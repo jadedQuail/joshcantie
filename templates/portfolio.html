@@ -172,6 +172,7 @@
 			margin-top: 60px;
 			margin-left: 150px;
 			margin-right: 150px;
+			margin-bottom: 70px;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
@@ -292,6 +293,68 @@
 			opacity: 0.7;
 		}
 		
+		/* Small screen adjustments */
+		
+		@media (max-height: 700px) {
+
+			.top {
+				margin-top: 5px;
+			}
+
+			.header {
+				font-size: 50px;
+			}
+
+			.link-text {
+				font-size: 25px;
+			}
+
+			.flex-container {
+				margin-top: 30px;
+			}
+
+			.box-red {
+				height: 300px;
+				width: 300px;
+			}
+
+			.box-blue {
+				height: 300px;
+				width: 300px;
+			}
+
+			.box-yellow {
+				height: 300px;
+				width: 300px;
+			}
+
+			.red-img {
+				height: 100px;
+				width: 167px;
+			}
+
+			.blue-img {
+				height: 100px;
+				width: 167px;
+			}
+
+			.yellow-img {
+				height: 100px;
+				width: 167px;
+			}
+
+			.cell-text-yellow {
+				font-size: 17px;
+			}
+
+			.cell-text-blue {
+				font-size: 17px;
+			}
+
+			.cell-text-red {
+				font-size: 17px;
+			}
+		}
 	</style>
 	
 	<body style="background-color: #173F5F;">
@@ -317,9 +380,7 @@
 			<div class="header d-none d-sm-block">Portfolio</div>
 		</div>
 		
-		<!-- Boxes -->
-		<div style="text-align: center;">
-		
+		<!-- Boxes -->		
 		<div class="flex-container">
 		
 			<!-- Box 1 -->
@@ -357,7 +418,7 @@
 			
 			<!-- Box 5 -->
 			<div class="box-red">
-				<div class="cell-title-red">Animal Crossing Creature Finder</div>
+				<div class="cell-title-red">Animal Crossing Website</div>
 				<div class="cell-subtitle">Website</div>
 				<a href="https://acnhfinder.herokuapp.com/"><img class="red-img" src="{{url_for('static', filename='images/acnh_still.PNG')}}"/></a>
 				<div class="cell-text-red">Website I made in early 2020, using HTML/CSS, Bootstrap, Flask, and SQLite. Search for critters!</div>

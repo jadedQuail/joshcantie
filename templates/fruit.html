@@ -323,8 +323,30 @@
 			margin-bottom: 50px;
 		}
 		
-		.download_icon {
+		.game-pic {
+			height: 300px;
+			width: 536px;
+		}
+		
+		/* Small screen adjustments */
+		@media (max-height: 700px) {
 			
+			.top {
+				margin-top: 5px;
+			}
+			
+			.header {
+				font-size: 50px;
+			}
+			
+			.link-text {
+				font-size: 25px;
+			}
+			
+			.game-pic {
+				height: 200px;
+				width: 358px;
+			}
 		}
 		
 	</style>
@@ -356,7 +378,7 @@
 		
 		<!-- Picture -->
 		<div style="text-align: center;">
-			<img style="height: 300px; width: 536px;" src="{{url_for('static', filename='images/fruit_still_big.PNG')}}"/>
+			<img class="game-pic" src="{{url_for('static', filename='images/fruit_still_big.PNG')}}"/>
 		</div>
 		
 		<!-- Column Test -->
