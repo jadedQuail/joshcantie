@@ -211,6 +211,26 @@
 			color: #2a7d75;
 			transition: color 0.2s;
 		}
+		
+		/* Specific blog post images */
+		
+		.model-img {
+			height: 534px; 
+			width: 700px; 
+			border: 3px solid #F6D55C;
+		}
+		
+		.anim-gif {
+			height: 407px; 
+			width: 600px; 
+			border: 3px solid #F6D55C;
+		}
+		
+		.unity-gif {
+			height: 353px; 
+			width: 600px; 
+			border: 3px solid #F6D55C;
+		}
 
 		
 		/* Small screen adjustments */
@@ -227,6 +247,39 @@
 			.link-text {
 				font-size: 25px;
 			}
+			
+		}
+		
+		@media (max-width: 1116px) {
+		
+			.model-img {
+				height: 305px; 
+				width: 400px; 
+			}
+		
+			.anim-gif {
+				height: 272px; 
+				width: 400px; 
+			}
+			
+			.unity-gif {
+				height: 235px; 
+				width: 400px; 
+			}
+		}
+		
+		@media (max-width: 650px) {
+			.model-img {
+				visibility: hidden;
+			}		
+			
+			.anim-gif {
+				visibility: hidden;
+			}	
+			
+			.unity-gif {
+				visibility: hidden;
+			}	
 		}
 		
 	</style>
@@ -302,7 +355,7 @@
 			
 			<!-- Picture of Model -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img style="height: 500px; width: 889px; border: 3px solid #F6D55C;" src="images/samurai_1.png"/>
+				<img class="model-img" src="images/samurai_2.png"/>
 			</div>
 			
 			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
@@ -314,7 +367,7 @@
 			
 			<!-- GIF of walking -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img style="height: 407px; width: 600px; border: 3px solid #F6D55C;" src="images/walk_anim.gif"/>
+				<img class="anim-gif" src="images/walk_anim.gif"/>
 			</div>
 			
 			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
@@ -327,7 +380,7 @@
 			
 			<!-- GIF of walking -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img style="height: 353px; width: 600px; border: 3px solid #F6D55C;" src="images/sun_test.gif"/>
+				<img class="unity-gif" src="images/sun_test.gif"/>
 			</div>
 			
 			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
