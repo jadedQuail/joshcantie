@@ -214,23 +214,18 @@
 		
 		/* Specific blog post images */
 		
-		.terrain-gif {
-			height: 375px; 
+		.bandit-img {
+			height: 385px; 
 			width: 600px; 
-			border: 3px solid #F6D55C;
+			border: 3px solid #3CAEA3;
 		}
 		
-		.excel-img {
-			height: 293px;
-			width: 800px;
-			border: 3px solid #F6D55C;
+		.lowpolyterr-img {
+			height: 369px; 
+			width: 600px; 
+			border: 3px solid #3CAEA3;
 		}
 		
-		.database-img {
-			height: 395px;
-			width: 800px;
-			border: 3px solid #F6D55C;
-		}
 		
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
@@ -249,39 +244,29 @@
 			
 		}
 		
-		@media (max-width: 1377px) {
+		@media (max-width: 1116px) {
 					
-			.terrain-gif {
-				height: 249px; 
+			.bandit-img {
+				height: 257px; 
 				width: 400px; 
-				border: 3px solid #F6D55C;
+				border: 3px solid #3CAEA3;
 			}
 			
-			.excel-img {
-				height: 183px;
-				width: 500px;
-				border: 3px solid #F6D55C;
-			}
-			
-			.database-img {
-				height: 247px;
-				width: 500px;
-				border: 3px solid #F6D55C;
+			.lowpolyterr-img {
+				height: 246px; 
+				width: 400px; 
+				border: 3px solid #3CAEA3;
 			}
 
 		}
 		
-		@media (max-width: 851px) {
+		@media (max-width: 650px) {
 			
-			.terrain-gif {
+			.bandit-img {
 				visibility: hidden;
 			}
 			
-			.excel-img {
-				visibility: hidden;
-			}
-
-			.database-img {
+			.lowpolyterr-img {
 				visibility: hidden;
 			}
 		}
@@ -315,77 +300,79 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-yellow container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						Database, Weapons, Terrains
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						CTFs and Low-Poly Terrains
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						August 6th, 2020
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						August 9th, 2020
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-blue">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Sorry for the long length of time between posts! I've done a lot in the past month, and a lot of my time was occupied because
-			I am moving to Chicago in the next two weeks, so there has been a lot of preparation (apartment shopping, furniture, utilities, etc).
-			Nonetheless, I've been working diligently on a few things.
+			This weekend I had the pleasure of playing OpenSOC, a DFIR challenge hosted by 
+			
+			<a style="color: #3CAEA3;" href="https://reconinfosec.com/">Recon InfoSec</a>, 
+			
+			where teams hunt down various threats and "capture flags." I got the opportunity to become more familiar with a bunch
+			of great tools, such as 
+			
+			<a style="color: #3CAEA3;" href="https://www.graylog.org/">Graylog</a>, 
+			
+			a log management software, and 
+			
+			<a style="color: #3CAEA3;" href="https://www.elastic.co/products/kibana">Kibana</a>,
+			
+			a data visualization tool.
 						
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			I've made some good progress on my game! I've removed health bars temporarily, but I've added weapons (which will display text when hovered over) and now enemies
-			will spawn within certain zones. The player can walk up to a weapon, pick it up, and start slashing at bad guys. I've also added some basic UI elements, just as
-			a start. I also started to work on a surrounding terrain for the game's map (I am very, very not good at using Unity's terrain tools, so that was a struggle), which
-			right now looks very plain but I plan on turning it into a green, low-poly terrain using Blender.
+			At first I found a lot of things to be pretty difficult, but by the end of the weekend, I was able to grab a few challenges all by myself!
+			The tools given to use were great for things like finding phishing emails and seeing which machines on the network clicked the dangerous
+			links. These scenarios were all made up, but they definitely drove home the point that all employees of a company should be on high alert
+			for phishing scams (there's nothing worse for info security then opening the door for your intruder)!
 						
 			</p>
 			
-			<!-- Terrain Gif -->
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			I really enjoyed this CTF-esque event, so I'm going to try a few more. I found a great website called 
+			
+			<a style="color: #3CAEA3;" href="https://overthewire.org/wargames/">OverTheWire</a>
+			
+			that has a lot of great "Wargames" that allow you to practice security concepts. I recently started the first one, called "Bandit," 
+			which teaches you how to use tools and commands on Linux machines. So far, it's been pretty fun!
+						
+			</p>
+						
+			<!-- Bandit Image -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="terrain-gif" src="images/terrain.gif"/>
+				<img class="bandit-img" src="images/bandit.png"/>
 			</div>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			I also started and completed another project in the past month. Recently I've gotten back into collecting Pokemon cards, something I did very casually as a child.
-			I got all my cards together (and bought some new ones!) and decided to enter them all into an Excel document. I recorded the information as shown below, cataloging each
-			card's stats, year, attributes, and value. I thought that these older cards would be pretty valuable, but that was not the case. Oh well.
+			I also managed to get a low-poly terrain finished for my game in Unity. I think it fits the theme well, and it certainly gives my testing grounds
+			a more lively atmosphere than before. In the weeks to come, I plan to start working on the UI, and creating an inventory system so that way
+			the player can pick up weapons and choose between them.
 						
 			</p>
 			
-			<!-- Excel Image -->
+			<!-- LowPoly Image -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="excel-img" src="images/excel.PNG"/>
+				<img class="lowpolyterr-img" src="images/lowpolyterr.PNG"/>
 			</div>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			After finishing the database of cards in Excel (a term I use loosely, because I chose not to use SQL for this), I used Python and the library openpyxl to read the database.
-			I was able to create a few useful scripts, like one that gave overall statistics about the database and another that checked how many Pokemon I had caught out of the total
-			list of Pokemon (or the "Pokedex"). Then, I used the library Tkinter to create a simple GUI for a script that allows a user to search through the database for specific cards,
-			as shown below.
-						
-			</p>
-			
-			<!-- Database Image -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="database-img" src="images/database.png"/>
-			</div>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			Hope you enjoyed and thanks for reading!
-						
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+				
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -399,7 +386,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_7-13-20.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				<a href="blog_8-9-20.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
