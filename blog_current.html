@@ -214,16 +214,16 @@
 		
 		/* Specific blog post images */
 		
-		.weapons-gif {
-			height: 376px; 
+		.speedboost-gif {
+			height: 377px; 
 			width: 600px; 
-			border: 3px solid #ED553B;
+			border: 3px solid #F6D55C;
 		}
 		
-		.networking-img {
-			height: 432px; 
-			width: 800px; 
-			border: 3px solid #ED553B;
+		.niceshot-gif {
+			height: 338px; 
+			width: 600px; 
+			border: 3px solid #F6D55C;
 		}
 		
 		
@@ -244,29 +244,28 @@
 			
 		}
 		
-		@media (max-width: 1211px) {
+		@media (max-width: 1116px) {
 					
-			.weapons-gif {
+			.speedboost-gif {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #ED553B;
+				border: 3px solid #F6D55C;
 			}
 			
-			.networking-img {
-				height: 324px; 
-				width: 600px; 
-				border: 3px solid #ED553B;
+			.niceshot-gif {
+				height: 225px; 
+				width: 400px; 
+				border: 3px solid #F6D55C;
 			}
-
 		}
 		
-		@media (max-width: 937px) {
+		@media (max-width: 650px) {
 			
-			.weapons-gif {
+			.speedboost-gif {
 				visibility: hidden;
 			}
 			
-			.networking-img {
+			.niceshot-gif {
 				visibility: hidden;
 			}
 		}
@@ -295,78 +294,68 @@
 		<div class="top">
 			<div class="header d-none d-sm-block">Josh's Blog</div>
 			<div class="description d-none d-sm-block">Things I did on my computer and more.</div>
+			<a class="description d-none d-sm-block" style="color: #F6D55C;" href="archive.html">Blog Archive</a>
 		</div>
 				
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-red container">
+		<div class="post-yellow container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
-						Networking and Inventory System
+					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
+						HUD Improvements
 					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						August 27th, 2020
+					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						September 1st, 2020
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-red">
+			<hr class="line-yellow">
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			Over the last few weeks I have been working on a few things, mainly a new inventory system for my Unity game and a new class on 
-			
-				<a style="color: #ED553B;" href="https://www.udemy.com/">Udemy</a>.
-				
-			I have also been playing a lot of 
-			
-				<a style="color: #ED553B;" href="https://fallguys.com/">Fall Guys</a>.
-			
-			I really missed the simple joy of playing Mario Party 6 at my friend's house after school as a kid, and I'm glad
-			that Mediatonic was able to capture that again!
+			Howdy folks. I can't believe it's already September! I have this weird thing with Covid where I simultaneously perceive time as going too fast and 
+			too slow at the same time... basically I can't wait to get out of the house again when this is all over.
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			In my Unity project, I have managed to create an inventory system where the player can pause, open an inventory menu, and then click the picture of the
-			weapon they would like to use. I also went into Blender and made some new weapons, such as an axe and a club (right now I can manage hopping on Blender and
-			making a few simple assets, but I definitely need to pick a time to really become proficient in modelling like I was on Autodesk Maya). The hardest part
-			of this whole process was actually finding a way to pause every moving entity in the scene whenever the player pressed pause, but luckily I found a way!
+			I've made some big improvements to the HUD in my game, and added a few new gameplay aspects. The player now has a shield that depletes before health, and it also
+			replenishes itself when the player is not in combat. I also touched up the weapon indicator in the bottom left, and added a few more cosmetic items to the inventory
+			menu. I also started on what I call the "Move Bar," which is at the bottom center of the screen; basically it gives a visual to the cooldown time for each special
+			move the player uses. I also added a speed boost function, which can be seen on said Move Bar.
 			
 			</p>
-			
-			<!-- Weapons Gif -->
+
+			<!-- Speedboost Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="weapons-gif" src="images/weapons.gif"/>
+				<img class="speedboost-gif" src="images/speedboost.gif"/>
 			</div>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			I've also become more interested in understanding how networks work; I realized that I only have a surface-level understanding of how things like routers and IP addresses
-			work. So I went ahead and purchased a course on networking created by
-			
-				<a style="color: #ED553B;" href="https://davidbombal.com/">David Bombal</a>.
-				
-			I've only just begun and I've already learned a lot about topics such as reading binary, IP subnetting, and broadcast/collision domains. I've also gotten some experience
-			using
-			
-				<a style="color: #ED553B;" href="https://www.netacad.com/courses/packet-tracer">Cisco Packet Tracer</a>,
-				
-			a network simulation tool that lets you get hands-on experience and apply everything you learn about networking. It's really an area that I didn't know much about,
-			so I'm excited to continue learning.
+			The HUD looks a little blocky and simple right now, but at the moment I'm just trying to lay things about before I make things look a little nicer. I think going forward
+			I want to focus on using the particle system in Unity to help emphasize what is happening to the player, i.e. an indication that shields are down or that the speed boost
+			is active.
 			
 			</p>
 			
-			<!-- Weapons Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="networking-img" src="images/networking.PNG"/>
-			</div>
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
+			That's all for now. Enjoy this goal I scored recently!
+			
+			</p>
+
+			<!-- Niceshot Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="niceshot-gif" src="images/niceshot.gif"/>
+			</div>
+
+			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -380,7 +369,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_8-9-20.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
+				<a href="blog_8-27-20.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
