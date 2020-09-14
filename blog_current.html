@@ -214,16 +214,16 @@
 		
 		/* Specific blog post images */
 		
-		.speedboost-gif {
-			height: 377px; 
+		.particles-gif {
+			height: 376px; 
 			width: 600px; 
-			border: 3px solid #F6D55C;
+			border: 3px solid #3CAEA3;
 		}
 		
-		.niceshot-gif {
-			height: 338px; 
+		.shop-gif {
+			height: 376px; 
 			width: 600px; 
-			border: 3px solid #F6D55C;
+			border: 3px solid #3CAEA3;
 		}
 		
 		
@@ -246,26 +246,26 @@
 		
 		@media (max-width: 1116px) {
 					
-			.speedboost-gif {
+			.particles-gif {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #F6D55C;
+				border: 3px solid #3CAEA3;
 			}
 			
-			.niceshot-gif {
-				height: 225px; 
+			.shop-gif {
+				height: 251px; 
 				width: 400px; 
-				border: 3px solid #F6D55C;
+				border: 3px solid #3CAEA3;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-			.speedboost-gif {
+			.particles-gif {
 				visibility: hidden;
 			}
 			
-			.niceshot-gif {
+			.shop-gif {
 				visibility: hidden;
 			}
 		}
@@ -300,62 +300,55 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-yellow container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						HUD Improvements
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						Particle Trails and Shopping
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						September 1st, 2020
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						September 13th, 2020
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-blue">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Howdy folks. I can't believe it's already September! I have this weird thing with Covid where I simultaneously perceive time as going too fast and 
-			too slow at the same time... basically I can't wait to get out of the house again when this is all over.
+			Hi there! Still here, chugging along.
+			
+			</p>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			I've made some good progress since my last post. I've managed to get some particle trails going that follow the player's movement; when the player swings, spins, or speed boosts, 
+			you can see a blue trail following the motion. I'm not too sure yet if the current trail I have on is the right color or if it's too intense, but I think some form of this trail will
+			look nice in the end. I also added a system of money to the game, where the player gets paid to defeat enemies (and you can see damage numbers and the "value of the kill" in-game).
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			I've made some big improvements to the HUD in my game, and added a few new gameplay aspects. The player now has a shield that depletes before health, and it also
-			replenishes itself when the player is not in combat. I also touched up the weapon indicator in the bottom left, and added a few more cosmetic items to the inventory
-			menu. I also started on what I call the "Move Bar," which is at the bottom center of the screen; basically it gives a visual to the cooldown time for each special
-			move the player uses. I also added a speed boost function, which can be seen on said Move Bar.
-			
-			</p>
-
-			<!-- Speedboost Gif -->
+			<!-- Particles Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="speedboost-gif" src="images/speedboost.gif"/>
+				<img class="particles-gif" src="images/particles.gif"/>
 			</div>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			The HUD looks a little blocky and simple right now, but at the moment I'm just trying to lay things about before I make things look a little nicer. I think going forward
-			I want to focus on using the particle system in Unity to help emphasize what is happening to the player, i.e. an indication that shields are down or that the speed boost
-			is active.
+			And, all of this money can be used in the new shopping system! I created an NPC that acts as a vendor who will be an access point to the shop. Here the player can buy and sell weapons.
+			I really enjoyed digging into the UI and setting up all the different dialogue texts and buttons, and I'm happy with how it turned out. I'll be sure to expand on this as my development
+			process goes on.
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			That's all for now. Enjoy this goal I scored recently!
+			Thanks for stopping by!
 			
 			</p>
 
-			<!-- Niceshot Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="niceshot-gif" src="images/niceshot.gif"/>
-			</div>
-
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -369,7 +362,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_8-27-20.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				<a href="blog_9-1-20.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
