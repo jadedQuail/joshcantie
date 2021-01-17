@@ -214,11 +214,18 @@
 		
 		/* Specific blog post images */
 		
-		.apluscert-jpeg {
-			height: 600px; 
-			width: 451px; 
-			border: 3px solid #ED553B;
+		.particles-gif {
+			height: 376px; 
+			width: 600px; 
+			border: 3px solid #3CAEA3;
 		}
+		
+		.shop-gif {
+			height: 376px; 
+			width: 600px; 
+			border: 3px solid #3CAEA3;
+		}
+		
 		
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
@@ -237,18 +244,30 @@
 			
 		}
 		
-		@media (max-width: 740px) {
-		
-			.apluscert-jpeg {
-			height: 400px; 
-			width: 301px; 
-			border: 3px solid #ED553B;
+		@media (max-width: 1116px) {
+					
+			.particles-gif {
+				height: 251px; 
+				width: 400px; 
+				border: 3px solid #3CAEA3;
+			}
+			
+			.shop-gif {
+				height: 251px; 
+				width: 400px; 
+				border: 3px solid #3CAEA3;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-
+			.particles-gif {
+				visibility: hidden;
+			}
+			
+			.shop-gif {
+				visibility: hidden;
+			}
 		}
 		
 	</style>
@@ -281,54 +300,55 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-red container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
 						Particle Trails and Shopping
 					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
 						September 13th, 2020
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-red">
+			<hr class="line-blue">
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Hello! After a lengthy hiatus I have returned :)
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			I apologize for the long delay, I've been very busy with various things and blogging got away from me. I've decided though that I will pick it back up however.
-			Although I've been gone, I have been busy! I have received two new certifications: GFCE and A+. It was a lot of studying, but passing the exams felt very rewarding.
-			I have my eyes on acquiring the Network+ certification next.
+			Hi there! Still here, chugging along.
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			I do plan on jumping back into Unity and other programming projects as well. I'm thinking that I want to start fresh with a new concept in Unity, so I have plans to take my 
-			current 3D game and finish it up as a sort of "sandbox" project. I plan on having it in my portfolio on this site soon!
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			So, back to the grind. I'll see you soon!
+			I've made some good progress since my last post. I've managed to get some particle trails going that follow the player's movement; when the player swings, spins, or speed boosts, 
+			you can see a blue trail following the motion. I'm not too sure yet if the current trail I have on is the right color or if it's too intense, but I think some form of this trail will
+			look nice in the end. I also added a system of money to the game, where the player gets paid to defeat enemies (and you can see damage numbers and the "value of the kill" in-game).
 			
 			</p>
 			
-			<!-- A+ Certification Picture -->
+			<!-- Particles Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="apluscert-jpeg" src="images/apluscert.jpeg"/>
+				<img class="particles-gif" src="images/particles.gif"/>
 			</div>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			And, all of this money can be used in the new shopping system! I created an NPC that acts as a vendor who will be an access point to the shop. Here the player can buy and sell weapons.
+			I really enjoyed digging into the UI and setting up all the different dialogue texts and buttons, and I'm happy with how it turned out. I'll be sure to expand on this as my development
+			process goes on.
+			
+			</p>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			Thanks for stopping by!
+			
+			</p>
 
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -342,7 +362,10 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_9-13-20.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
+				<a href="blog_current.html" class="col-sm botlink_left blue-text" style="text-decoration: none;">
+					<-- Newer Post
+				</a>
+				<a href="blog_9-1-20.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
