@@ -214,10 +214,17 @@
 		
 		/* Specific blog post images */
 		
-		.frogger-image {
-			height: 376px; 
+		.freenas-image {
+			height: 600px; 
+			width: 450px; 
+			border: 3px solid #ED553B;
+		}
+		
+		/* Named it this because it was being difficult otherwise, not sure why */
+		.newclass {
+			height: 338px; 
 			width: 600px; 
-			border: 3px solid #3CAEA3;
+			border: 3px solid #ED553B;
 		}
 		
 		/* Small screen adjustments */
@@ -237,18 +244,22 @@
 			
 		}
 		
-		@media (max-width: 1116px) {
+		@media (max-width: 968px) {
 		
-			.frogger-image {
+			.newclass {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #3CAEA3;
+				border: 3px solid #ED553B;
 			}
 		}
 		
-		@media (max-width: 650px) {
+		@media (max-width: 698px) {
 			
-			.frogger-image {
+			.newclass {
+				visibility: hidden;
+			}
+			
+			.freenas-image {
 				visibility: hidden;
 			}
 
@@ -284,54 +295,66 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-blue container">
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Simple Frogger
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						A Few Updates
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						March 4th, 2021
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						March 21st, 2021
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-red">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Hello!
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			I was poking around some old Unity files on my computer and I totally forgot that I had started a simple 2D project a few months ago. It was about halfway done, so I went ahead
-			and took a few days to finish it up. It's just a simple frogger game, but I had fun going back and completing it because it's the perfect kind of small
-			project that I can use to get back on the proverbial horse. I uploaded it to my portfolio if you want to check it out!
+			Hey there,
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			MacOS builds have been hurting my head lately, so I am going to address that later, but for now you can play the game on Windows or on WebGL (i.e. in-browser). It seems to me there
-			aren't a ton of web browsers that support client-side WebGL games, but if you have one then go for it :)
+			So unfortunately after some poking around, I've decided that the FreeNAS dream is dead. I attempted to set up my laptop by my router and turn it into a NAS device,
+			but I was really struggling with working with the FreeNAS (now TrueNAS) software, and frankly the laptop sitting around on the floor was quite the eye sore (pictured below). I gave it
+			a shot and learned a few things, so I'm going to let this one go.
 			
 			</p>
 			
-			<!-- Ducky Picture -->
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			I also was planning on prepping a tank to get a new betta fish, but prepping done right takes weeks and I don't have the energy for it. So I've been having a real quitter's mindset
+			this week!
+			
+			</p>
+			
+			<!-- FreeNAS Picture -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="frogger-image" src="images/frog_blog.png"/>
+				<img class="freenas-image" src="images/FreeNAS.jpg"/>
 			</div>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			(Others might describe this as minimal graphics, but I like to think of it as a complex work in style of the De Stijl art movement)
+			However, I did have a nice little start to my unnamed 2D RPG game that I do want to focus on. I got some assets, started the project, and got my character moving (and the camera
+			following him). Not much, but a start. I'm using the same main character as my Fruit N Shoot game because it's an easy spritesheet to work with and I like him :)
 			
-			</p>
+			</p>		
 
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+			<!-- 2D Sample Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="newclass" src="images/2dsample.gif"/>
+			</div>	
+
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			I'm planning on re-focusing on my projects and I will hopefully have more to report in the weeks to come!
+			
+			</p>				
+
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -345,7 +368,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_2-28-21.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_3-4-21.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
