@@ -214,10 +214,10 @@
 		
 		/* Specific blog post images */
 		
-		.spawn-area-image {
+		.snap-combat-image {
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #F6D55C;
+			border: 3px solid #3CAEA3;
 		}
 		
 		/* Small screen adjustments */
@@ -284,86 +284,68 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-yellow container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						Updates and New 2D Game
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						Smooth Gameplay
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						May 3rd, 2022
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						May 18th, 2022
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-blue">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Hi Again,
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			Back to the blog! Although I haven't made a post here in a while, I have been <i>very</i> busy in the last year with programming.
-			About March of last year, I wrote on this blog that I had started to work on a 2D RPG game. Well I've been working on it consistently since
-			last year, and it's become my biggest project yet. I've done a lot of things with this game I have never done before, including but not limited
-			to randomly-generated dungeons, a full loot system, a drag-and-drop inventory, multiple combat mechanics and abilities, and more.
+			Hey there!
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			There's a lot of stuff in this game, too much for one update, so I am going to make several posts detailing the different features I've created in this
-			game in the last year. I always think it's a good idea to stop where you are and take inventory of what you've done with a project, so I'm hoping that
-			dissecting my game in the next few posts will help me make it better as I continue to work on it here.
+			When I first started making this game, I had two learning priorities for myself. First, I wanted to make something that was more than
+			just a "demo" to see what it's like to put a full game together; second, I wanted the game's core loop to "cut like butter" and feel
+			smooth. I'm a strong believer that this second point is an absolute essential for having a game that people want to come back for. 
+			
+			</p>
+
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+ 			For instance, one of my favorite games of all time - Rocket League - literally just consists of some cars, a bar, and a field. But, the
+			game has had lasting success for over six years and has a very dedicated following and eSports scene; and to me, I believe it's because
+			it feels really, <i>really</i> good to drive and fly around in the game.
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			As a little sneak-peak, see the gif below - I'm proud of how lively the spawn area is in the game!
+			So, to put this concept into practice, I tried to think of ways I could make gameplay feel "snappy" in my game. I quite literally created
+			a system in the game where the player's character "snaps" onto enemies in his immediate vicinity, so that way the player doesn't have to
+			worry about making sure their sword lines up exactly with the enemy they're targeting. If you look at the gif below, you can see the character
+			pivoting from enemy to enemy quickly and wasting no strokes - that's all being done with a click of a mouse, and doesn't require the player
+			to re-align the character's direction otherwise.
 			
 			</p>
 			
 			<!-- Shinobi Sunclan Spawn Area Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="spawn-area-image" src="images/spawn_area.gif"/>
+				<img class="snap-combat-image" src="images/snap_combat.gif"/>
 			</div>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			I'm also very happy to say that I've gone back to school to finally get my bachelor's degree in Computer Science.
-			I'm currently enrolled in a post-baccalaureate CS program at Oregon State University - Go Beavs! - where I'm able to take rigorous
-			computer science courses in a well-established online program. I'm able to take the courses while working full-time, so it works very
-			well for me right now. I'm 2&#189 courses through the program so far, and it's been a lot of fun, and I've learned a lot.
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			(I have to say, too, after taking Discrete Math for the second time, it turns out this education thing works, because it is much, <i>much</i>
-			easier to grasp this time around).
+			So while this simplifies combat, it also makes cutting through enemies buttery smooth. And overall, I want to make the full "onslaught"
+			of the dungeon be the complex, rewarding experience for the player, and not so much frustrate them with the "clunkiness" of individual battles.
+			As I continue to add more features to my game, I want to pay special attention to this "smoothness" factor, so I can make the player feel
+			light and airy in the game.
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			Looking forward to more posts in the days and weeks to come &#128513
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			(Also, wanted to note here that while I did create this game, many of the game's assets are from artists who create free pixel art for
-			use for developers. I will be creating a credits list shortly, as these artists do a great service to people like me who want to cut their teeth
-			and make some games!)
-			
-			</p>
-
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -377,7 +359,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_3-21-21.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				<a href="blog_5-3-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
