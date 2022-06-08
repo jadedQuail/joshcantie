@@ -42,26 +42,13 @@
 			font-size: 65px;
 		}
 		
-		.archive-text-yellow {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: center;
-			font-size: 40px;
-		}
-		
-		.archive-text-red {
+		.description {
 			color: #ED553B;
 			font-family: Lato;
 			text-align: center;
-			font-size: 40px;
+			font-size: 25px;
 		}
-
-		.archive-text-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: center;
-			font-size: 40px;
-		}
+			
 			
 		.top {
 			margin-top: 70px;
@@ -126,11 +113,6 @@
 		.email:hover{
 			color: #9e3a29;
 			transition: color 0.2s;
-		}
-		
-		.archive-container {
-			margin-top: 60px;
-			width: 70%;
 		}
 		
 		.post-red {
@@ -225,21 +207,6 @@
 			transition: color 0.2s;
 		}
 		
-		.archive-text-yellow:hover {
-			color: #bda346;
-			transition: color 0.2s;		
-		}
-		
-		.archive-text-red:hover {
-			color: #9e3a29;
-			transition: color 0.2s;		
-		}
-		
-		.archive-text-blue:hover {
-			color: #2a7d75;
-			transition: color 0.2s;		
-		}
-		
 		.blue-text:hover {
 			color: #2a7d75;
 			transition: color 0.2s;
@@ -247,18 +214,11 @@
 		
 		/* Specific blog post images */
 		
-		.speedboost-gif {
-			height: 377px; 
+		.snap-combat-image {
+			height: 340px; 
 			width: 600px; 
-			border: 3px solid #F6D55C;
+			border: 3px solid #3CAEA3;
 		}
-		
-		.niceshot-gif {
-			height: 338px; 
-			width: 600px; 
-			border: 3px solid #F6D55C;
-		}
-		
 		
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
@@ -278,29 +238,20 @@
 		}
 		
 		@media (max-width: 1116px) {
-					
-			.speedboost-gif {
+		
+			.snap-combat-image {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #F6D55C;
-			}
-			
-			.niceshot-gif {
-				height: 225px; 
-				width: 400px; 
-				border: 3px solid #F6D55C;
+				border: 3px solid #3CAEA3;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-			.speedboost-gif {
+			.snap-combat-image {
 				visibility: hidden;
 			}
-			
-			.niceshot-gif {
-				visibility: hidden;
-			}
+
 		}
 		
 	</style>
@@ -325,79 +276,98 @@
 		
 		<!-- Title -->
 		<div class="top">
-			<div class="header d-none d-sm-block">Blog Archive</div>
+			<div class="header d-none d-sm-block">Josh's Blog</div>
+			<div class="description d-none d-sm-block">Things I did on my computer and more.</div>
+			<a class="description d-none d-sm-block" style="color: #F6D55C;" href="archive.html">Blog Archive</a>
 		</div>
 				
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		<div class="container archive-container">
 		
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_current.html">Blog 06/08/22</a>
-			</p>		
+		<!-- Post 1 -->
+		<div class="post-blue container">
 		
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_5-18-22.html">Blog 05/18/22</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_5-3-22.html">Blog 05/03/22</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_3-21-21.html">Blog 03/21/21</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_3-4-21.html">Blog 03/04/21</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_2-28-21.html">Blog 02/28/21</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_1-17-21.html">Blog 01/17/21</a>
+			<div>
+				<div class="row">
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						Smooth Gameplay
+					</div>
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						May 18th, 2022
+					</div>
+				</div>
+			</div>
+			
+			<hr class="line-blue">
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			Hey there!
+			
 			</p>
 			
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_9-13-20.html">Blog 09/13/20</a>
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			When I first started making this game, I had two learning priorities for myself. First, I wanted to make something that was more than
+			just a "demo" to see what it's like to put a full game together; second, I wanted the game's core loop to "cut like butter" and feel
+			smooth. I'm a strong believer that this second point is an absolute essential for having a game that people want to come back for. 
+			
 			</p>
-		
-		
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_9-1-20.html">Blog 09/01/20</a>
+
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+ 			For instance, one of my favorite games of all time - Rocket League - literally just consists of some cars, a bar, and a field. But, the
+			game has had lasting success for over six years and has a very dedicated following and eSports scene; and to me, I believe it's because
+			it feels really, <i>really</i> good to drive and fly around in the game.
+			
 			</p>
 			
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_8-27-20.html">Blog 08/27/20</a>
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			So, to put this concept into practice, I tried to think of ways I could make gameplay feel "snappy" in my game. I quite literally created
+			a system in the game where the player's character "snaps" onto enemies in his immediate vicinity, so that way the player doesn't have to
+			worry about making sure their sword lines up exactly with the enemy they're targeting. If you look at the gif below, you can see the character
+			pivoting from enemy to enemy quickly and wasting no strokes - that's all being done with a click of a mouse, and doesn't require the player
+			to re-align the character's direction otherwise.
+			
 			</p>
 			
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_8-9-20.html">Blog 08/09/20</a>
+			<!-- Shinobi Sunclan Spawn Area Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="snap-combat-image" src="images/snap_combat.gif"/>
+			</div>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			So while this simplifies combat, it also makes cutting through enemies buttery smooth. And overall, I want to make the full "onslaught"
+			of the dungeon be the complex, rewarding experience for the player, and not so much frustrate them with the "clunkiness" of individual battles.
+			As I continue to add more features to my game, I want to pay special attention to this "smoothness" factor, so I can make the player feel
+			light and airy in the game.
+			
 			</p>
 			
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_8-6-20.html">Blog 08/06/20</a>
-			</p>
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_7-13-20.html">Blog 07/13/20</a>
-			</p>
+			--Josh
 			
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_7-7-20.html">Blog 07/07/20</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_6-27-20.html">Blog 06/27/20</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_6-23-20.html">Blog 06/23/20</a>
 			</p>
 			
 		</div>
 		
+		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!-- Navigate to other posts -->
+		
+		<div class="container" style="margin-top: 50px;">
+			<div class="row">
+				<a href="blog_current.html" class="col-sm botlink_left blue-text" style="text-decoration: none;">
+					<-- Newer Post
+				</a>
+				<a href="blog_5-3-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+					Older Post -->
+				</a>
+			</div>
+		</div>
+				
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 				
 		<!-- Footer -->
