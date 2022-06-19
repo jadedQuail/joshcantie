@@ -214,10 +214,10 @@
 		
 		/* Specific blog post images */
 		
-		.dialogue-image {
+		.inventory-image {
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #F6D55C;
+			border: 3px solid #ED553B;
 		}
 		
 		/* Small screen adjustments */
@@ -239,16 +239,16 @@
 		
 		@media (max-width: 1116px) {
 		
-			.dialogue-image {
+			.inventory-image {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #F6D55C;
+				border: 3px solid #ED553B;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-			.dialogue-image {
+			.inventory-image {
 				visibility: hidden;
 			}
 
@@ -284,60 +284,70 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-yellow container">
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						New Post
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						Inventory System
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						June 19th, 2022
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						June 8th, 2022
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-red">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Howdy,
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			Quick blog post for today! One of the systems in my game that I worked hard on was creating dialogue interactions with NPCs. The key to having it run
-			smoothly was to ensure that each dialogue "slide" is marked properly so that the game knows what to do next when the player clicks - that could be
-			another static line a dialogue, a line of dialogue that requires a "yes/no" answer, or the end of the dialogue. Additionally, I had to also create
-			branching paths of dialogue, where the NPC's answer would be different if the player answered "yes" or "no" to a question. I wanted to make sure
-			that I designed a system that could be re-used, such that every new NPC I put in the game could fit right in without me having to completely
-			re-configure how their individual dialogue would work.
+			Hello,
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			I also created for the NPCs a script I called "Wander", which created determined, closed-loop paths that the NPCs would walk in around
-			the map. They're very short and concise, and the main purpose of adding these paths was to give some life to what would be an otherwise
-			"frozen" character. Like with the dialogue system, I designed it such that it can be re-used seamlessly with new NPCs, such that I can create
-			a new NPC, assign it a path like "left, up, right, down," and the NPC will immediately walk in the same path over and over again.
+			One of the most challenging but rewarding things to put into my most recent game was a drag-and-drop inventory system. I started by working off of a 
+			
+			<a style="color: #ED553B;" href="https://www.youtube.com/watch?v=BGr-7GZJNXg">fantastic video</a>
+			
+			by Code Monkey on how to create such an inventory, and then added more features from there. Beyond the basic 
+			drag-and-drop functionality, I was also able to restrict certain "use slots" such that they could only hold items
+			of a certain class, as well as have items "drop" from the player's inventory at his feet when the user drags
+			the item outside of the inventory menu box.
+			
+			</p>
+			
+			<!-- Shinobi Sunclan Inventory Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="inventory-image" src="images/inventory.gif"/>
+			</div>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			An important aspect of creating this inventory system was keeping track of item "images" while they were being
+			dragged from one slot to another. I had to account for a couple of different scenarios, such as the item being dragged
+			to a new slot, the item never finding a new slot and reverting back to its old slot, the item swapping with another
+			item in another slot, etc. 
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			It was also challenging to make sure that the actual item associated with each inventory slot had its information
+			properly transferred from one slot to another. This was especially important for the shop, where the player can buy
+			and sell items. It took a long time to ensure that the inventory items were responding properly to being dragged and
+			dropped (and I must admit I think a more senior coder would probably have a thing or two to say about the efficiency
+			of my code), but eventually I got it right through a lot of trial and error!
 			
 			</p>
 
-			<!-- Dialogue Gif -->
+			<!-- Shinobi Sunclan Shop Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="dialogue-image" src="images/dialogue.gif"/>
+				<img class="inventory-image" src="images/shopping.gif"/>
 			</div>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			One of my favorite things to do in all coding projects is put in those cosmetic changes that are neat, organized, and give the project life.
-			Which is probably why I like game design so much!
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -351,7 +361,10 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_6-8-22.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				<a href="blog_current.html" class="col-sm botlink_left red-text" style="text-decoration: none;">
+					<-- Newer Post
+				</a>
+				<a href="blog_5-18-22.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
