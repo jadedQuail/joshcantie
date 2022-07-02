@@ -204,7 +204,6 @@
 		
 		.yellow-text:hover {
 			color: #bda346;
-			color: #bda346;
 			transition: color 0.2s;
 		}
 		
@@ -213,18 +212,12 @@
 			transition: color 0.2s;
 		}
 		
-		.flex-container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-		
 		/* Specific blog post images */
 		
-		.dungeon-image {
-			height: 280px; 
-			width: 280px; 
-			border: 3px solid #3CAEA3;
+		.dialogue-image {
+			height: 340px; 
+			width: 600px; 
+			border: 3px solid #F6D55C;
 		}
 		
 		/* Small screen adjustments */
@@ -244,36 +237,18 @@
 			
 		}
 		
-		@media (max-width: 1316px) {
+		@media (max-width: 1116px) {
 		
-			.dungeon-image {
-				height: 220px; 
-				width: 220px; 
-				border: 3px solid #3CAEA3;
+			.dialogue-image {
+				height: 251px; 
+				width: 400px; 
+				border: 3px solid #F6D55C;
 			}
 		}
 		
-		@media (max-width: 1050px) {
-		
-			.dungeon-image {
-				height: 180px; 
-				width: 180px; 
-				border: 3px solid #3CAEA3;
-			}
-		}
-		
-		@media (max-width: 877px) {
-		
-			.dungeon-image {
-				height: 160px; 
-				width: 160px; 
-				border: 3px solid #3CAEA3;
-			}
-		}
-
-		@media (max-width: 785px) {
+		@media (max-width: 650px) {
 			
-			.dungeon-image {
+			.dialogue-image {
 				visibility: hidden;
 			}
 
@@ -309,74 +284,60 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-blue container">
+		<div class="post-yellow container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Random Dungeon Generation
+					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
+						NPCs
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						July 2nd, 2022
+					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						June 19th, 2022
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-yellow">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			Hello,
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			One of the new concepts I took a crack at with this game was doing some random dungeon generation. I relied heavily on a
-			
-			<a style="color: #3CAEA3;" href="https://www.youtube.com/watch?v=qAf9axsyijY"><u>video tutorial by Blackthornprod</u></a>
-			
-			, which broke down the nuts and bolts of random map generation very well. Basically, we start with a chunk of the map as our
-			centerpoint, which has four openings on it (up, down, left, right). Each of these openings has a "node" attached to it that will
-			select a random "map chunk" to be placed next to that opening, thus extending the map; the newly-generated map chunk then has its
-			own openings, which in turn have their own nodes, and thus the generation continues. The generation will stop once each path is
-			closed off, meaning that the last-generated map chunk has no extra openings that need to be closed.
+			Howdy,
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			See below for some examples of dungeons that were generated in my game!
+			Quick blog post for today! One of the systems in my game that I worked hard on was creating dialogue interactions with NPCs. The key to having it run
+			smoothly was to ensure that each dialogue "slide" is marked properly so that the game knows what to do next when the player clicks - that could be
+			another static line a dialogue, a line of dialogue that requires a "yes/no" answer, or the end of the dialogue. Additionally, I had to also create
+			branching paths of dialogue, where the NPC's answer would be different if the player answered "yes" or "no" to a question. I wanted to make sure
+			that I designed a system that could be re-used, such that every new NPC I put in the game could fit right in without me having to completely
+			re-configure how their individual dialogue would work.
 			
 			</p>
 			
-			<!-- Dungeon Images - Flex -->
-			<div class="flex-container" style="text-align: center; margin-bottom: 43px;">
-				<img class="dungeon-image" style="margin-top: 10px;" src="images/dungeon_map_1.PNG"/>
-				<img class="dungeon-image" style="margin-left: 10px; margin-top: 10px;" src="images/dungeon_map_2.PNG"/>
-				<img class="dungeon-image" style="margin-left: 10px; margin-top: 10px;" src="images/dungeon_map_3.PNG"/>
-				<img class="dungeon-image" style="margin-top: 10px;" src="images/dungeon_map_4.PNG"/>
-				<img class="dungeon-image" style="margin-left: 10px; margin-top: 10px;" src="images/dungeon_map_5.PNG"/>
-				<img class="dungeon-image" style="margin-left: 10px; margin-top: 10px;" src="images/dungeon_map_6.PNG"/>
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+			I also created for the NPCs a script I called "Wander", which created determined, closed-loop paths that the NPCs would walk in around
+			the map. They're very short and concise, and the main purpose of adding these paths was to give some life to what would be an otherwise
+			"frozen" character. Like with the dialogue system, I designed it such that it can be re-used seamlessly with new NPCs, such that I can create
+			a new NPC, assign it a path like "left, up, right, down," and the NPC will immediately walk in the same path over and over again.
+			
+			</p>
+
+			<!-- Dialogue Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="dialogue-image" src="images/dialogue.gif"/>
 			</div>
-
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			From there, each of these map chunks has a set number of "mob spawners" on it, which will spawn a random number of mobs (within a range),
-			and randomly select which mobs to spawn, as well. The player can explore the different paths and encounter random assortments
-			of enemies to defeat.
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			</p>
-
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			It was definitely one of the more challenging goals to achieve for my game, but I really learned a ton while doing this, as I've never
-			done random generation like this before. I hope to build on this basic implementation of random map generation in the future, so I can
-			create more complex and winding maps :)
+			One of my favorite things to do in coding projects is put in those cosmetic changes that are neat, organized, and give the project life.
+			Which is probably why I like game design so much!
 			
 			</p>
-	
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+			
+			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -390,7 +351,10 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_6-19-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_current.html" class="col-sm botlink_left yellow-text" style="text-decoration: none;">
+					<-- Newer Post
+				</a>
+				<a href="blog_6-8-22.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
