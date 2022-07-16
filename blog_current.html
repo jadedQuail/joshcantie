@@ -221,10 +221,10 @@
 		
 		/* Specific blog post images */
 		
-		.dungeon-image {
-			height: 280px; 
-			width: 280px; 
-			border: 3px solid #3CAEA3;
+		.bomber-image {
+			height: 340px; 
+			width: 600px; 
+			border: 3px solid #ED553B;
 		}
 		
 		/* Small screen adjustments */
@@ -244,36 +244,18 @@
 			
 		}
 		
-		@media (max-width: 1316px) {
+		@media (max-width: 1116px) {
 		
-			.dungeon-image {
-				height: 220px; 
-				width: 220px; 
-				border: 3px solid #3CAEA3;
+			.bomber-image {
+				height: 251px; 
+				width: 400px; 
+				border: 3px solid #ED553B;
 			}
 		}
 		
-		@media (max-width: 1050px) {
-		
-			.dungeon-image {
-				height: 180px; 
-				width: 180px; 
-				border: 3px solid #3CAEA3;
-			}
-		}
-		
-		@media (max-width: 877px) {
-		
-			.dungeon-image {
-				height: 160px; 
-				width: 160px; 
-				border: 3px solid #3CAEA3;
-			}
-		}
-
-		@media (max-width: 785px) {
+		@media (max-width: 650px) {
 			
-			.dungeon-image {
+			.bomber-image {
 				visibility: hidden;
 			}
 
@@ -309,78 +291,88 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-blue container">
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Random Dungeon Generation
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						Variety in Enemies
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						July 2nd, 2022
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						July 16th, 2022
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-red">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Hello,
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			One of the new concepts I took a crack at with this game was doing some random dungeon generation. I relied heavily on a
-			
-			<a style="color: #3CAEA3;" href="https://www.youtube.com/watch?v=qAf9axsyijY"><u>video tutorial by Blackthornprod</u></a>
-			
-			, which broke down the nuts and bolts of random map generation very well. Basically, we start with a chunk of the map as our
-			centerpoint, which has four openings on it (up, down, left, right). Each of these openings has a "node" attached to it that will
-			select a random "map chunk" to be placed next to that opening, thus extending the map; the newly-generated map chunk then has its
-			own openings, which in turn have their own nodes, and thus the generation continues. The generation will stop once each path is
-			closed off, meaning that the last-generated map chunk has no extra openings that need to be closed.
+			Happy Saturday,
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			See below for some examples of dungeons that were generated in my game!
-			
-			</p>
-			
-			<!-- Dungeon Images - Flex -->
-			<div class="flex-container" style="text-align: center; margin-bottom: 43px;">
-				<img class="dungeon-image" style="margin-top: 10px;" src="images/dungeon_map_1.PNG"/>
-				<img class="dungeon-image" style="margin-left: 10px; margin-top: 10px;" src="images/dungeon_map_2.PNG"/>
-				<img class="dungeon-image" style="margin-left: 10px; margin-top: 10px;" src="images/dungeon_map_3.PNG"/>
-				<img class="dungeon-image" style="margin-top: 10px;" src="images/dungeon_map_4.PNG"/>
-				<img class="dungeon-image" style="margin-left: 10px; margin-top: 10px;" src="images/dungeon_map_5.PNG"/>
-				<img class="dungeon-image" style="margin-left: 10px; margin-top: 10px;" src="images/dungeon_map_6.PNG"/>
-			</div>
-
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			From there, each of these map chunks has a set number of "mob spawners" on it, which will spawn a random number of mobs (within a range),
-			and randomly select which mobs to spawn, as well. The player can explore the different paths and encounter random assortments
-			of enemies to defeat.
-			
-			</p>
-
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			It was definitely one of the more challenging goals to achieve for my game, but I really learned a ton while doing this, as I've never
-			done random generation like this before. I hope to build on this basic implementation of random map generation in the future, so I can
-			create more complex and winding maps :)
+			I initially started this game with the goal of "going further" with a personal project and seeing what it's like to make a "big" game
+			(in my world, at least &#128516;). One thing I was willing to sacrifice was "compelling combat" for the sake of "completing something," i.e.
+			I wanted to prioritize things like inventory, leveling-up, and random-generation first.
 			
 			</p>
 	
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			However! At some point I decided I got far enough with that and now I want the game to be <i>fun</i>. I really do think the difference
+			between an average game and a great game is the subtleties in the core gameplay loop. So I want to play around with what makes combat fun;
+			one effort to do that is by creating new and various types of enemies, so that combat doesn't feel boring or monotone.
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			I've introduced a variety of new enemies into my game. One is an enemy-type that I call a "trailer," where it produces a slime trail
+			behind it that is dangerous to the touch of the player. I've also created a "bomber" enemy that starts to "puff up" when you get in its
+			range, and then it will explode and inflict massive damange if you are still nearby (it's an homage to the 
+			
+			<a style="color: #ED553B;" href="https://en.wikipedia.org/wiki/Creeper_(Minecraft)"><u>Minecraft Creeper</u></a>
+			
+			).
+			
+			</p>
+						
+			<!-- Bomber Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="bomber-image" src="images/bomber.gif"/>
+			</div>
+				
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			I've also created what I call a "bounty" enemy, which is essentially <i>not</i> an enemy but instead a golden raccoon that has had too
+			much caffeine and runs around erratically. If you're quick enough, you can defeat it and it will drop big money &#128176; &#128176;.
+			(If you have qualms over the morality of killing a creature that isn't attacking you, then let's say in the official lore of the game,
+			these golden raccoons are trying to find children to steal lollipops from. Now you're obligated to stop them!)
+			
+			</p>
+			
+			<!-- Bounty Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="bomber-image" src="images/bounty.gif"/>
+			</div>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			I'm hoping to also create a boss enemy soon that is bigger, has more health, and has a variety of attacks. I'm hoping to learn a lot about
+			gameplay in the next few weeks, and hope to make my game as exciting as possible!
+			
+			</p>
+
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
 			</p>
+			
+			
 			
 		</div>
 		
@@ -390,7 +382,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_6-19-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_7-2-22.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
