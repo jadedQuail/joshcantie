@@ -218,15 +218,50 @@
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-		
+				
 		/* Specific blog post images */
 		
-		.specials-image {
-			height: 340px; 
-			width: 600px; 
-			border: 3px solid #F6D55C;
+		.thumbnail-outerbox {
+			width: 400px;
+			height: 400px;
+			margin: 10px;
+			border: 3px solid #3CAEA3;
+			border-radius: 8px;
+			text-align: center;
 		}
 		
+		.cell-title-blue {
+			color: #3CAEA3;
+			font-family: Lato;
+			text-align: center;
+			font-size: 25px;
+			margin-top: 10px;
+		}
+		
+		.cell-subtitle {
+			color: #9c9c9c;
+			font-family: Lato;
+			text-align: center;
+			font-size: 17px;
+		}
+		
+		.cell-text-blue {
+			color: #3CAEA3;
+			font-family: Lato;
+			text-align: left;
+			font-size: 20px;
+			margin: 10px;
+		}
+		
+		.blue-img {
+			border-radius: 8px;
+			border: 3px solid #3CAEA3;
+			margin-top: 10px;
+			overflow: hidden;
+			height: 162px; 
+			width: 271px;
+		}
+				
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
 			
@@ -241,21 +276,21 @@
 			.link-text {
 				font-size: 25px;
 			}
-			
 		}
-		
-		@media (max-width: 1116px) {
-		
-			.specials-image {
-				height: 251px; 
-				width: 400px; 
-				border: 3px solid #F6D55C;
+				
+		@media (max-width: 700px) {
+			
+			.thumbnail-outerbox {
+				width: 250px;
+				height: 250px;
 			}
-		}
-		
-		@media (max-width: 650px) {
 			
-			.specials-image {
+			.blue-img {
+				height: 100px; 
+				width: 167px;
+			}
+			
+			.cell-text-blue {
 				visibility: hidden;
 			}
 
@@ -291,82 +326,65 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-yellow container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						Boss Fights
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						Demo is Live!
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						July 31st, 2022
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						August 14th, 2022
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-blue">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
 			Hello!
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Happy to say that after a lot of experimentation, I now have a "boss" enemy to fight in my game. This is the first of what I am going
-			to call "Barons" in the game - they're bigger and tougher than standard enemies, and have different moves they'll use on the player.
-			This first baron is named Bluestreak, and he's a giant lizard (I named him after one of my favorite rollercoasters at Cedar Point 
-			&#128513;)
+			I finally have a demo of my game, ready to be played in your browser right now! Just click the image below here, and you'll be taken
+			to a link where you can give it a try. Hope you enjoy it, and feel free to provide any feedback you might have. &#128513
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			In addition to having a lot more health, a visible health bar, and a name tag, this enemy is also set apart by its special moves.
-			Basically, the enemy has a script that draws a random number every few seconds, and that number decides what attack the enemy will
-			do next - either a standard attack or one of his specials. His first special is a rotating laser beam - Bluestreak starts a charge-up
-			animation, which gives the player a little bit of time to prepare (e.g., run for his life), and then Bluestreak will blast out four lasers.
-			As you can see below, it pretty much melts the player's health bar, so the best move is to bail.
-			
-			</p>
-						
-			<!-- Laser Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="specials-image" src="images/laser.gif"/>
-			</div>
-				
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			Bluestreak's other move is to power himself up and charge at the player, where damage is dealt upon impact. Like with the laser, a few
-			seconds of animation gives the player the ability to get out of the way. With both of these specials, I intend to give the player a good
-			feeling of "ebb and flow" with boss battles, i.e. there's a time to attack and a time to retreat. I think it makes for fun, stimulating
-			gameplay.
-			
-			</p>
-			
-			<!-- Charge Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="specials-image" src="images/charge.gif"/>
+			<!-- Link to SSC demo -->
+			<div style="display: table; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
+				<div class="thumbnail-outerbox">
+					<div class="cell-title-blue">Shinobi SunClan Demo</div>
+					<div class="cell-subtitle">2D Game</div>
+					<a href=https://jadedquail.github.io/demotwo/><img class="blue-img" src="images/ssc_portfolio_thumbnail.PNG"/></a>
+					<div class="cell-text-blue">Demo for my longterm 2D RPG, which focuses on combat in randomly-generated dungeons.</div>
+				</div>
 			</div>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Now that I have more variety in enemies, I think I want to touch up the game and create a demo for it that people can download and play.
-			First, I'll need to play-test it a bit and settle on some proper attack, buff, and defense values for the player and the enemies (thus far,
-			I've been throwing random-ish numbers out to get something going). I've never balanced a game before with so many different values, but this
-			is really an essential part of many games and I'm looking forward to this experience.
+			You can also access this demo from the "Portfolio" page of this site at any time. This is the first time I tried creating a WebGL build,
+			and I think it's a much, much better way to put games out there for people to see. I am going to spend some time making WebGL versions
+			of all my other games as well, so they're more easily accessible.
 			
 			</p>
-
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			As always, I will continue to work on this game to make new features and squash bugs. Stay tuned as well for a new side project I'm
+			working on as well; hope you like fishing! &#127907;
+			
+			</p>
+																
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
 			</p>
-			
-			
-			
+
 		</div>
 		
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -375,7 +393,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_7-16-22.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				<a href="blog_7-31-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
