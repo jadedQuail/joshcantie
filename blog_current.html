@@ -221,47 +221,12 @@
 				
 		/* Specific blog post images */
 		
-		.thumbnail-outerbox {
-			width: 400px;
-			height: 400px;
-			margin: 10px;
-			border: 3px solid #3CAEA3;
-			border-radius: 8px;
-			text-align: center;
+		.fishing-image {
+			height: 340px; 
+			width: 600px; 
+			border: 3px solid #ED553B;
 		}
 		
-		.cell-title-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: center;
-			font-size: 25px;
-			margin-top: 10px;
-		}
-		
-		.cell-subtitle {
-			color: #9c9c9c;
-			font-family: Lato;
-			text-align: center;
-			font-size: 17px;
-		}
-		
-		.cell-text-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-			margin: 10px;
-		}
-		
-		.blue-img {
-			border-radius: 8px;
-			border: 3px solid #3CAEA3;
-			margin-top: 10px;
-			overflow: hidden;
-			height: 162px; 
-			width: 271px;
-		}
-				
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
 			
@@ -276,21 +241,21 @@
 			.link-text {
 				font-size: 25px;
 			}
+			
 		}
-				
-		@media (max-width: 700px) {
-			
-			.thumbnail-outerbox {
-				width: 250px;
-				height: 250px;
+		
+		@media (max-width: 1116px) {
+		
+			.fishing-image {
+				height: 251px; 
+				width: 400px; 
+				border: 3px solid #ED553B;
 			}
+		}
+		
+		@media (max-width: 650px) {
 			
-			.blue-img {
-				height: 100px; 
-				width: 167px;
-			}
-			
-			.cell-text-blue {
+			.fishing-image {
 				visibility: hidden;
 			}
 
@@ -326,60 +291,64 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-blue container">
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Demo is Live!
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						Side Project: Fishing Game &#127907;
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						August 14th, 2022
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						September 2nd, 2022
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-red">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Hello!
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			I finally have a demo of my game, ready to be played in your browser right now! Just click the image below here, and you'll be taken
-			to a link where you can give it a try. Hope you enjoy it, and feel free to provide any feedback you might have. &#128513
+			Hello hello!
 			
 			</p>
 			
-			<!-- Link to SSC demo -->
-			<div style="display: table; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
-				<div class="thumbnail-outerbox">
-					<div class="cell-title-blue">Shinobi SunClan Demo</div>
-					<div class="cell-subtitle">2D Game</div>
-					<a href="builds/shinobi_demo/game.html"><img class="blue-img" src="images/ssc_portfolio_thumbnail.PNG"/></a>
-					<div class="cell-text-blue">Demo for my longterm 2D RPG, which focuses on combat in randomly-generated dungeons.</div>
-				</div>
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			I'm pretty ecstatic to be at a place where I have a working demo for my main 2D game that I've been working on. It's pretty satisfying
+			to see all my hard work over the past year materialize into something that is playable - though I've got a lot of work to do, still!
+			To give myself a little bit of a break (but believe me, I will be working on this more very soon), I have decided to create a little
+			fishing-game side project.
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			I am a big fan of action and adventure games, but I would truly be lost if I didn't have my social simulation games - Animal Crossing,
+			Stardew Valley, and the Sims are some of my favorite games to play. I wanted to try my hand at a little fishing game, using a  
+			
+			<a style="color: #ED553B;" href="https://shubibubi.itch.io/cozy-fishing" target="_blank" rel="noopener noreferrer"><u>very awesome 2D asset pack</u></a>
+			
+			created by shubibubi on itch.io. This one is going to be much smaller in scope; I really just want to create a crisp, satisfying 
+			game where you toss your rod into the water and pull back a fish &#128522; I've already gotten my player moving and throwing the rod in a 
+			pretty clean and satisfying way, as you can see below.
+			
+			</p>
+									
+			<!-- Fishing Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="fishing-image" src="images/fishing.gif"/>
 			</div>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			You can also access this demo from the "Portfolio" page of this site at any time. This is the first time I tried creating a WebGL build,
-			and I think it's a much, much better way to put games out there for people to see. I am going to spend some time making WebGL versions
-			of all my other games as well, so they're more easily accessible.
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			As always, I will continue to work on this game to make new features and squash bugs. Stay tuned as well for a new side project I'm
-			working on as well; hope you like fishing! &#127907;
+			I'm taking this time, too, as an opportunity to implement what I've learned having worked on a bigger game over the past year. I've been more
+			conscious about how I'm laying the groundwork for this next game; specifically, I want to make sure I'm setting myself up to write more efficient
+			code. That means relying less on multiple "GetComponent<>" calls and calls that are occurring every frame in Update() when they should be only
+			occurring once. I think it's going well so far and it's cool to put some new lessons into action.
 			
 			</p>
-																
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+																			
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -393,7 +362,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_7-31-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_8-14-22.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>

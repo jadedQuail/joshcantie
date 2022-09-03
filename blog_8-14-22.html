@@ -204,6 +204,7 @@
 		
 		.yellow-text:hover {
 			color: #bda346;
+			color: #bda346;
 			transition: color 0.2s;
 		}
 		
@@ -212,21 +213,55 @@
 			transition: color 0.2s;
 		}
 		
+		.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+				
 		/* Specific blog post images */
 		
-		.weapons-gif {
-			height: 376px; 
-			width: 600px; 
-			border: 3px solid #ED553B;
+		.thumbnail-outerbox {
+			width: 400px;
+			height: 400px;
+			margin: 10px;
+			border: 3px solid #3CAEA3;
+			border-radius: 8px;
+			text-align: center;
 		}
 		
-		.networking-img {
-			height: 432px; 
-			width: 800px; 
-			border: 3px solid #ED553B;
+		.cell-title-blue {
+			color: #3CAEA3;
+			font-family: Lato;
+			text-align: center;
+			font-size: 25px;
+			margin-top: 10px;
 		}
 		
+		.cell-subtitle {
+			color: #9c9c9c;
+			font-family: Lato;
+			text-align: center;
+			font-size: 17px;
+		}
 		
+		.cell-text-blue {
+			color: #3CAEA3;
+			font-family: Lato;
+			text-align: left;
+			font-size: 20px;
+			margin: 10px;
+		}
+		
+		.blue-img {
+			border-radius: 8px;
+			border: 3px solid #3CAEA3;
+			margin-top: 10px;
+			overflow: hidden;
+			height: 162px; 
+			width: 271px;
+		}
+				
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
 			
@@ -241,34 +276,24 @@
 			.link-text {
 				font-size: 25px;
 			}
-			
 		}
-		
-		@media (max-width: 1211px) {
-					
-			.weapons-gif {
-				height: 251px; 
-				width: 400px; 
-				border: 3px solid #ED553B;
+				
+		@media (max-width: 700px) {
+			
+			.thumbnail-outerbox {
+				width: 250px;
+				height: 250px;
 			}
 			
-			.networking-img {
-				height: 324px; 
-				width: 600px; 
-				border: 3px solid #ED553B;
+			.blue-img {
+				height: 100px; 
+				width: 167px;
+			}
+			
+			.cell-text-blue {
+				visibility: hidden;
 			}
 
-		}
-		
-		@media (max-width: 937px) {
-			
-			.weapons-gif {
-				visibility: hidden;
-			}
-			
-			.networking-img {
-				visibility: hidden;
-			}
 		}
 		
 	</style>
@@ -301,78 +326,65 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-red container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
-						Networking and Inventory System
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						Demo is Live!
 					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						August 27th, 2020
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						August 14th, 2022
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-red">
+			<hr class="line-blue">
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Over the last few weeks I have been working on a few things, mainly a new inventory system for my Unity game and a new class on 
-			
-			<a style="color: #ED553B;" href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer"><u>Udemy</u></a>.
-				
-			I have also been playing a lot of 
-			
-			<a style="color: #ED553B;" href="https://fallguys.com/" target="_blank" rel="noopener noreferrer"><u>Fall Guys</u></a>.
-			
-			I really missed the simple joy of playing Mario Party 6 at my friend's house after school as a kid, and I'm glad
-			that Mediatonic was able to capture that again!
+			Hello!
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			In my Unity project, I have managed to create an inventory system where the player can pause, open an inventory menu, and then click the picture of the
-			weapon they would like to use. I also went into Blender and made some new weapons, such as an axe and a club (right now I can manage hopping on Blender and
-			making a few simple assets, but I definitely need to pick a time to really become proficient in modelling like I was on Autodesk Maya). The hardest part
-			of this whole process was actually finding a way to pause every moving entity in the scene whenever the player pressed pause, but luckily I found a way!
+			I finally have a demo of my game, ready to be played in your browser right now! Just click the image below here, and you'll be taken
+			to a link where you can give it a try. Hope you enjoy it, and feel free to provide any feedback you might have. &#128513
 			
 			</p>
 			
-			<!-- Weapons Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="weapons-gif" src="images/weapons.gif"/>
+			<!-- Link to SSC demo -->
+			<div style="display: table; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
+				<div class="thumbnail-outerbox">
+					<div class="cell-title-blue">Shinobi SunClan Demo</div>
+					<div class="cell-subtitle">2D Game</div>
+					<a href="builds/shinobi_demo/game.html"><img class="blue-img" src="images/ssc_portfolio_thumbnail.PNG"/></a>
+					<div class="cell-text-blue">Demo for my longterm 2D RPG, which focuses on combat in randomly-generated dungeons.</div>
+				</div>
 			</div>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			I've also become more interested in understanding how networks work; I realized that I only have a surface-level understanding of how things like routers and IP addresses
-			work. So I went ahead and purchased a course on networking created by
-			
-			<a style="color: #ED553B;" href="https://davidbombal.com/" target="_blank" rel="noopener noreferrer"><u>David Bombal</u></a>.
-				
-			I've only just begun and I've already learned a lot about topics such as reading binary, IP subnetting, and broadcast/collision domains. I've also gotten some experience
-			using
-						
-			<a style="color: #ED553B;" href="https://www.netacad.com/courses/packet-tracer" target="_blank" rel="noopener noreferrer"><u>Cisco Packet Tracer</u></a>,
-				
-			a network simulation tool that lets you get hands-on experience and apply everything you learn about networking. It's really an area that I didn't know much about,
-			so I'm excited to continue learning.
+			You can also access this demo from the "Portfolio" page of this site at any time. This is the first time I tried creating a WebGL build,
+			and I think it's a much, much better way to put games out there for people to see. I am going to spend some time making WebGL versions
+			of all my other games as well, so they're more easily accessible.
 			
 			</p>
 			
-			<!-- Weapons Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="networking-img" src="images/networking.PNG"/>
-			</div>
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
+			As always, I will continue to work on this game to make new features and squash bugs. Stay tuned as well for a new side project I'm
+			working on as well; hope you like fishing! &#127907;
+			
+			</p>
+																
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
 			</p>
-			
+
 		</div>
 		
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -381,10 +393,10 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_9-1-20.html" class="col-sm botlink_left red-text" style="text-decoration: none;">
+				<a href="blog_current.html" class="col-sm botlink_left blue-text" style="text-decoration: none;">
 					<-- Newer Post
 				</a>
-				<a href="blog_8-9-20.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
+				<a href="blog_7-31-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>

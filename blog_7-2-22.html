@@ -334,9 +334,9 @@
 			
 			One of the new concepts I took a crack at with this game was doing some random dungeon generation. I relied heavily on a
 			
-			<a style="color: #3CAEA3;" href="https://www.youtube.com/watch?v=qAf9axsyijY"><u>video tutorial by Blackthornprod</u></a>
+			<a style="color: #3CAEA3;" href="https://www.youtube.com/watch?v=qAf9axsyijY" target="_blank" rel="noopener noreferrer"><u>video tutorial by Blackthornprod</u></a>,
 			
-			, which broke down the nuts and bolts of random map generation very well. Basically, we start with a chunk of the map as our
+			which broke down the nuts and bolts of random map generation very well. Basically, we start with a chunk of the map as our
 			centerpoint, which has four openings on it (up, down, left, right). Each of these openings has a "node" attached to it that will
 			select a random "map chunk" to be placed next to that opening, thus extending the map; the newly-generated map chunk then has its
 			own openings, which in turn have their own nodes, and thus the generation continues. The generation will stop once each path is
