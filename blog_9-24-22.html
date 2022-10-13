@@ -42,26 +42,13 @@
 			font-size: 65px;
 		}
 		
-		.archive-text-yellow {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: center;
-			font-size: 40px;
-		}
-		
-		.archive-text-red {
+		.description {
 			color: #ED553B;
 			font-family: Lato;
 			text-align: center;
-			font-size: 40px;
+			font-size: 25px;
 		}
-
-		.archive-text-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: center;
-			font-size: 40px;
-		}
+			
 			
 		.top {
 			margin-top: 70px;
@@ -126,11 +113,6 @@
 		.email:hover{
 			color: #9e3a29;
 			transition: color 0.2s;
-		}
-		
-		.archive-container {
-			margin-top: 60px;
-			width: 70%;
 		}
 		
 		.post-red {
@@ -222,22 +204,8 @@
 		
 		.yellow-text:hover {
 			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.archive-text-yellow:hover {
 			color: #bda346;
-			transition: color 0.2s;		
-		}
-		
-		.archive-text-red:hover {
-			color: #9e3a29;
-			transition: color 0.2s;		
-		}
-		
-		.archive-text-blue:hover {
-			color: #2a7d75;
-			transition: color 0.2s;		
+			transition: color 0.2s;
 		}
 		
 		.blue-text:hover {
@@ -245,20 +213,19 @@
 			transition: color 0.2s;
 		}
 		
+		.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+				
 		/* Specific blog post images */
 		
-		.speedboost-gif {
-			height: 377px; 
+		.catching-image {
+			height: 340px; 
 			width: 600px; 
 			border: 3px solid #F6D55C;
 		}
-		
-		.niceshot-gif {
-			height: 338px; 
-			width: 600px; 
-			border: 3px solid #F6D55C;
-		}
-		
 		
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
@@ -278,15 +245,9 @@
 		}
 		
 		@media (max-width: 1116px) {
-					
-			.speedboost-gif {
+		
+			.catching-image {
 				height: 251px; 
-				width: 400px; 
-				border: 3px solid #F6D55C;
-			}
-			
-			.niceshot-gif {
-				height: 225px; 
 				width: 400px; 
 				border: 3px solid #F6D55C;
 			}
@@ -294,13 +255,10 @@
 		
 		@media (max-width: 650px) {
 			
-			.speedboost-gif {
+			.catching-image {
 				visibility: hidden;
 			}
-			
-			.niceshot-gif {
-				visibility: hidden;
-			}
+
 		}
 		
 	</style>
@@ -325,111 +283,80 @@
 		
 		<!-- Title -->
 		<div class="top">
-			<div class="header d-none d-sm-block">Blog Archive</div>
+			<div class="header d-none d-sm-block">Josh's Blog</div>
+			<div class="description d-none d-sm-block">Things I did on my computer and more.</div>
+			<a class="description d-none d-sm-block" style="color: #F6D55C;" href="archive.html">Blog Archive</a>
 		</div>
 				
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		<div class="container archive-container">
+		
+		<!-- Post 1 -->
+		<div class="post-yellow container">
+		
+			<div>
+				<div class="row">
+					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
+						Fishing Game Updates
+					</div>
+					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						September 24th, 2022
+					</div>
+				</div>
+			</div>
+			
+			<hr class="line-yellow">
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+			Happy Fall!
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+			Just poppin' in for a quick update, as I'm currently hard at work on this game, school, and work. I've gotten a lot done since my last
+			post, and most importantly, we're at a spot in this fishing game where you can cast your line, hook a fish, and it will fly back to you
+			when you reel in! I had a lot of experience from my last game with spawn random items, so it came in handy when implementing random fish.
+			
+			</p>
 
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_current.html">Blog 10/12/22</a>
-			</p>		
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+			A new thing I learned here was how to use a little bit of physics to get the fish to fly out of the water and land on the player's head.
+			I wanted to make sure that the fish would pop out of the water at a reasonable speed, and also fly out in an "arc" motion, which looks
+			a lot more natural than the fish beelining up above the player. Overall, I am happy with how it looks, and I'm satisfied to see how much
+			quicker making this mini-project has been based on the experience I've gained in the last year or two.
+			
+			</p>
+									
+			<!-- Catching Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="catching-image" src="images/catching.gif"/>
+			</div>
+										
+			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+			
+			--Josh
+			
+			</p>
 
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_9-24-22.html">Blog 09/24/22</a>
-			</p>
-
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_9-02-22.html">Blog 09/02/22</a>
-			</p>
-
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_8-14-22.html">Blog 08/14/22</a>
-			</p>		
-
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_7-31-22.html">Blog 07/31/22</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_7-16-22.html">Blog 07/16/22</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_7-2-22.html">Blog 07/02/22</a>
-			</p>	
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_6-19-22.html">Blog 06/19/22</a>
-			</p>	
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_6-8-22.html">Blog 06/08/22</a>
-			</p>		
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_5-18-22.html">Blog 05/18/22</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_5-3-22.html">Blog 05/03/22</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_3-21-21.html">Blog 03/21/21</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_3-4-21.html">Blog 03/04/21</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_2-28-21.html">Blog 02/28/21</a>
-			</p>
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_1-17-21.html">Blog 01/17/21</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_9-13-20.html">Blog 09/13/20</a>
-			</p>
-		
-		
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_9-1-20.html">Blog 09/01/20</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_8-27-20.html">Blog 08/27/20</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_8-9-20.html">Blog 08/09/20</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_8-6-20.html">Blog 08/06/20</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_7-13-20.html">Blog 07/13/20</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-blue" style="text-decoration: none;" href="blog_7-7-20.html">Blog 07/07/20</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-yellow" style="text-decoration: none;" href="blog_6-27-20.html">Blog 06/27/20</a>
-			</p>
-			
-			<p style="text-align: center; padding-right: 30px; padding-left: 30px;">
-				<a class="archive-text-red" style="text-decoration: none;" href="blog_6-23-20.html">Blog 06/23/20</a>
-			</p>
-			
 		</div>
 		
+		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!-- Navigate to other posts -->
+		
+		<div class="container" style="margin-top: 50px;">
+			<div class="row">
+				<a href="blog_current.html" class="col-sm botlink_left yellow-text" style="text-decoration: none;">
+					<-- Newer Post
+				</a>
+				<a href="blog_9-02-22.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+					Older Post -->
+				</a>
+			</div>
+		</div>
+				
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 				
 		<!-- Footer -->

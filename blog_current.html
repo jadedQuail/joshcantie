@@ -220,12 +220,52 @@
 		}
 				
 		/* Specific blog post images */
+		/* Specific blog post images */
 		
-		.catching-image {
-			height: 340px; 
-			width: 600px; 
-			border: 3px solid #F6D55C;
+		.thumbnail-outerbox {
+			width: 400px;
+			height: 400px;
+			margin: 10px;
+			border: 3px solid #3CAEA3;
+			border-radius: 8px;
+			text-align: center;
 		}
+		
+		.cell-title-blue {
+			color: #3CAEA3;
+			font-family: Lato;
+			text-align: center;
+			font-size: 25px;
+			margin-top: 10px;
+		}
+		
+		.cell-subtitle {
+			color: #9c9c9c;
+			font-family: Lato;
+			text-align: center;
+			font-size: 17px;
+		}
+		
+		.cell-text-blue {
+			color: #3CAEA3;
+			font-family: Lato;
+			text-align: left;
+			font-size: 20px;
+			margin: 10px;
+		}
+		
+		.blue-img {
+			border-radius: 8px;
+			border: 3px solid #3CAEA3;
+			margin-top: 10px;
+			overflow: hidden;
+			height: 162px; 
+			width: 271px;
+		}
+				
+		.blue-img:hover {
+			opacity: 0.7;
+		}		
 		
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
@@ -241,21 +281,21 @@
 			.link-text {
 				font-size: 25px;
 			}
-			
 		}
-		
-		@media (max-width: 1116px) {
-		
-			.catching-image {
-				height: 251px; 
-				width: 400px; 
-				border: 3px solid #F6D55C;
+				
+		@media (max-width: 700px) {
+			
+			.thumbnail-outerbox {
+				width: 250px;
+				height: 250px;
 			}
-		}
-		
-		@media (max-width: 650px) {
 			
-			.catching-image {
+			.blue-img {
+				height: 100px; 
+				width: 167px;
+			}
+			
+			.cell-text-blue {
 				visibility: hidden;
 			}
 
@@ -291,50 +331,61 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-yellow container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						Fishing Game Updates
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						Fishing Village is Complete!
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						September 24th, 2022
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						October 12th, 2022
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-blue">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Happy Fall!
+			Hello!
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Just poppin' in for a quick update, as I'm currently hard at work on this game, school, and work. I've gotten a lot done since my last
-			post, and most importantly, we're at a spot in this fishing game where you can cast your line, hook a fish, and it will fly back to you
-			when you reel in! I had a lot of experience from my last game with spawn random items, so it came in handy when implementing random fish.
+			Very happy to say that I am finished with my fishing game, which is called Fishing Village. The game is as the title advertises, it's a
+			village in which you fish. Have a ball! See if you can catch every species.
 			
 			</p>
 
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			A new thing I learned here was how to use a little bit of physics to get the fish to fly out of the water and land on the player's head.
-			I wanted to make sure that the fish would pop out of the water at a reasonable speed, and also fly out in an "arc" motion, which looks
-			a lot more natural than the fish beelining up above the player. Overall, I am happy with how it looks, and I'm satisfied to see how much
-			quicker making this mini-project has been based on the experience I've gained in the last year or two.
+			In terms of personal growth, I explored a few new concepts with this game, one of which was implementing a little bit of physics, which
+			you can see when you catch a fish (it flies out at the player as a projectile with an arc). I also got to play more with probabilities 
+			and spawn rates, and I especially firmed up my grasp on how weighted probabilities can be implemented in Unity. The thing I'm most proud 
+			of with this game, however, is that I made it in only 2 months, and my scripting definitely stepped up in terms of efficiency. It's 
+			really satisfying to be able to put together a fun little polished game so quickly!
 			
 			</p>
-									
-			<!-- Catching Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="catching-image" src="images/catching.gif"/>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			If you'd like to play the game in your browser, please click the picture link below, or check out the "Portfolio" tab on this site.
+			
+			</p>
+			
+			<!-- Link to Vault Crawl demo -->
+			<div style="display: table; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
+				<div class="thumbnail-outerbox">
+					<div class="cell-title-blue">Fishing Village</div>
+					<div class="cell-subtitle">2D Game</div>
+					<a href="builds/fishing_village/game.html"><img class="blue-img" src="images/fish_thumbnail.png"/></a>
+					<div class="cell-text-blue">A game about a happy little fishing village. Can you catch all the different species the town has to offer?</div>
+				</div>
 			</div>
-										
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+																			
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -348,7 +399,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_9-02-22.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				<a href="blog_9-24-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
