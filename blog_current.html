@@ -221,12 +221,12 @@
 				
 		/* Specific blog post images */
 		
-		.fps-image {
+		.fps_gifs {
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #F6D55C;
+			border: 3px solid #3CAEA3;
 		}
-		
+			
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
 			
@@ -246,16 +246,16 @@
 		
 		@media (max-width: 1116px) {
 		
-			.fps-image {
+			.fps_gifs {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #F6D55C;
+				border: 3px solid #3CAEA3;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-			.fps-image {
+			.fps_gifs {
 				visibility: hidden;
 			}
 
@@ -291,59 +291,74 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-yellow container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						Starting on my FPS
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						Recoil and Particle Effects
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						December 5th, 2022
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						December 29th, 2022
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-blue">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Hello,
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			Sorry for such a long delay in posts! I've not had as much time in the last month for a few reasons, such as preparing for a final
-			exam, holidays, and my second go-around with Covid-19. But, with a lot of that stuff behind me, I have some more time to work on
-			this FPS game.
+			Hi Again,
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Honestly, I am definitely realizing that I am a lot more comfortable with 2D development than I am with 3D development. As I've been
-			getting started here with getting a character moving, I'm truly starting to come to terms with just how involved 3D game physics are
-			(and how subtle changes can make a huge difference). While I still have lots to learn, I was able to play with the gravity for my
-			character so that it feels a little more natural, i.e the player will "plummet" faster at the bottom of their jump's arc.
+			The number one thing I've learned in the last month is that I really don't know much about 3D game development! I feel like I've
+			been spending a lot of time in the
 			
-			</p>
+			<a style="color: #3CAEA3;" href="https://commons.wikimedia.org/wiki/File:Dunning%E2%80%93Kruger_Effect_01.svg" target="_blank" rel="noopener noreferrer"><u>"Valley of Despair" of the Dunning-Kruger Effect chart</u></a>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			I found a few great asset packs to work with, too (it still never ceases to amaze me how many cheap or free assets exist out there
-			to play with). Right now I want to get some basics down for the player, such as a gun that fires properly and feels like it has a little
-			life to it, and then I will try to detail and polish those areas. For now, though, I definitely feel like I've picked a project that is
-			pretty exciting for me and offers a lot for me to learn.
+			. It was a little disappointing at first, and made me feel like I hadn't learned much in my last few years of game development. But
+			that's not true, and I snapped out of it pretty quickly.
 			
 			</p>
-						
-			<!-- FPS Gif -->
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			With my FPS game, I've been focusing on making the gun feel good. I've managed to implement aiming down sights, recoil, and particle effects 
+			(sparks) for when bullets hit a target. I've also added bullet holes that appear on hit surfaces, and hitmarkers for when bullets hit targets.
+			
+			</p>
+							
+			<!-- Recoil Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="fps-image" src="images/fps_hopping.gif"/>
+				<img class="fps_gifs" src="images/recoil.gif"/>
 			</div>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			Recoil was the hardest thing for me to get right, and I learned a lot about game physics in doing so. Right now, the "up and down" motion
+			of the player's view is controlled by the mouse, which moves the camera up and down. The "left and right" motion is also controlled by the mouse,
+			but that actually moves the <i>player</i> itself versus just the camera. For recoil, I had to add a force that factors in to this up/down and
+			left/right movement; so the mouse controls where the player looks, but the firing weapon also pushes the camera up a little more and the player
+			left and right a little more, which creates a recoil effect. Additionally, I have the gun itself move backwards slightly when the weapon is fired,
+			and then it is immediately pulled back to its local position relative to the player, thus creating a "back and forth" movement of the weapon.
+			
+			</p>		
+			
+			<!-- Hitmarker Gif -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="fps_gifs" src="images/hitmarker.gif"/>
+			</div>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			Learned a lot, but have a lot more to go!
+			
+			</p>				
 																		
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -357,7 +372,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_11-05-22.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				<a href="blog_12-05-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
