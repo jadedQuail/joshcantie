@@ -221,10 +221,10 @@
 				
 		/* Specific blog post images */
 		
-		.fps_gifs {
+		.handling_gif {
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #3CAEA3;
+			border: 3px solid #ED553B;
 		}
 			
 		/* Small screen adjustments */
@@ -246,16 +246,16 @@
 		
 		@media (max-width: 1116px) {
 		
-			.fps_gifs {
+			.handling_gif {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #3CAEA3;
+				border: 3px solid #ED553B;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-			.fps_gifs {
+			.handling_gif {
 				visibility: hidden;
 			}
 
@@ -291,74 +291,72 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-blue container">
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Recoil and Particle Effects
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						Weapon Handling 101
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						December 29th, 2022
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						Janaury 14th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-red">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Hi Again,
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			The number one thing I've learned in the last month is that I really don't know much about 3D game development! I feel like I've
-			been spending a lot of time in the
-			
-			<a style="color: #3CAEA3;" href="https://commons.wikimedia.org/wiki/File:Dunning%E2%80%93Kruger_Effect_01.svg" target="_blank" rel="noopener noreferrer"><u>"Valley of Despair" of the Dunning-Kruger Effect chart</u></a>
-			
-			. It was a little disappointing at first, and made me feel like I hadn't learned much in my last few years of game development. But
-			that's not true, and I snapped out of it pretty quickly.
+			Happy New Year,
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			With my FPS game, I've been focusing on making the gun feel good. I've managed to implement aiming down sights, recoil, and particle effects 
-			(sparks) for when bullets hit a target. I've also added bullet holes that appear on hit surfaces, and hitmarkers for when bullets hit targets.
+			Spent most of my time over the last few weeks improving how the gun handles for the player. I created animations for what the gun
+			does when the player is reloading or running. At first I was worried that I wasn't going to be able to make compelling animations,
+			but I found that it's pretty easy to get a simple reload or "weapon bob" animation created, and I'm pretty pleased with the results.
 			
 			</p>
-							
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			The running and reloading are done with animations, but I decided that for the player "lowering his gun" when approaching a wall,
+			I would instead lerp the rotation of the weapon. I used a 
+			
+			<a style="color: #ED553B;" href="https://www.youtube.com/watch?v=bax-xjlfMPs" target="_blank" rel="noopener noreferrer"><u>great tutorial by BuffaLou</u></a>
+			
+			as a starting point, and I was able to make the adjustments needed to fit my vision for this game. Between these different animations
+			and mechanisms, it took me a good bit of thinking to figure out how to properly trigger each one - i.e. handling things like "you
+			shouldn't be able to shoot while near a wall" and "you should cancel your reload if you start running during the animation". I'm pretty
+			happy with where it's at now, and I think I've laid solid groundwork to move on to other parts of the game.
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			Speaking of other parts, I have a shootable NPC in my game, which I got from the
+			
+			<a style="color: #ED553B;" href="https://assetstore.unity.com/packages/3d/characters/humanoids/low-poly-animated-people-156748" target="_blank" rel="noopener noreferrer"><u>Low Poly Animated People pack by polyperfect</u></a>
+			
+			. As you can see below, you can now shoot and kill Santa in my video game. I plan on building on this affront to Christmas by
+			playing around with the other characters in this pack, and hopefully will get some basic enemies and levels designed soon.
+			
+			</p>			
+										
 			<!-- Recoil Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="fps_gifs" src="images/recoil.gif"/>
-			</div>
+				<img class="handling_gif" src="images/handling.gif"/>
+			</div>			
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Recoil was the hardest thing for me to get right, and I learned a lot about game physics in doing so. Right now, the "up and down" motion
-			of the player's view is controlled by the mouse, which moves the camera up and down. The "left and right" motion is also controlled by the mouse,
-			but that actually moves the <i>player</i> itself versus just the camera. For recoil, I had to add a force that factors in to this up/down and
-			left/right movement; so the mouse controls where the player looks, but the firing weapon also pushes the camera up a little more and the player
-			left and right a little more, which creates a recoil effect. Additionally, I have the gun itself move backwards slightly when the weapon is fired,
-			and then it is immediately pulled back to its local position relative to the player, thus creating a "back and forth" movement of the weapon.
+			Stay tuned!
 			
-			</p>		
-			
-			<!-- Hitmarker Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="fps_gifs" src="images/hitmarker.gif"/>
-			</div>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			Learned a lot, but have a lot more to go!
-			
-			</p>				
+			</p>
 																		
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -372,7 +370,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_12-05-22.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_12-29-22.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
