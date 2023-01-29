@@ -221,10 +221,10 @@
 				
 		/* Specific blog post images */
 		
-		.handling_gif {
+		.enemy_demo_vid {
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #ED553B;
+			border: 3px solid #F6D55C;
 		}
 			
 		/* Small screen adjustments */
@@ -246,16 +246,16 @@
 		
 		@media (max-width: 1116px) {
 		
-			.handling_gif {
+			.enemy_demo_vid {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #ED553B;
+				border: 3px solid #F6D55C;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-			.handling_gif {
+			.enemy_demo_vid {
 				visibility: hidden;
 			}
 
@@ -291,72 +291,74 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-red container">
+		<div class="post-yellow container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
-						Weapon Handling 101
+					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
+						Gun Sounds and Enemy AI
 					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						Janaury 14th, 2023
+					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						Janaury 29th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-red">
+			<hr class="line-yellow">
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			Happy New Year,
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			Spent most of my time over the last few weeks improving how the gun handles for the player. I created animations for what the gun
-			does when the player is reloading or running. At first I was worried that I wasn't going to be able to make compelling animations,
-			but I found that it's pretty easy to get a simple reload or "weapon bob" animation created, and I'm pretty pleased with the results.
+			Hello,
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			The running and reloading are done with animations, but I decided that for the player "lowering his gun" when approaching a wall,
-			I would instead lerp the rotation of the weapon. I used a 
+			Since my last post, I have worked on two things: giving the weapons sound, and laying the groundwork to have functioning and responsive
+			enemies. The gun sounds were actually pretty easy to implement (though I think I did something quite basic). I found a 
 			
-			<a style="color: #ED553B;" href="https://www.youtube.com/watch?v=bax-xjlfMPs" target="_blank" rel="noopener noreferrer"><u>great tutorial by BuffaLou</u></a>
+			<a style="color: #F6D55C;" href="https://assetstore.unity.com/packages/audio/sound-fx/weapons/gun-sound-pack-59420" target="_blank" rel="noopener noreferrer"><u>weapon sounds pack</u></a>
 			
-			as a starting point, and I was able to make the adjustments needed to fit my vision for this game. Between these different animations
-			and mechanisms, it took me a good bit of thinking to figure out how to properly trigger each one - i.e. handling things like "you
-			shouldn't be able to shoot while near a wall" and "you should cancel your reload if you start running during the animation". I'm pretty
-			happy with where it's at now, and I think I've laid solid groundwork to move on to other parts of the game.
+			on the Unity Asset Store, and from there it was pretty easy to have these sounds trigger when the player fires their gun, reloads their
+			weapon, etc.
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+			The harder project of the two was to get started on the enemy AI. This is an area that I'm not very familiar with; even in my 2D games,
+			my enemies move and interract with the player in a pretty basic way. One of my favorite tutorialists on YouTube for Unity games is
+			
+			<a style="color: #F6D55C;" href="https://www.youtube.com/@TheKiwiCoder" target="_blank" rel="noopener noreferrer"><u>TheKiwiCoder</u></a>
+
+			who I think has content that is great for "bridging the gap" between being a beginner and an advanced game developer. Specifically, I'm
+			very heavily following his
+			
+			<a style="color: #F6D55C;" href="https://www.youtube.com/playlist?list=PLyBYG1JGBcd009lc1ZfX9ZN5oVUW7AFVy" target="_blank" rel="noopener noreferrer"><u>AI series</u></a>
+			
+			, which is helping teach me about AI states, state machines, NavMeshes and agents, advanced character models and rigs, and more. I had
+			to stop more than a couple of times along the way to learn about new concepts before I could continue his tutorials - things such as
+			enums, interfaces, null conditional operators, scriptable objects, structs - but overall it's been very productive for me and I'm
+			learning an absolute <i>ton</i> about scripting. Specifically, I have a better handle on interfaces and state machines in Unity then
+			I've ever had before. If you sometimes feel frustrated with tutorials being too hard and explaining too little, definitely check TheKiwiCoder
+			out, he's one of the best.
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			Speaking of other parts, I have a shootable NPC in my game, which I got from the
+			See the below embedded video for a look at what one of my weapons sounds like, and some of the basic AI activity that I've implemented.
+			I absolutely love the ragdolling of the enemy!
 			
-			<a style="color: #ED553B;" href="https://assetstore.unity.com/packages/3d/characters/humanoids/low-poly-animated-people-156748" target="_blank" rel="noopener noreferrer"><u>Low Poly Animated People pack by polyperfect</u></a>
-			
-			. As you can see below, you can now shoot and kill Santa in my video game. I plan on building on this affront to Christmas by
-			playing around with the other characters in this pack, and hopefully will get some basic enemies and levels designed soon.
-			
-			</p>			
-										
-			<!-- Recoil Gif -->
+			</p>
+													
+			<!-- Enemy Demo Clip -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="handling_gif" src="images/handling.gif"/>
+				<iframe class="enemy_demo_vid"
+					src="https://www.youtube.com/embed/tKECMcLP5Uo" allowfullscreen>
+				</iframe>
 			</div>			
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			Stay tuned!
-			
-			</p>
-																		
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
+																					
+			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
 			
 			--Josh
 			
@@ -370,7 +372,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_12-29-22.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
+				<a href="blog_1-14-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
