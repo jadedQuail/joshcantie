@@ -221,11 +221,11 @@
 				
 		/* Specific blog post images */
 		
-		.return_state_vid {
+		.enemy_demo_vid {
 			margin-top: 30px;
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #3CAEA3;
+			border: 3px solid #F6D55C;
 		}
 			
 		/* Small screen adjustments */
@@ -247,16 +247,16 @@
 		
 		@media (max-width: 1116px) {
 		
-			.return_state_vid {
+			.enemy_demo_vid {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #3CAEA3;
+				border: 3px solid #F6D55C;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-			.return_state_vid {
+			.enemy_demo_vid {
 				visibility: hidden;
 			}
 
@@ -292,112 +292,76 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-blue container">
+		<div class="post-yellow container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Enums, Interfaces, and State Machines
+					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
+						Gun Sounds and Enemy AI
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						February 26th, 2023
+					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						Janaury 29th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-yellow">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			Happy Sunday!
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-				I’ve been putting some more work into my enemy AI in my game. Once again, I’m largely following the work of 
-				
-				<a style="color: #3CAEA3;" href="https://www.youtube.com/@TheKiwiCoder" target="_blank" rel="noopener noreferrer"><u>The Kiwi Coder</u></a>
-				
-				(who has become one of my favorite Unity content creators, especially since he’s personally responded to a few questions I’ve had!); 
-				I’m making a lot of tweaks along the way and I’ve now gotten to a spot where I’m implementing my own states into the state machine 
-				that Kiwi implemented in his project.
+			Hello,
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				<a style="color: #3CAEA3;" href="https://docs.unity3d.com/Manual/StateMachineBasics.html" target="_blank" rel="noopener noreferrer"><u>State machines</u></a>
-				
-				are very useful, and I’m actually pretty impressed with myself for not utilizing them earlier. I really like how 
-				with Kiwi’s implementation, you can very easily “Enter” a new state, and the main state machine script itself handles the exiting
-				of the current state and other little transition items. This state machine build has also helped me become more familiar with both
-				
-				<a style="color: #3CAEA3;" href="https://learn.unity.com/tutorial/enumerations" target="_blank" rel="noopener noreferrer"><u>enumerations</u></a>			
-				
-				and
-				
-				<a style="color: #3CAEA3;" href="https://learn.unity.com/tutorial/interfaces" target="_blank" rel="noopener noreferrer"><u>interfaces</u></a>			
+			Since my last post, I have worked on two things: giving the weapons sound, and laying the groundwork to have functioning and responsive
+			enemies. The gun sounds were actually pretty easy to implement (though I think I did something quite basic). I found a 
+			
+			<a style="color: #F6D55C;" href="https://assetstore.unity.com/packages/audio/sound-fx/weapons/gun-sound-pack-59420" target="_blank" rel="noopener noreferrer"><u>weapon sounds pack</u></a>
+			
+			on the Unity Asset Store, and from there it was pretty easy to have these sounds trigger when the player fires their gun, reloads their
+			weapon, etc.
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+			The harder project of the two was to get started on the enemy AI. This is an area that I'm not very familiar with; even in my 2D games,
+			my enemies move and interract with the player in a pretty basic way. One of my favorite tutorialists on YouTube for Unity games is
+			
+			<a style="color: #F6D55C;" href="https://www.youtube.com/@TheKiwiCoder" target="_blank" rel="noopener noreferrer"><u>TheKiwiCoder</u></a>
 
-				in C#. The different states all inherit from the same interface to ensure that all the proper functionality
-				exists across each state, and to change states, you simply provide the state’s enum value to the state machine object, which has
-				already stored the states that correspond to each enum value (I will admit, I have in the past been guilty of just using a string
-				in place of an enumeration, and I can see how this is a much cleaner option).
+			who I think has content that is great for "bridging the gap" between being a beginner and an advanced game developer. Specifically, I'm
+			very heavily following his
+			
+			<a style="color: #F6D55C;" href="https://www.youtube.com/playlist?list=PLyBYG1JGBcd009lc1ZfX9ZN5oVUW7AFVy" target="_blank" rel="noopener noreferrer"><u>AI series</u></a>
+			
+			, which is helping teach me about AI states, state machines, NavMeshes and agents, advanced character models and rigs, and more. I had
+			to stop more than a couple of times along the way to learn about new concepts before I could continue his tutorials - things such as
+			enums, interfaces, null conditional operators, scriptable objects, structs - but overall it's been very productive for me and I'm
+			learning an absolute <i>ton</i> about scripting. Specifically, I have a better handle on interfaces and state machines in Unity then
+			I've ever had before. If you sometimes feel frustrated with tutorials being too hard and explaining too little, definitely check TheKiwiCoder
+			out, he's one of the best.
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				In my game right now, I’ve implemented an “idle” and “attack” state by following along with Kiwi. In addition to that,
-				I’ve also created a “return” state, where if the player gets too far away from the enemy that is chasing him, the enemy will
-				give up and run back to the initial position where he was idling. Part of these state transitions is also an animation for
-				equipping and unequipping a weapon. So when the enemy enters the attack state, he pulls the weapon off his back and into his
-				hand, and when the enemy leaves the attack state, he puts the weapon out of his hand and back onto his back (see video below).
-				Organizing when all of these events should be triggered is made easy thanks to the state machine. Thanks Kiwi!
+			See the below embedded video for a look at what one of my weapons sounds like, and some of the basic AI activity that I've implemented.
+			I absolutely love the ragdolling of the enemy!
 			
 			</p>
-												
+													
 			<!-- Enemy Demo Clip -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<iframe class="return_state_vid"
-					src="https://www.youtube.com/embed/LTWrtBCNDsM" allowfullscreen>
+				<iframe class="enemy_demo_vid"
+					src="https://www.youtube.com/embed/tKECMcLP5Uo" allowfullscreen>
 				</iframe>
-			</div>		
-
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-				I try to do at least two blog posts a month, so seeing that I’m a little behind here, I’m going to make another post soon here
-				to write about what I’ve learned about
-				
-				<a style="color: #3CAEA3;" href="https://docs.unity3d.com/ScriptReference/Vector3.Slerp.html" target="_blank" rel="noopener noreferrer"><u>slerping</u></a>			
-
-			
-				lately – I use this to make sure that the enemy doesn’t just “snap” when he rotates
-				towards the player after pulling out his weapon, but instead more smoothly looks at him. Still a long way to go, but I think
-				I’m making great strides in learning about 3D mechanics.
-			
-			</p>				
+			</div>			
 																					
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
 			
-				Also, I’m in a web development course right now at Oregon State! Before this, I wasn’t super educated on the full stack
-				of web development. For instance, this site you’re on right now (as of 2/26/2023) is entirely static, built only using HTML
-				and CSS. In the past, I’ve built very basic backends using
-
-				<a style="color: #3CAEA3;" href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank" rel="noopener noreferrer"><u>Flask</u></a>			
-
-				in Python, but I didn’t know much about web frameworks in general. We’ve been using 
-				
-				<a style="color: #3CAEA3;" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"><u>React.js</u></a>							
-				
-				in this class, and it’s definitely sparked my curiosity for web development. I’m hoping to convert this website into 
-				a React app one day, and maybe overhaul the design and implement some cool features. Hopefully soon! Thanks for reading, as always.
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
-			
-				--Josh
+			--Josh
 			
 			</p>
 
@@ -409,7 +373,10 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_1-29-23.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_current.html" class="col-sm botlink_left yellow-text" style="text-decoration: none;">
+					<-- Newer Post
+				</a>	
+				<a href="blog_1-14-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
