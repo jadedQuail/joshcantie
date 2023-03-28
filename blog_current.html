@@ -221,11 +221,10 @@
 				
 		/* Specific blog post images */
 		
-		.return_state_vid {
-			margin-top: 30px;
+		.snipe-gif {
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #3CAEA3;
+			border: 3px solid #ED553B;
 		}
 			
 		/* Small screen adjustments */
@@ -247,16 +246,16 @@
 		
 		@media (max-width: 1116px) {
 		
-			.return_state_vid {
+			.snipe-gif {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #3CAEA3;
+				border: 3px solid #ED553B;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-			.return_state_vid {
+			.snipe-gif {
 				visibility: hidden;
 			}
 
@@ -292,110 +291,74 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-blue container">
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Enums, Interfaces, and State Machines
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						Enemy Patrolling
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						February 26th, 2023
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						March 27th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-red">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Happy Sunday!
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-				I’ve been putting some more work into my enemy AI in my game. Once again, I’m largely following the work of 
-				
-				<a style="color: #3CAEA3;" href="https://www.youtube.com/@TheKiwiCoder" target="_blank" rel="noopener noreferrer"><u>The Kiwi Coder</u></a>
-				
-				(who has become one of my favorite Unity content creators, especially since he’s personally responded to a few questions I’ve had!); 
-				I’m making a lot of tweaks along the way and I’ve now gotten to a spot where I’m implementing my own states into the state machine 
-				that Kiwi implemented in his project.
+			Hi There,
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				<a style="color: #3CAEA3;" href="https://docs.unity3d.com/Manual/StateMachineBasics.html" target="_blank" rel="noopener noreferrer"><u>State machines</u></a>
-				
-				are very useful, and I’m actually pretty impressed with myself for not utilizing them earlier. I really like how 
-				with Kiwi’s implementation, you can very easily “Enter” a new state, and the main state machine script itself handles the exiting
-				of the current state and other little transition items. This state machine build has also helped me become more familiar with both
-				
-				<a style="color: #3CAEA3;" href="https://learn.unity.com/tutorial/enumerations" target="_blank" rel="noopener noreferrer"><u>enumerations</u></a>			
-				
-				and
-				
-				<a style="color: #3CAEA3;" href="https://learn.unity.com/tutorial/interfaces" target="_blank" rel="noopener noreferrer"><u>interfaces</u></a>			
-
-				in C#. The different states all inherit from the same interface to ensure that all the proper functionality
-				exists across each state, and to change states, you simply provide the state’s enum value to the state machine object, which has
-				already stored the states that correspond to each enum value (I will admit, I have in the past been guilty of just using a string
-				in place of an enumeration, and I can see how this is a much cleaner option).
+				Been a busy month for sure, but I’ve still found some time to work on my FPS game. I’ve created a new state for the AI,
+				which I’ve called “patrolling”; in this state, the enemy AI will walk a path consisting of several nodes, then loop back
+				around to the first node after completing the path. This state has replaced the “idle” state that I was working with
+				previously, and now I can have my AI walking around on custom paths instead of standing still like statues. 
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				In my game right now, I’ve implemented an “idle” and “attack” state by following along with Kiwi. In addition to that,
-				I’ve also created a “return” state, where if the player gets too far away from the enemy that is chasing him, the enemy will
-				give up and run back to the initial position where he was idling. Part of these state transitions is also an animation for
-				equipping and unequipping a weapon. So when the enemy enters the attack state, he pulls the weapon off his back and into his
-				hand, and when the enemy leaves the attack state, he puts the weapon out of his hand and back onto his back (see video below).
-				Organizing when all of these events should be triggered is made easy thanks to the state machine. Thanks Kiwi!
+				With this state, I’ve also made a tweak where any time you shoot the enemies, they’ll come out of the “patrolling” state
+				and immediately attack the player, whereas before the enemy would only attack the player if the player was within a
+				certain range (regardless of whether the player shot the enemy). I haven’t implemented it yet, but I also plan on adding
+				in functionality whereby an enemy will notice other enemies attacking a player, and join in themselves; that way, it won’t
+				appear like enemies are ignoring gunfights happening right in front of them.				
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				The other big thing I worked on this month was adding a sniper rifle to the game. Like with the other weapons, I had to
+				size and position the gun in the player’s hands and then create animations for reloading, lowering, and raising the
+				weapon, but I had to also make some adjustments and add new features for the sniper. I had to play with values to make
+				sure that the sniper had more “kick” when firing, and make sure that it was single fire with a limited fire rate. I also
+				had to make sure that the zoom when aiming down the sights was more intense, too. When zooming in, once the camera’s
+				“field of view” value passed a certain threshold, I made the gun itself disappear and a scope overlay appeared on the
+				screen instead, thus imitating an eye staring down a sniper scope. I’m very pleased with the results; the sniper feels
+				very fluid and fun.
 			
 			</p>
 												
-			<!-- Enemy Demo Clip -->
+			<!-- Sniper Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<iframe class="return_state_vid"
-					src="https://www.youtube.com/embed/LTWrtBCNDsM" allowfullscreen>
-				</iframe>
-			</div>		
+				<img class="snipe-gif" src="images/snipe.gif"/>
+			</div>	
 
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				I try to do at least two blog posts a month, so seeing that I’m a little behind here, I’m going to make another post soon here
-				to write about what I’ve learned about
-				
-				<a style="color: #3CAEA3;" href="https://docs.unity3d.com/ScriptReference/Vector3.Slerp.html" target="_blank" rel="noopener noreferrer"><u>slerping</u></a>			
-
-			
-				lately – I use this to make sure that the enemy doesn’t just “snap” when he rotates
-				towards the player after pulling out his weapon, but instead more smoothly looks at him. Still a long way to go, but I think
-				I’m making great strides in learning about 3D mechanics.
+				So only a few changes this month, but I’m looking to dig into a lot more for the next month to come. I want to move
+				forward with setting up a level for this FPS game versus just the sandbox I have right now; I also have plans to make
+				a MERN website soon, and I’ve been feeling the itch again to make a small 2D game again, maybe with my own artwork.
+				Here’s to hoping that I have a productive spring &#128522;
 			
 			</p>				
-																					
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-				Also, I’m in a web development course right now at Oregon State! Before this, I wasn’t super educated on the full stack
-				of web development. For instance, this site you’re on right now (as of 2/26/2023) is entirely static, built only using HTML
-				and CSS. In the past, I’ve built very basic backends using
-
-				<a style="color: #3CAEA3;" href="https://flask.palletsprojects.com/en/2.2.x/" target="_blank" rel="noopener noreferrer"><u>Flask</u></a>			
-
-				in Python, but I didn’t know much about web frameworks in general. We’ve been using 
-				
-				<a style="color: #3CAEA3;" href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"><u>React.js</u></a>							
-				
-				in this class, and it’s definitely sparked my curiosity for web development. I’m hoping to convert this website into 
-				a React app one day, and maybe overhaul the design and implement some cool features. Hopefully soon! Thanks for reading, as always.
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+																								
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -409,7 +372,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_1-29-23.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_2-26-23.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
