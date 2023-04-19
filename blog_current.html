@@ -221,10 +221,10 @@
 				
 		/* Specific blog post images */
 		
-		.snipe-gif {
+		.arms-gif {
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #ED553B;
+			border: 3px solid #F6D55C;
 		}
 			
 		/* Small screen adjustments */
@@ -246,16 +246,16 @@
 		
 		@media (max-width: 1116px) {
 		
-			.snipe-gif {
+			.arms-gif {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #ED553B;
+				border: 3px solid #F6D55C;
 			}
 		}
 		
 		@media (max-width: 650px) {
 			
-			.snipe-gif {
+			.arms-gif {
 				visibility: hidden;
 			}
 
@@ -291,74 +291,91 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-red container">
+		<div class="post-yellow container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
-						Enemy Patrolling
+					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
+						Arms!
 					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						March 27th, 2023
+					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						April 18th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-red">
+			<hr class="line-yellow">
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			Hi There,
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				Been a busy month for sure, but I’ve still found some time to work on my FPS game. I’ve created a new state for the AI,
-				which I’ve called “patrolling”; in this state, the enemy AI will walk a path consisting of several nodes, then loop back
-				around to the first node after completing the path. This state has replaced the “idle” state that I was working with
-				previously, and now I can have my AI walking around on custom paths instead of standing still like statues. 
+			Happy Tuesday,
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				With this state, I’ve also made a tweak where any time you shoot the enemies, they’ll come out of the “patrolling” state
-				and immediately attack the player, whereas before the enemy would only attack the player if the player was within a
-				certain range (regardless of whether the player shot the enemy). I haven’t implemented it yet, but I also plan on adding
-				in functionality whereby an enemy will notice other enemies attacking a player, and join in themselves; that way, it won’t
-				appear like enemies are ignoring gunfights happening right in front of them.				
+				The day has finally arrived: The player in my FPS game is no longer possessing his gun with non-existent hands,
+				and instead I now have two arms that hold the weapons and animate along with them! It’s definitely added some life
+				to the game, and I feel like I’m getting closer to being ready to set up some levels for the player to conquer.
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				The other big thing I worked on this month was adding a sniper rifle to the game. Like with the other weapons, I had to
-				size and position the gun in the player’s hands and then create animations for reloading, lowering, and raising the
-				weapon, but I had to also make some adjustments and add new features for the sniper. I had to play with values to make
-				sure that the sniper had more “kick” when firing, and make sure that it was single fire with a limited fire rate. I also
-				had to make sure that the zoom when aiming down the sights was more intense, too. When zooming in, once the camera’s
-				“field of view” value passed a certain threshold, I made the gun itself disappear and a scope overlay appeared on the
-				screen instead, thus imitating an eye staring down a sniper scope. I’m very pleased with the results; the sniper feels
-				very fluid and fun.
+				At first, I wanted to try creating a fully animating character model for the player instead of just a pair of arms.
+				I experimented with a platform called 
+				
+				<a style="color: #F6D55C;" href="https://www.mixamo.com/#/" target="_blank" rel="noopener noreferrer"><u>Mixamo</u></a>,
+				
+				which has tons of character models and animations that are all very
+				plug-and-play, so you can integrate them all with each other pretty easily (and you can implement the animations
+				with other 3D character models outside of Mixamo, too). While I do think I will be making use of Mixamo in future
+				projects, I decided against a full character model for my player, mainly because I thought it would be difficult
+				to integrate these animations with the weapons which I have already animated separately. The only way you could “see”
+				this character model anyway would be by seeing the player’s shadow, so the benefit to me seemed pretty minimal given
+				the amount of time and energy it would have taken at this juncture to implement the full model.
+				
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				So instead, I used the same character model I had been using for the enemy, and I opened up its .fbx file in 
+				
+				<a style="color: #F6D55C;" href="https://www.blender.org/" target="_blank" rel="noopener noreferrer"><u>Blender</u></a>
+				
+				and ripped off its arms! (Or rather, I ripped the body off the arms). I created two models, one for the left and right
+				arms respectively, so I could more easily manipulate the two as separate objects. In Unity, I actually didn’t have
+				just one pair of arms, but instead a pair of arms for each separate weapon. By making the arms a child object of the
+				weapon, it would cause them to inherit a lot of the other things occurring on the weapon, i.e. when the weapon
+				experiences recoil, the arms would “kick up” as the weapon kicks up. In short, it makes more sense to pair the arms
+				with the weapon instead of the player’s body, since the arms really follow what the weapon does.				
 			
 			</p>
 												
-			<!-- Sniper Gif -->
+			<!-- Arms Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="snipe-gif" src="images/snipe.gif"/>
+				<img class="arms-gif" src="images/arms.gif"/>
 			</div>	
 
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				So only a few changes this month, but I’m looking to dig into a lot more for the next month to come. I want to move
-				forward with setting up a level for this FPS game versus just the sandbox I have right now; I also have plans to make
-				a MERN website soon, and I’ve been feeling the itch again to make a small 2D game again, maybe with my own artwork.
-				Here’s to hoping that I have a productive spring &#128522;
+				From there, it was pretty simple to animate the arms to follow along with a weapon’s animations. When the weapon would
+				be lowered, raised, reloaded, etc., I moved the arms to new positions on the same keyframes where the weapon moved; this
+				created simple animations that look great for this low-poly world. One weapon that I still have to work on is the pistol,
+				since it’s smaller than a rifle and the current arm models have hands that are too clunky to make holding a pistol look
+				good. I’m going to experiment in Blender with curling the fingers on the arms models, so that way the pair of arms
+				attached to the pistol will be easier to work with and will look more realistic.
 			
-			</p>				
+			</p>	
+
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				From there, I think it’s time to put some levels together and see how it feels, and adjust as I go to make the game feel
+				more fun! As always, thanks for stopping by.				
+			
+			</p>			
 																								
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -372,7 +389,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_2-26-23.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
+				<a href="blog_3-27-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
