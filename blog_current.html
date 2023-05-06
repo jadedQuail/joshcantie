@@ -221,10 +221,17 @@
 				
 		/* Specific blog post images */
 		
-		.arms-gif {
+		.curled-arm-img {
+			height: 393px; 
+			width: 750px; 
+			border: 3px solid #3CAEA3;
+		}
+		
+		.pistol_vid {
+			margin-top: 30px;
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #F6D55C;
+			border: 3px solid #3CAEA3;
 		}
 			
 		/* Small screen adjustments */
@@ -244,18 +251,28 @@
 			
 		}
 		
-		@media (max-width: 1116px) {
-		
-			.arms-gif {
+		@media (max-width: 1177px) {
+
+			.curled-arm-img {
+				height: 262px; 
+				width: 500px; 
+				border: 3px solid #3CAEA3;
+			}
+
+			.pistol_vid {
 				height: 251px; 
 				width: 400px; 
-				border: 3px solid #F6D55C;
+				border: 3px solid #3CAEA3;
 			}
 		}
 		
-		@media (max-width: 650px) {
+		@media (max-width: 800px) {
 			
-			.arms-gif {
+			.curled-arm-img {
+				visibility: hidden;
+			}
+			
+			.pistol_vid {
 				visibility: hidden;
 			}
 
@@ -291,91 +308,96 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post 1 -->
-		<div class="post-yellow container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						Arms!
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						Pistol Animations and More Weapon Sounds
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						April 18th, 2023
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						May 6th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-blue">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Happy Tuesday,
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				The day has finally arrived: The player in my FPS game is no longer possessing his gun with non-existent hands,
-				and instead I now have two arms that hold the weapons and animate along with them! It’s definitely added some life
-				to the game, and I feel like I’m getting closer to being ready to set up some levels for the player to conquer.
+			Hello,
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-				At first, I wanted to try creating a fully animating character model for the player instead of just a pair of arms.
-				I experimented with a platform called 
-				
-				<a style="color: #F6D55C;" href="https://www.mixamo.com/#/" target="_blank" rel="noopener noreferrer"><u>Mixamo</u></a>,
-				
-				which has tons of character models and animations that are all very
-				plug-and-play, so you can integrate them all with each other pretty easily (and you can implement the animations
-				with other 3D character models outside of Mixamo, too). While I do think I will be making use of Mixamo in future
-				projects, I decided against a full character model for my player, mainly because I thought it would be difficult
-				to integrate these animations with the weapons which I have already animated separately. The only way you could “see”
-				this character model anyway would be by seeing the player’s shadow, so the benefit to me seemed pretty minimal given
-				the amount of time and energy it would have taken at this juncture to implement the full model.
-				
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				So instead, I used the same character model I had been using for the enemy, and I opened up its .fbx file in 
-				
-				<a style="color: #F6D55C;" href="https://www.blender.org/" target="_blank" rel="noopener noreferrer"><u>Blender</u></a>
-				
-				and ripped off its arms! (Or rather, I ripped the body off the arms). I created two models, one for the left and right
-				arms respectively, so I could more easily manipulate the two as separate objects. In Unity, I actually didn’t have
-				just one pair of arms, but instead a pair of arms for each separate weapon. By making the arms a child object of the
-				weapon, it would cause them to inherit a lot of the other things occurring on the weapon, i.e. when the weapon
-				experiences recoil, the arms would “kick up” as the weapon kicks up. In short, it makes more sense to pair the arms
-				with the weapon instead of the player’s body, since the arms really follow what the weapon does.				
+				The last couple of weeks have been busy for me, but I still found some time to work on my FPS. I have a few essential
+				pieces that I wanted to finish up before I move on to my next phase here, which would be finally putting everything
+				together on a playable level. I think at that point, I’ll finally be able to start tweaking things and creating a
+				“core gameplay loop” that feels fun.
 			
 			</p>
-												
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+				One of the big things I focused on last week was modifying the arm asset I have been using for the player so that it
+				fits the pistol better (the arm asset I am using is from
+				
+				<a style="color: #3CAEA3;" href="https://www.youtube.com/playlist?list=PLyBYG1JGBcd009lc1ZfX9ZN5oVUW7AFVy" target="_blank" rel="noopener noreferrer"><u>TheKiwiCoder's Enemy AI series</u></a>).
+				
+				To do that, I had to open up the .fbx file in	
+
+				<a style="color: #3CAEA3;" href="https://www.blender.org/" target="_blank" rel="noopener noreferrer"><u>Blender</u></a>				
+				
+				and re-educate myself on how to model (it’s been a sec!). I eventually re-familiarized myself with edges, vertices,
+				and faces, and I was able to modify the arm asset so that I could make the fingers curl and fit around the handle
+				of the pistol better. I also had to add an index finger to the hand so it could be placed in front of the pistol’s
+				trigger.
+			
+			</p>
+															
 			<!-- Arms Gif -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="arms-gif" src="images/arms.gif"/>
+				<img class="curled-arm-img" src="images/curled_arm.png"/>
 			</div>	
 
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-				From there, it was pretty simple to animate the arms to follow along with a weapon’s animations. When the weapon would
-				be lowered, raised, reloaded, etc., I moved the arms to new positions on the same keyframes where the weapon moved; this
-				created simple animations that look great for this low-poly world. One weapon that I still have to work on is the pistol,
-				since it’s smaller than a rifle and the current arm models have hands that are too clunky to make holding a pistol look
-				good. I’m going to experiment in Blender with curling the fingers on the arms models, so that way the pair of arms
-				attached to the pistol will be easier to work with and will look more realistic.
+				From there, I attached this modified right arm and a left arm to the pistol, and created animations running,
+				lowering the weapon, raising the weapon, and reloading, same as the other weapons. I’m pretty satisfied with
+				how the arms look on the pistol, and I’m glad I went through the effort to customize the right hand.
 			
 			</p>	
 
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-				From there, I think it’s time to put some levels together and see how it feels, and adjust as I go to make the game feel
-				more fun! As always, thanks for stopping by.				
+				Aside from the pistol animations, I made a few smaller additions as well. I implemented some more weapon noises,
+				including a “dry fire” sound effect that plays when you fire a weapon that has no bullet in the chamber. I also
+				added more weapons to the enemies, who were previously only using the M4 weapon. I modified the relevant scripts
+				so that they now detect which weapon is active on the enemy and then use the correct assets relative to that weapon,
+				such as the proper raycast point, muzzle flash, and offset coordinates for how the weapon sits on the enemy’s back
+				and hands. This makes it easy for me to just activate whichever weapon I want the particular enemy to be using in
+				the hierarchy, and then the game does the rest.				
 			
-			</p>			
+			</p>	
+
+			<!-- Pistol Anim Demo Clip -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<iframe class="pistol_vid"
+					src="https://www.youtube.com/embed/BzU6BklEGn8" allowfullscreen>
+				</iframe>
+			</div>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+				I’m pretty excited, because now it’s time to put a level together! I’m going to find a cool pack of polygonal
+				terrain and assets to build a level with, and start setting up enemies that will patrol the area for my player
+				to get into firefights with. I want to put all the ingredients in the stew and see how it tastes, and go from
+				there &#128522;
+			
+			</p>
 																								
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -389,7 +411,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_3-27-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				<a href="blog_4-18-23.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
