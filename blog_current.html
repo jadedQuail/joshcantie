@@ -188,6 +188,11 @@
 			color: #ED553B;
 		}
 		
+		.red-figcaption {
+			color: #ED553B;
+			margin-top: 2px;
+		}
+		
 		.yellow-text {
 			color: #F6D55C;
 		}
@@ -218,20 +223,31 @@
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-				
-		/* Specific blog post images */
 		
-		.curled-arm-img {
-			height: 393px; 
-			width: 750px; 
-			border: 3px solid #3CAEA3;
+		.code-block {
+			padding: 12px 20px;
+			background-color: rgba(59, 59, 59, 0.7);
+			border-radius: 10px;
+			margin-bottom: 12px;
 		}
 		
-		.pistol_vid {
-			margin-top: 30px;
+		code {
+			color: #5eb0f7;
+			font-size: 105%;
+		}
+						
+		/* Specific blog post images */
+		
+		.nav-mesh-img {
+			height: 334px; 
+			width: 700px; 
+			border: 3px solid #ED553B;
+		}
+		
+		.nma-gifs {
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #3CAEA3;
+			border: 3px solid #ED553B;
 		}
 			
 		/* Small screen adjustments */
@@ -253,29 +269,32 @@
 		
 		@media (max-width: 1177px) {
 
-			.curled-arm-img {
-				height: 262px; 
+			.nav-mesh-img {
+				height: 238px; 
 				width: 500px; 
-				border: 3px solid #3CAEA3;
+				border: 3px solid #ED553B;
 			}
-
-			.pistol_vid {
-				height: 251px; 
-				width: 400px; 
-				border: 3px solid #3CAEA3;
+			
+			.nma-gifs {
+				height: 283px; 
+				width: 500px; 
+				border: 3px solid #ED553B;
 			}
 		}
 		
-		@media (max-width: 800px) {
-			
-			.curled-arm-img {
+		@media (max-width: 812px) {
+		
+			.nav-mesh-img {
 				visibility: hidden;
 			}
 			
-			.pistol_vid {
+			.nma-gifs {
 				visibility: hidden;
 			}
-
+			
+			.red-figcaption {
+				visibility: hidden;
+			}
 		}
 		
 	</style>
@@ -307,97 +326,159 @@
 				
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
-		<!-- Post 1 -->
-		<div class="post-blue container">
+		<!-- Post -->
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Pistol Animations and More Weapon Sounds
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						Playing with a Map
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						May 6th, 2023
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						May 26th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-red">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Hello,
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-				The last couple of weeks have been busy for me, but I still found some time to work on my FPS. I have a few essential
-				pieces that I wanted to finish up before I move on to my next phase here, which would be finally putting everything
-				together on a playable level. I think at that point, I’ll finally be able to start tweaking things and creating a
-				“core gameplay loop” that feels fun.
+			Hi There,
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				One of the big things I focused on last week was modifying the arm asset I have been using for the player so that it
-				fits the pistol better (the arm asset I am using is from
+				We’re finally cooking with gas! Now that I have a bunch of core pieces of my game setup, I’ve moved on
+				to putting together a map. I first wanted to see what would happen once I moved my player, enemies, and
+				other key components (such as my audio manager and main canvas) to a new scene; whenever the environment
+				changes, you learn a lot about what settings need to change. I downloaded a desert-themed terrain and town
+				pack (by 
 				
-				<a style="color: #3CAEA3;" href="https://www.youtube.com/playlist?list=PLyBYG1JGBcd009lc1ZfX9ZN5oVUW7AFVy" target="_blank" rel="noopener noreferrer"><u>TheKiwiCoder's Enemy AI series</u></a>).
+				<a style="color: #ED553B;" href="https://assetstore.unity.com/packages/3d/environments/desert-town-environment-low-poly-194870" target="_blank" rel="noopener noreferrer"><u>Halberstram Art</u></a>),
 				
-				To do that, I had to open up the .fbx file in	
-
-				<a style="color: #3CAEA3;" href="https://www.blender.org/" target="_blank" rel="noopener noreferrer"><u>Blender</u></a>				
-				
-				and re-educate myself on how to model (it’s been a sec!). I eventually re-familiarized myself with edges, vertices,
-				and faces, and I was able to modify the arm asset so that I could make the fingers curl and fit around the handle
-				of the pistol better. I also had to add an index finger to the hand so it could be placed in front of the pistol’s
-				trigger.
+				and luckily it already had a demo scene that I could use as my testing grounds.
+				I placed my player and enemies in the environment, and after doing some minor tweaking and re-baking the 
+				nav mesh, everything was up and running pretty smoothly. Nice!
 			
 			</p>
-															
-			<!-- Arms Gif -->
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				I will say that having an actual town to run around in is exposing some flaws in my movement system for the
+				player. I don’t like how the player can change directions in midair, and I want to make his jump feel a bit
+				more realistic. I also am finding that my game sometimes messes up on calculating whether or not the player
+				should have a second jump. I plan on modifying this movement system soon, so that movement feels little less
+				clunky and simplistic.
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				There was some other progress I made on this new map (one of which was lighting; this is seriously the best
+				tutorial I have ever seen on basic lighting in a Unity scene:
+				
+				<a style="color: #ED553B;" href="https://www.youtube.com/watch?v=uwYf1yMPuvk" target="_blank" rel="noopener noreferrer"><u>Unity 2020 Tutorial - Lighting And Post-Processing Low Poly Scene</u></a>),				
+				
+				but I want to highlight what I thought was the most interesting thing I learned with moving to
+				this new map.
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				This map is a lot larger than what I had been working on in my demo scene, so when I re-baked the nav mesh,
+				there were more obstacles that had to be considered. Here’s a peek at what the nav mesh looks like in the new
+				scene. Note that you can see the player on top of a roof:
+			
+			</p>
+			
+			<!-- Nav Mesh Image -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="curled-arm-img" src="images/curled_arm.png"/>
+				<img class="nav-mesh-img" src="images/navmesh_scene.png"/>
 			</div>	
-
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-				From there, I attached this modified right arm and a left arm to the pistol, and created animations running,
-				lowering the weapon, raising the weapon, and reloading, same as the other weapons. I’m pretty satisfied with
-				how the arms look on the pistol, and I’m glad I went through the effort to customize the right hand.
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			</p>	
-
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+				Since the nav mesh is more complex, it sometimes takes the nav mesh agent more time to calculate a path to its
+				target. If the target (which is the player) is reachable, it’s not an issue, but if the player is in an
+				unreachable location – such as on the roof of a building – then the nav mesh agent takes a longer amount of
+				time to go through a bunch of possibilities before moving closer towards the player.
 			
-				Aside from the pistol animations, I made a few smaller additions as well. I implemented some more weapon noises,
-				including a “dry fire” sound effect that plays when you fire a weapon that has no bullet in the chamber. I also
-				added more weapons to the enemies, who were previously only using the M4 weapon. I modified the relevant scripts
-				so that they now detect which weapon is active on the enemy and then use the correct assets relative to that weapon,
-				such as the proper raycast point, muzzle flash, and offset coordinates for how the weapon sits on the enemy’s back
-				and hands. This makes it easy for me to just activate whichever weapon I want the particular enemy to be using in
-				the hierarchy, and then the game does the rest.				
+			</p>
 			
-			</p>	
-
-			<!-- Pistol Anim Demo Clip -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<iframe class="pistol_vid"
-					src="https://www.youtube.com/embed/BzU6BklEGn8" allowfullscreen>
-				</iframe>
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				Normally, I’ve been setting the destination of the nav mesh agent with this code:
+			
+			</p>
+			
+			<div class="code-block">
+				<code>
+					navMeshAgent.destination = player.transform.position;
+				</code>
 			</div>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				I’m pretty excited, because now it’s time to put a level together! I’m going to find a cool pack of polygonal
-				terrain and assets to build a level with, and start setting up enemies that will patrol the area for my player
-				to get into firefights with. I want to put all the ingredients in the stew and see how it tastes, and go from
-				there &#128522;
+				But this is an asynchronous call, so the nav mesh agent will not move until it can calculate what its
+				destination should be. So, when I was calling this every frame (which in general is a bad idea, not very
+				efficient to update your nav mesh agent’s so frequently, and it’s unnecessary), I was finding that the nav
+				mesh agent was literally just paralyzed because it couldn’t calculate a path before the next frame rolled
+				around, and then it had to start over. When I tried only calling every second, the nav mesh agent started
+				to move again, but it would stop every time it needed to calculate its destination again, which resulted in
+				the agent stuttering as it moved.
 			
 			</p>
-																								
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				To resolve this, I had to instead use this code:
+			
+			</p>
+			
+			<div class="code-block">
+				<code>
+					NavMesh.CalculatePath(navMeshAgent.transform.position, player.transform.position, NavMesh.AllAreas, path);
+					navMeshAgent.SetPath(path);
+				</code>
+			</div>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				The call to CalculatePath() is synchronous, and it calculates a route for the nav mesh agent while it’s still
+				moving. The agent will keep moving on its path, and only change paths once the calculation is complete, so it
+				will move fluidly without pausing or stuttering. You can see the difference between the two below:
+			
+			</p>
+			
+			<!-- NMA Gif 1 -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="nma-gifs" src="images/nma_stutter.gif"/>
+				<figcaption class="red-figcaption">Nav mesh agent stutters while calculating path.</figcaption>
+			</div>	
+			
+			<!-- NMA Gif 2 -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="nma-gifs" src="images/nma_working.gif"/>
+				<figcaption class="red-figcaption">Nav mesh agent moves fluidly, calculates path while moving.</figcaption>
+			</div>
+								
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				The one concern to think about going forward is whether the CalculatePath() calls will cause frame rate issues.
+				I plan on loading this map up with a ton of enemy AI in the future to see what happens, so that will be telling!
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				Stay tuned for more updates!
+			
+			</p>
+								
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -411,7 +492,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_4-18-23.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_5-6-23.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
