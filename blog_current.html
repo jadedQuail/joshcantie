@@ -193,6 +193,11 @@
 			margin-top: 2px;
 		}
 		
+		.yellow-figcaption {
+			color: #F6D55C;
+			margin-top: 2px;		
+		}
+		
 		.yellow-text {
 			color: #F6D55C;
 		}
@@ -237,17 +242,11 @@
 		}
 						
 		/* Specific blog post images */
-		
-		.nav-mesh-img {
-			height: 334px; 
-			width: 700px; 
-			border: 3px solid #ED553B;
-		}
-		
-		.nma-gifs {
+				
+		.jumping-gifs {
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #ED553B;
+			border: 3px solid #F6D55C;
 		}
 			
 		/* Small screen adjustments */
@@ -268,31 +267,21 @@
 		}
 		
 		@media (max-width: 1177px) {
-
-			.nav-mesh-img {
-				height: 238px; 
-				width: 500px; 
-				border: 3px solid #ED553B;
-			}
 			
-			.nma-gifs {
+			.jumping-gifs {
 				height: 283px; 
 				width: 500px; 
-				border: 3px solid #ED553B;
+				border: 3px solid #F6D55C;
 			}
 		}
 		
 		@media (max-width: 812px) {
 		
-			.nav-mesh-img {
+			.jumping-gifs {
 				visibility: hidden;
 			}
 			
-			.nma-gifs {
-				visibility: hidden;
-			}
-			
-			.red-figcaption {
+			.yellow-figcaption {
 				visibility: hidden;
 			}
 		}
@@ -327,158 +316,120 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post -->
-		<div class="post-red container">
+		<div class="post-yellow container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
-						Playing with a Map
+					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
+						Plans for the Summer
 					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						May 26th, 2023
+					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						June 16th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-red">
+			<hr class="line-yellow">
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			Hi There,
+			Hello!
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				We’re finally cooking with gas! Now that I have a bunch of core pieces of my game setup, I’ve moved on
-				to putting together a map. I first wanted to see what would happen once I moved my player, enemies, and
-				other key components (such as my audio manager and main canvas) to a new scene; whenever the environment
-				changes, you learn a lot about what settings need to change. I downloaded a desert-themed terrain and town
-				pack (by 
+				I’ve finished up my class for the semester, and I now have some extra time this summer to dig into some more
+				game development. I’m going to use this blog post as a way to organize my thoughts on what the plan is going
+				forward for me.
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				First off, to report on what I’ve been working on the last couple of weeks: One thing I was starting to not
+				like the feel of in my game was the movement system, specifically the jumping. I really disliked how the player
+				could switch directions midair at full velocity; it felt very unnatural, and while jumping around this desert
+				map, it was actually difficult to control the player to land on smaller platforms. My movement system was done
+				by completely changing the player’s velocity on any input, and I decided I needed to learn more about a 
+				force-based system.
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				I found a really great tutorial series online by a new YouTuber I hadn’t before checked out named
 				
-				<a style="color: #ED553B;" href="https://assetstore.unity.com/packages/3d/environments/desert-town-environment-low-poly-194870" target="_blank" rel="noopener noreferrer"><u>Halberstram Art</u></a>),
+				<a style="color: #F6D55C;" href="https://www.youtube.com/@davegamedevelopment" target="_blank" rel="noopener noreferrer"><u>Dave / GameDevelopment</u></a>.
 				
-				and luckily it already had a demo scene that I could use as my testing grounds.
-				I placed my player and enemies in the environment, and after doing some minor tweaking and re-baking the 
-				nav mesh, everything was up and running pretty smoothly. Nice!
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				I will say that having an actual town to run around in is exposing some flaws in my movement system for the
-				player. I don’t like how the player can change directions in midair, and I want to make his jump feel a bit
-				more realistic. I also am finding that my game sometimes messes up on calculating whether or not the player
-				should have a second jump. I plan on modifying this movement system soon, so that movement feels little less
-				clunky and simplistic.
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				There was some other progress I made on this new map (one of which was lighting; this is seriously the best
-				tutorial I have ever seen on basic lighting in a Unity scene:
+				He has a pretty effective 
 				
-				<a style="color: #ED553B;" href="https://www.youtube.com/watch?v=uwYf1yMPuvk" target="_blank" rel="noopener noreferrer"><u>Unity 2020 Tutorial - Lighting And Post-Processing Low Poly Scene</u></a>),				
+				<a style="color: #F6D55C;" href="https://www.youtube.com/watch?v=f473C43s8nE" target="_blank" rel="noopener noreferrer"><u>first person movement</u></a>
 				
-				but I want to highlight what I thought was the most interesting thing I learned with moving to
-				this new map.
+				tutorial that I followed and implemented into my game. Specifically, he moves his player using 
+				
+				<a style="color: #F6D55C;" href="https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html" target="_blank" rel="noopener noreferrer"><u>Rigidbody.AddForce</u></a>;				
+				
+				this means that when you switch directions (midair or otherwise), you’re player doesn’t just change velocity 
+				to the other direction on a dime, but instead slowly switches directions as the force impacts the velocity of 
+				the player. It feels much more organic. See below for a “before and after” of what movement looks like in my
+				game with this implementation.
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				This map is a lot larger than what I had been working on in my demo scene, so when I re-baked the nav mesh,
-				there were more obstacles that had to be considered. Here’s a peek at what the nav mesh looks like in the new
-				scene. Note that you can see the player on top of a roof:
-			
-			</p>
-			
-			<!-- Nav Mesh Image -->
+			<!-- Velocity Jump -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="nav-mesh-img" src="images/navmesh_scene.png"/>
+				<img class="jumping-gifs" src="images/vel-jump.gif"/>
+				<figcaption class="yellow-figcaption">The player switches movement from left to right instantly.</figcaption>
 			</div>	
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				Since the nav mesh is more complex, it sometimes takes the nav mesh agent more time to calculate a path to its
-				target. If the target (which is the player) is reachable, it’s not an issue, but if the player is in an
-				unreachable location – such as on the roof of a building – then the nav mesh agent takes a longer amount of
-				time to go through a bunch of possibilities before moving closer towards the player.
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				Normally, I’ve been setting the destination of the nav mesh agent with this code:
-			
-			</p>
-			
-			<div class="code-block">
-				<code>
-					navMeshAgent.destination = player.transform.position;
-				</code>
-			</div>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				But this is an asynchronous call, so the nav mesh agent will not move until it can calculate what its
-				destination should be. So, when I was calling this every frame (which in general is a bad idea, not very
-				efficient to update your nav mesh agent’s so frequently, and it’s unnecessary), I was finding that the nav
-				mesh agent was literally just paralyzed because it couldn’t calculate a path before the next frame rolled
-				around, and then it had to start over. When I tried only calling every second, the nav mesh agent started
-				to move again, but it would stop every time it needed to calculate its destination again, which resulted in
-				the agent stuttering as it moved.
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				To resolve this, I had to instead use this code:
-			
-			</p>
-			
-			<div class="code-block">
-				<code>
-					NavMesh.CalculatePath(navMeshAgent.transform.position, player.transform.position, NavMesh.AllAreas, path);
-					navMeshAgent.SetPath(path);
-				</code>
-			</div>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				The call to CalculatePath() is synchronous, and it calculates a route for the nav mesh agent while it’s still
-				moving. The agent will keep moving on its path, and only change paths once the calculation is complete, so it
-				will move fluidly without pausing or stuttering. You can see the difference between the two below:
-			
-			</p>
-			
-			<!-- NMA Gif 1 -->
+			<!-- Force Jump -->
 			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="nma-gifs" src="images/nma_stutter.gif"/>
-				<figcaption class="red-figcaption">Nav mesh agent stutters while calculating path.</figcaption>
-			</div>	
-			
-			<!-- NMA Gif 2 -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="nma-gifs" src="images/nma_working.gif"/>
-				<figcaption class="red-figcaption">Nav mesh agent moves fluidly, calculates path while moving.</figcaption>
+				<img class="jumping-gifs" src="images/force-jump.gif"/>
+				<figcaption class="yellow-figcaption">The player gradually moves from left to right as a new force is applied.</figcaption>
 			</div>
-								
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				The one concern to think about going forward is whether the CalculatePath() calls will cause frame rate issues.
-				I plan on loading this map up with a ton of enemy AI in the future to see what happens, so that will be telling!
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				Honestly, I was so intrigued by Dave’s movement system that I went down a rabbit hole and started following
+				several of his tutorials to learn more about how he moves his player controller. I love the way he organizes
+				his code and I found myself watching his tutorials on jumping, running, sliding, and wall running. So while
+				I don’t have much more to report on in my own game, I really think I learned a ton since my last post!
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				Going forward, I’ve decided that I don’t really want to pursue this “desert map” any further; I think it was
+				a good exercise in lighting and adjusting my assets for a map, but it doesn’t feel optimized for what I’d
+				like to create, which is a fast, fluid shooter. I plan on leaning more heavily into the movement systems that
+				I’ve been learning about; while I am going to implement a lot of what Dave’s channel has to offer, I am also
+				going to push myself to build upon what I’ve learned about adding forces to Rigidbodies to implement my movement
+				systems, too.
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				Stay tuned for more updates!
+				I also think this is a good opportunity for me to learn a bit of level design. I’ve been looking at features
+				like Unity’s 
+				
+				<a style="color: #F6D55C;" href="https://unity.com/features/probuilder" target="_blank" rel="noopener noreferrer"><u>ProBuilder</u></a>,
+				
+				and I’d like to design some prototype levels for me to play around with, i.e. place my enemy AI on some basic
+				maps and see how the gameplay feels.				
 			
 			</p>
-								
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				I’m going to keep my sights set on these goals for now, and then going forward I can focus more on putting
+				together a more full experience with some polish. For now, I’m feeling great about what I’ve learned about
+				physics and movement in Unity, and I can’t wait to put it into action.
+			
+			</p>
+
+			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -492,7 +443,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_5-6-23.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
+				<a href="blog_5-26-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
