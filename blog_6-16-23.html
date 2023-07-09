@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Josh Cantie</title>
+		
+		<!-- Bootstrap CSS, JS, Popper.js, jQuery -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
+		
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+		
+		<!-- jQuery, Popper, Bootstrap -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		
+	</head>
+	
+	<style>
+	
+		/* Font */
+		@font-face {
+			src: url(fonts/Lato-Regular.ttf);
+			font-family: Lato;
+		}
+	
+		.title {
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			-moz-transform: translateX(-50%) translateY(-50%);
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+		}
+	
+		.header {
+			color: #F6D55C;
+			font-family: Lato;
+			text-align: center;
+			font-size: 65px;
+		}
+		
+		.description {
+			color: #ED553B;
+			font-family: Lato;
+			text-align: center;
+			font-size: 25px;
+		}
+			
+			
+		.top {
+			margin-top: 70px;
+		}
+			
+		img {
+			border-radius: 8px;
+			border: 3px solid #ED553B;
+			margin-top: 25px;
+			overflow: hidden;
+			image-orientation: from-image;
+		}
+		
+		.text-style {
+			color: #3CAEA3;
+			font-family: Lato;
+			font-size: 20px;
+			text-align: center;
+		}
+		
+		.nav-color {
+			background-color: #173F5F;
+		}
+		
+		.link-text {
+			color: #F6D55C;
+			font-family: Lato;
+			font-size: 30px;
+			margin: 7px;
+		}
+		
+		.link-text:hover {
+			color: #bda346;
+			transition: color 0.2s;
+		}
+		
+		body {
+			min-width: 566px;
+			min-height: 700px;
+		}
+		
+		.footer {
+			text-align: center;
+			position: relative;
+			margin-top: 50px;
+		}
+		
+		.icon-color {
+			color: #F6D55C; <!-- Gray -->
+		}
+		
+		.facebook:hover {
+			color: #bda346;
+			transition: color 0.2s;
+		}			
+		
+		.linkedin:hover {
+			color: #bda346;
+			transition: color 0.2s;
+		}
+		
+		.email:hover{
+			color: #9e3a29;
+			transition: color 0.2s;
+		}
+		
+		.post-red {
+			margin-top: 60px;
+			border-radius: 8px;
+			border: 3px solid #ED553B;
+			width: 70%;
+		}
+		
+		.post-blue {
+			margin-top: 60px;
+			border-radius: 8px;
+			border: 3px solid #3CAEA3;
+			width: 70%;
+		}
+		
+		.post-yellow {
+			margin-top: 60px;
+			border-radius: 8px;
+			border: 3px solid #F6D55C;
+			width: 70%;
+		}
+		
+		.blog-text-red {
+			color: #ED553B;
+			font-family: Lato;
+			text-align: left;
+			font-size: 20px;
+		}
+		
+		.blog-text-blue {
+			color: #3CAEA3;
+			font-family: Lato;
+			text-align: left;
+			font-size: 20px;
+		}
+		
+		.blog-text-yellow {
+			color: #F6D55C;
+			font-family: Lato;
+			text-align: left;
+			font-size: 20px;
+		}
+		
+		.line-red {
+			border-radius: 8px;
+			border: 1.5px solid #ED553B;
+		}
+		
+		.line-blue {
+			border-radius: 8px;
+			border: 1.5px solid #3CAEA3;
+		}
+		
+		.line-yellow {
+			border-radius: 8px;
+			border: 1.5px solid #F6D55C;
+		}
+		
+		.botlink_left {
+			text-align: left;
+			margin-bottom: 50px;
+			font-size: 30px;
+		}
+		
+		.botlink_right {
+			text-align: right;
+			margin-bottom: 50px;
+			font-size: 30px;
+		}
+		
+		.red-text {
+			color: #ED553B;
+		}
+		
+		.red-figcaption {
+			color: #ED553B;
+			margin-top: 2px;
+		}
+		
+		.yellow-figcaption {
+			color: #F6D55C;
+			margin-top: 2px;		
+		}
+		
+		.yellow-text {
+			color: #F6D55C;
+		}
+		
+		
+		.blue-text {
+			color: #3CAEA3;
+		}
+		
+		.red-text:hover {
+			color: #9e3a29;
+			transition: color 0.2s;
+		}
+		
+		.yellow-text:hover {
+			color: #bda346;
+			color: #bda346;
+			transition: color 0.2s;
+		}
+		
+		.blue-text:hover {
+			color: #2a7d75;
+			transition: color 0.2s;
+		}
+		
+		.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+		.code-block {
+			padding: 12px 20px;
+			background-color: rgba(59, 59, 59, 0.7);
+			border-radius: 10px;
+			margin-bottom: 12px;
+		}
+		
+		code {
+			color: #5eb0f7;
+			font-size: 105%;
+		}
+						
+		/* Specific blog post images */
+				
+		.jumping-gifs {
+			height: 340px; 
+			width: 600px; 
+			border: 3px solid #F6D55C;
+		}
+			
+		/* Small screen adjustments */
+		@media (max-height: 700px) {
+			
+			.top {
+				margin-top: 5px;
+			}
+			
+			.header {
+				font-size: 50px;
+			}
+			
+			.link-text {
+				font-size: 25px;
+			}
+			
+		}
+		
+		@media (max-width: 1177px) {
+			
+			.jumping-gifs {
+				height: 283px; 
+				width: 500px; 
+				border: 3px solid #F6D55C;
+			}
+		}
+		
+		@media (max-width: 812px) {
+		
+			.jumping-gifs {
+				visibility: hidden;
+			}
+			
+			.yellow-figcaption {
+				visibility: hidden;
+			}
+		}
+		
+	</style>
+	
+	<body style="background-color: #173F5F;">
+		
+		<!-- Navbar -->
+		<ul class="nav nav-width">
+		  <li class="nav-item">
+			<a class="nav-link link-text" href="index.html">Home</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link link-text" href="files/resume_may_23_website.pdf">Resume</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link link-text" href="portfolio.html">Portfolio</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link link-text" href="blog_current.html">Blog</a>
+		  </li>
+		</ul>
+		
+		<!-- Title -->
+		<div class="top">
+			<div class="header d-none d-sm-block">Josh's Blog</div>
+			<div class="description d-none d-sm-block">Things I did on my computer and more.</div>
+			<a class="description d-none d-sm-block" style="color: #F6D55C;" href="archive.html">Blog Archive</a>
+		</div>
+				
+		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!-- Post -->
+		<div class="post-yellow container">
+		
+			<div>
+				<div class="row">
+					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
+						Plans for the Summer
+					</div>
+					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						June 16th, 2023
+					</div>
+				</div>
+			</div>
+			
+			<hr class="line-yellow">
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+			Hello!
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				I’ve finished up my class for the semester, and I now have some extra time this summer to dig into some more
+				game development. I’m going to use this blog post as a way to organize my thoughts on what the plan is going
+				forward for me.
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				First off, to report on what I’ve been working on the last couple of weeks: One thing I was starting to not
+				like the feel of in my game was the movement system, specifically the jumping. I really disliked how the player
+				could switch directions midair at full velocity; it felt very unnatural, and while jumping around this desert
+				map, it was actually difficult to control the player to land on smaller platforms. My movement system was done
+				by completely changing the player’s velocity on any input, and I decided I needed to learn more about a 
+				force-based system.
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				I found a really great tutorial series online by a new YouTuber I hadn’t before checked out named
+				
+				<a style="color: #F6D55C;" href="https://www.youtube.com/@davegamedevelopment" target="_blank" rel="noopener noreferrer"><u>Dave / GameDevelopment</u></a>.
+				
+				He has a pretty effective 
+				
+				<a style="color: #F6D55C;" href="https://www.youtube.com/watch?v=f473C43s8nE" target="_blank" rel="noopener noreferrer"><u>first person movement</u></a>
+				
+				tutorial that I followed and implemented into my game. Specifically, he moves his player using 
+				
+				<a style="color: #F6D55C;" href="https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html" target="_blank" rel="noopener noreferrer"><u>Rigidbody.AddForce</u></a>;				
+				
+				this means that when you switch directions (midair or otherwise), you’re player doesn’t just change velocity 
+				to the other direction on a dime, but instead slowly switches directions as the force impacts the velocity of 
+				the player. It feels much more organic. See below for a “before and after” of what movement looks like in my
+				game with this implementation.
+			
+			</p>
+			
+			<!-- Velocity Jump -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="jumping-gifs" src="images/vel-jump.gif"/>
+				<figcaption class="yellow-figcaption">The player switches movement from left to right instantly.</figcaption>
+			</div>	
+			
+			<!-- Force Jump -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="jumping-gifs" src="images/force-jump.gif"/>
+				<figcaption class="yellow-figcaption">The player gradually moves from left to right as a new force is applied.</figcaption>
+			</div>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				Honestly, I was so intrigued by Dave’s movement system that I went down a rabbit hole and started following
+				several of his tutorials to learn more about how he moves his player controller. I love the way he organizes
+				his code and I found myself watching his tutorials on jumping, running, sliding, and wall running. So while
+				I don’t have much more to report on in my own game, I really think I learned a ton since my last post!
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				Going forward, I’ve decided that I don’t really want to pursue this “desert map” any further; I think it was
+				a good exercise in lighting and adjusting my assets for a map, but it doesn’t feel optimized for what I’d
+				like to create, which is a fast, fluid shooter. I plan on leaning more heavily into the movement systems that
+				I’ve been learning about; while I am going to implement a lot of what Dave’s channel has to offer, I am also
+				going to push myself to build upon what I’ve learned about adding forces to Rigidbodies to implement my movement
+				systems, too.
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				I also think this is a good opportunity for me to learn a bit of level design. I’ve been looking at features
+				like Unity’s 
+				
+				<a style="color: #F6D55C;" href="https://unity.com/features/probuilder" target="_blank" rel="noopener noreferrer"><u>ProBuilder</u></a>,
+				
+				and I’d like to design some prototype levels for me to play around with, i.e. place my enemy AI on some basic
+				maps and see how the gameplay feels.				
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				I’m going to keep my sights set on these goals for now, and then going forward I can focus more on putting
+				together a more full experience with some polish. For now, I’m feeling great about what I’ve learned about
+				physics and movement in Unity, and I can’t wait to put it into action.
+			
+			</p>
+
+			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+			
+				--Josh
+			
+			</p>
+
+		</div>
+		
+		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+		
+		<!-- Navigate to other posts -->
+		
+		<div class="container" style="margin-top: 50px;">
+			<div class="row">
+				<a href="blog_current.html" class="col-sm botlink_left yellow-text" style="text-decoration: none;">
+					<-- Newer Post
+				</a>			
+				<a href="blog_5-26-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+					Older Post -->
+				</a>
+			</div>
+		</div>
+				
+		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+				
+		<!-- Footer -->
+		<div style="margin-bottom: 100px;"></div>		
+				
+	</body>
+	
+</html>
