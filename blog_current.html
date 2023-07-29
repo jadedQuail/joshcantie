@@ -288,10 +288,17 @@
 						
 		/* Specific blog post images */
 				
-		.jumping-gifs {
+		.level-img {
+			height: 362px; 
+			width: 647px; 
+			border: 3px solid #ED553B;
+		}
+		
+		.level_vid {
+			margin-top: 30px;
 			height: 340px; 
 			width: 600px; 
-			border: 3px solid #F6D55C;
+			border: 3px solid #ED553B;
 		}
 			
 		/* Small screen adjustments */
@@ -311,28 +318,32 @@
 			
 		}
 		
-		@media (max-width: 1177px) {
+		@media (max-width: 1016px) {
 			
-			.jumping-gifs {
-				height: 283px; 
-				width: 500px; 
-				border: 3px solid #F6D55C;
+			.level-img {
+				height: 224px; 
+				width: 400px; 
+				border: 3px solid #ED553B;
+			}
+			
+			.level_vid {
+				height: 251px; 
+				width: 400px; 
+				border: 3px solid #ED553B;
 			}
 		}
 		
 		@media (max-width: 700px) {
-			
-			.thumbnail-outerbox {
-				width: 250px;
-				height: 250px;
+						
+			.level-img {
+				visibility: hidden;
 			}
 			
-			.blue-img {
-				height: 100px; 
-				width: 167px;
+			.level_vid {
+				visibility: hidden;
 			}
 			
-			.cell-text-blue {
+			.red-figcaption {
 				visibility: hidden;
 			}
 		}
@@ -367,95 +378,125 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post -->
-		<div class="post-blue container">
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						GMTK Game Jam 2023
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						Flying Off the Staircase
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						July 9th, 2023
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						July 28th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-red">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Hello!
+			Hello again!
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				This weekend I participated in GMTK's 2023 Game Jam
+				As promised, I’m now going to revisit the FPS game and go over some of the progress I’ve made there. As I said in a
+				previous post, I’ve decided to abandon the pre-made “desert” map that I had been playing with, as it doesn’t really
+				fit with what I want to focus on with this game. Instead, I’ve turned my attention to Unity’s
 				
-				<a style="color: #3CAEA3;" href="https://itch.io/jam/gmtk-2023" target="_blank" rel="noopener noreferrer"><u>GMTK's 2023 Game Jam</u></a>,
-				
-				which was an absolute blast. This is the third game jam I have been to, but the first one I just sorta hung out and talked
-				to people and the second one I only assisted my team with some minor level-design stuff; this was the first game jam where
-				I put my head down and made something from scratch, all by myself. I didn't have the bandwidth this weekend to put in
-				the maximum amount of time (it's a little different when it starts while you're still at work and you're not physically
-				present at the game jam), but I still managed to put in 17 hours in the span of two days making a game (or rather, it ended
-				up being a little demo).
-				
-			</p>
+				<a style="color: #ED553B;" href="https://unity.com/features/probuilder" target="_blank" rel="noopener noreferrer"><u>ProBuilder</u></a>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-				The theme for this year's game jam was "Roles Reversed", which you could interpret however you'd like. I had a few thoughts
-				in my head at first - a princess rescuing a knight, a comedy game where horses ride people (which I'm still kinda into) - but
-				I decided to keep it simple and go with a 2D platformer, which I have actually never made before. My thought was to make a
-				platformer game where the player shoots at enemies, but then a timer would be running and when it finishes counting down, 
-				suddenly the game world changed and the enemies are the ones with the guns, and they try to shoot you. The player could then 
-				build-up points or "mana" or something the better you do dodging enemies in the "reversed" world, and then you can use those 
-				earnings to have more success when the gun is back in the player's hands.
+				design editor to build out a map.
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				As is tradition for me, I bit off more than I could chew in my head and I had to reel it in and make something much smaller
-				(I am also way too neurotic and detail-oriented to "go for bulk" in a game jam). So my game, which I call Reverse Rabbit
-				based on the theme and the main character, is more of a demo for some of the mechanics that I would like to include in this
-				theoretical game. I <em>do</em> plan on making a more fleshed out version of this game eventually, so stay tuned! I think that's
-				the power of a game jam, is that it forces you to do something in a short time frame so you can get your creative juices flowing,
-				and you can always take what you learned and did and expand on it.
+				I’ve been pretty busy doing that; you can see in the screenshot below the map I’ve been making. It’s pretty basic,
+				but I want to spend more of my time focusing on creating a core gameplay loop and polishing the mechanics of the game,
+				and I think a simple map such as this one will enable me to do so.
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<!-- Level Image -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="level-img" src="images/level.png"/>
+				<figcaption class="red-figcaption">I plan on giving this walls and a glass ceiling, sort of like a stadium.</figcaption>
+			</div>	
 			
-				I have my build for this game jam posted here on my site (though I am cheating, I actually added the sound effects after time was up, so this version posted on my site here has
-				a little more pizzazz). The art for this game comes from Kenney's 
-				
-				<a style="color: #3CAEA3;" href="https://kenney.nl/assets/pixel-line-platformer" target="_blank" rel="noopener noreferrer"><u>Pixel Line Platformer</u></a>
-				
-				tileset, which looks very nice and was easy to use. You can go to the "Portfolio" tab of this website or click the link below in this blog post to play the game:
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			</p>
-			
-			<!-- Link to Reverse Rabbit demo -->
-			<div style="display: table; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
-				<div class="thumbnail-outerbox">
-					<div class="cell-title-blue">Reverse Rabbit</div>
-					<div class="cell-subtitle">2D Game</div>
-					<a href="builds/reverse_rabbit/game.html"><img class="blue-img" src="images/rr-thumbnail.png"/></a>
-					<div class="cell-text-blue">A little demo I made for GMTK's Game Jam 2023, to showcase platformer mechanics. Do not press the red button!</div>
-				</div>
-			</div>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-				It's been a bit since my last blog post, and I've made a ton of progress on my FPS game (built a whole stage). I also have some
-				more technical notes from what I learned during this game jam. I'm going to save both of these for some later blog posts, and I
-				plan on posting more frequently again here. Until next time!
-			
-			</p>
+				After building some stairs and ramps, I had an issue that I needed to figure out. My current movement system is
+				based on user input adding <em>forces</em> to the player to get him to move; as a result of that, when the player was 
+				going up ramps, he would end up flying off the top once the end of the ramp/staircase was reached. This was not ideal for
+				ramps, and very unrealistic for stairs! (
 
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+				<a style="color: #ED553B;" href="https://www.reddit.com/r/Unity3D/comments/p7nq93/how_do_i_keep_player_on_ground_when_running_up/" target="_blank" rel="noopener noreferrer"><u>This post</u></a>
+
+				from reddit shows the exact same issue I’m talking about).
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				The solution to this involved a couple of things. For one, while on a slope, the player’s “forward” force was going in
+				the same direction as the ramp’s slope, via the 
+				
+				<a style="color: #ED553B;" href="https://docs.unity3d.com/ScriptReference/Vector3.ProjectOnPlane.html" target="_blank" rel="noopener noreferrer"><u>ProjectOnPlane()</u></a>
+				
+				method of Unity’s Vector3 struct. This was still not preventing the player from flying off the top of the ramp, 
+				because we’re adding forces, and they don’t magically go away when the slope of the surface the player is on changes.				
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				What did fix the issue, though, was forcing the player to have no upward velocity (i.e. a “y” value) unless the player
+				is on a slope or jumping. Obviously if a player is deliberately moving up a slope or is choosing to jump, there needs
+				to be some upward velocity allowed; but aside from that, there’s no other scenario where we’d want the player to have
+				upward momentum. So, by adding the following at the end of our Update() method:		
+			
+			</p>
+			
+			<div class="code-block">
+				<code>
+					if (!OnSlope() && !initiatingJump && rb.velocity.y > 0f)
+					<br>
+					{
+					<br>
+					&nbsp &nbsp &nbsp rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+					<br>
+					}
+				</code>
+			</div>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				We were able to correct the player’s velocity to eliminate upward movement in cases where we didn’t want it, such
+				as the moment where the player has moved off a ramp and back onto a flat surface. So, no more flying off of stairs.
+				Perhaps if I run fast enough up my own staircase I can fly off the top and then I’ll change this back to reflect this
+				new perspective on physics, but for now, I think this fix works nicely.
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				Aside from that, I’ve laid out some of my enemies and I’m seeing how the game feels when the player is shooting his
+				way through the map. See the video below for what that looks like! A crucial next step is coming up with a way to make
+				my enemy AI more fun to fight. I don’t want them bunching up too much with each other, and I want my AI to have a little
+				more complexity than just charging straight at the player. So, I have some research to do!
+			
+			</p>
+			
+			<!-- Level Test Demo Clip -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<iframe class="level_vid"
+					src="https://www.youtube.com/embed/UtbU5sK2jl0" allowfullscreen>
+				</iframe>
+			</div>
+
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -469,7 +510,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_6-16-23.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_7-9-23.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>

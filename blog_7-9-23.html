@@ -240,6 +240,51 @@
 			color: #5eb0f7;
 			font-size: 105%;
 		}
+		
+		.thumbnail-outerbox {
+			width: 400px;
+			height: 400px;
+			margin: 10px;
+			border: 3px solid #3CAEA3;
+			border-radius: 8px;
+			text-align: center;
+		}		
+		
+		.cell-title-blue {
+			color: #3CAEA3;
+			font-family: Lato;
+			text-align: center;
+			font-size: 25px;
+			margin-top: 10px;
+		}
+		
+		.cell-subtitle {
+			color: #9c9c9c;
+			font-family: Lato;
+			text-align: center;
+			font-size: 17px;
+		}
+		
+		.cell-text-blue {
+			color: #3CAEA3;
+			font-family: Lato;
+			text-align: left;
+			font-size: 20px;
+			margin: 10px;
+		}
+		
+		.blue-img {
+			border-radius: 8px;
+			border: 3px solid #3CAEA3;
+			margin-top: 10px;
+			overflow: hidden;
+			height: 162px; 
+			width: 271px;
+		}
+				
+		.blue-img:hover {
+			opacity: 0.7;
+		}
 						
 		/* Specific blog post images */
 				
@@ -275,13 +320,19 @@
 			}
 		}
 		
-		@media (max-width: 812px) {
-		
-			.jumping-gifs {
-				visibility: hidden;
+		@media (max-width: 700px) {
+			
+			.thumbnail-outerbox {
+				width: 250px;
+				height: 250px;
 			}
 			
-			.yellow-figcaption {
+			.blue-img {
+				height: 100px; 
+				width: 167px;
+			}
+			
+			.cell-text-blue {
 				visibility: hidden;
 			}
 		}
@@ -316,120 +367,95 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post -->
-		<div class="post-yellow container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						Plans for the Summer
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						GMTK Game Jam 2023
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						June 16th, 2023
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						July 9th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-blue">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
 			Hello!
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-				I’ve finished up my class for the semester, and I now have some extra time this summer to dig into some more
-				game development. I’m going to use this blog post as a way to organize my thoughts on what the plan is going
-				forward for me.
+				This weekend I participated in GMTK's 2023 Game Jam
+				
+				<a style="color: #3CAEA3;" href="https://itch.io/jam/gmtk-2023" target="_blank" rel="noopener noreferrer"><u>GMTK's 2023 Game Jam</u></a>,
+				
+				which was an absolute blast. This is the third game jam I have been to, but the first one I just sorta hung out and talked
+				to people and the second one I only assisted my team with some minor level-design stuff; this was the first game jam where
+				I put my head down and made something from scratch, all by myself. I didn't have the bandwidth this weekend to put in
+				the maximum amount of time (it's a little different when it starts while you're still at work and you're not physically
+				present at the game jam), but I still managed to put in 17 hours in the span of two days making a game (or rather, it ended
+				up being a little demo).
+				
+			</p>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+				The theme for this year's game jam was "Roles Reversed", which you could interpret however you'd like. I had a few thoughts
+				in my head at first - a princess rescuing a knight, a comedy game where horses ride people (which I'm still kinda into) - but
+				I decided to keep it simple and go with a 2D platformer, which I have actually never made before. My thought was to make a
+				platformer game where the player shoots at enemies, but then a timer would be running and when it finishes counting down, 
+				suddenly the game world changed and the enemies are the ones with the guns, and they try to shoot you. The player could then 
+				build-up points or "mana" or something the better you do dodging enemies in the "reversed" world, and then you can use those 
+				earnings to have more success when the gun is back in the player's hands.
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-				First off, to report on what I’ve been working on the last couple of weeks: One thing I was starting to not
-				like the feel of in my game was the movement system, specifically the jumping. I really disliked how the player
-				could switch directions midair at full velocity; it felt very unnatural, and while jumping around this desert
-				map, it was actually difficult to control the player to land on smaller platforms. My movement system was done
-				by completely changing the player’s velocity on any input, and I decided I needed to learn more about a 
-				force-based system.
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				I found a really great tutorial series online by a new YouTuber I hadn’t before checked out named
-				
-				<a style="color: #F6D55C;" href="https://www.youtube.com/@davegamedevelopment" target="_blank" rel="noopener noreferrer"><u>Dave / GameDevelopment</u></a>.
-				
-				He has a pretty effective 
-				
-				<a style="color: #F6D55C;" href="https://www.youtube.com/watch?v=f473C43s8nE" target="_blank" rel="noopener noreferrer"><u>first person movement</u></a>
-				
-				tutorial that I followed and implemented into my game. Specifically, he moves his player using 
-				
-				<a style="color: #F6D55C;" href="https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html" target="_blank" rel="noopener noreferrer"><u>Rigidbody.AddForce</u></a>;				
-				
-				this means that when you switch directions (midair or otherwise), you’re player doesn’t just change velocity 
-				to the other direction on a dime, but instead slowly switches directions as the force impacts the velocity of 
-				the player. It feels much more organic. See below for a “before and after” of what movement looks like in my
-				game with this implementation.
+				As is tradition for me, I bit off more than I could chew in my head and I had to reel it in and make something much smaller
+				(I am also way too neurotic and detail-oriented to "go for bulk" in a game jam). So my game, which I call Reverse Rabbit
+				based on the theme and the main character, is more of a demo for some of the mechanics that I would like to include in this
+				theoretical game. I <em>do</em> plan on making a more fleshed out version of this game eventually, so stay tuned! I think that's
+				the power of a game jam, is that it forces you to do something in a short time frame so you can get your creative juices flowing,
+				and you can always take what you learned and did and expand on it.
 			
 			</p>
 			
-			<!-- Velocity Jump -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="jumping-gifs" src="images/vel-jump.gif"/>
-				<figcaption class="yellow-figcaption">The player switches movement from left to right instantly.</figcaption>
-			</div>	
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			<!-- Force Jump -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="jumping-gifs" src="images/force-jump.gif"/>
-				<figcaption class="yellow-figcaption">The player gradually moves from left to right as a new force is applied.</figcaption>
+				I have my build for this game jam posted here on my site (though I am cheating, I actually added the sound effects after time was up, so this version posted on my site here has
+				a little more pizzazz). The art for this game comes from Kenney's 
+				
+				<a style="color: #3CAEA3;" href="https://kenney.nl/assets/pixel-line-platformer" target="_blank" rel="noopener noreferrer"><u>Pixel Line Platformer</u></a>
+				
+				tileset, which looks very nice and was easy to use. You can go to the "Portfolio" tab of this website or click the link below in this blog post to play the game:
+			
+			</p>
+			
+			<!-- Link to Reverse Rabbit demo -->
+			<div style="display: table; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
+				<div class="thumbnail-outerbox">
+					<div class="cell-title-blue">Reverse Rabbit</div>
+					<div class="cell-subtitle">2D Game</div>
+					<a href="builds/reverse_rabbit/game.html"><img class="blue-img" src="images/rr-thumbnail.png"/></a>
+					<div class="cell-text-blue">A little demo I made for GMTK's Game Jam 2023, to showcase platformer mechanics. Do not press the red button!</div>
+				</div>
 			</div>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-				Honestly, I was so intrigued by Dave’s movement system that I went down a rabbit hole and started following
-				several of his tutorials to learn more about how he moves his player controller. I love the way he organizes
-				his code and I found myself watching his tutorials on jumping, running, sliding, and wall running. So while
-				I don’t have much more to report on in my own game, I really think I learned a ton since my last post!
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				Going forward, I’ve decided that I don’t really want to pursue this “desert map” any further; I think it was
-				a good exercise in lighting and adjusting my assets for a map, but it doesn’t feel optimized for what I’d
-				like to create, which is a fast, fluid shooter. I plan on leaning more heavily into the movement systems that
-				I’ve been learning about; while I am going to implement a lot of what Dave’s channel has to offer, I am also
-				going to push myself to build upon what I’ve learned about adding forces to Rigidbodies to implement my movement
-				systems, too.
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				I also think this is a good opportunity for me to learn a bit of level design. I’ve been looking at features
-				like Unity’s 
-				
-				<a style="color: #F6D55C;" href="https://unity.com/features/probuilder" target="_blank" rel="noopener noreferrer"><u>ProBuilder</u></a>,
-				
-				and I’d like to design some prototype levels for me to play around with, i.e. place my enemy AI on some basic
-				maps and see how the gameplay feels.				
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				I’m going to keep my sights set on these goals for now, and then going forward I can focus more on putting
-				together a more full experience with some polish. For now, I’m feeling great about what I’ve learned about
-				physics and movement in Unity, and I can’t wait to put it into action.
+				It's been a bit since my last blog post, and I've made a ton of progress on my FPS game (built a whole stage). I also have some
+				more technical notes from what I learned during this game jam. I'm going to save both of these for some later blog posts, and I
+				plan on posting more frequently again here. Until next time!
 			
 			</p>
 
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -443,10 +469,10 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_7-9-23.html" class="col-sm botlink_left yellow-text" style="text-decoration: none;">
+				<a href="blog_current.html" class="col-sm botlink_left blue-text" style="text-decoration: none;">
 					<-- Newer Post
-				</a>			
-				<a href="blog_5-26-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				</a>
+				<a href="blog_6-16-23.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
