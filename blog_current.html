@@ -288,13 +288,17 @@
 						
 		/* Specific blog post images */
 				
-		.demo_vid {
-			margin-top: 30px;
-			height: 340px; 
+		.level-generation-gif {
+			height: 332px; 
 			width: 600px; 
-			border: 3px solid #3CAEA3;
+			border: 3px solid #ED553B;
 		}
-	
+		
+		.dynamic-navmesh-img {
+			height: 385px; 
+			width: 656px; 
+			border: 3px solid #ED553B;			
+		}
 			
 		/* Small screen adjustments */
 		@media (max-height: 700px) {
@@ -313,18 +317,32 @@
 			
 		}
 		
-		@media (max-width: 1016px) {
+		@media (max-width: 1035px) {
 			
-			.demo_vid {
-				height: 251px; 
+			.level-generation-gif {
+				height: 221px; 
 				width: 400px; 
-				border: 3px solid #3CAEA3;
+				border: 3px solid #ED553B;
+			}
+			
+			.dynamic-navmesh-img {
+				height: 255px; 
+				width: 435px; 
+				border: 3px solid #ED553B;			
 			}
 		}
 		
-		@media (max-width: 700px) {
+		@media (max-width: 725px) {
 						
-			.demo_vid {
+			.level-generation-gif {
+				visibility: hidden;
+			}
+			
+			.dynamic-navmesh-img {
+				visibility: hidden;
+			}
+			
+			.red-figcaption {
 				visibility: hidden;
 			}
 		}
@@ -359,78 +377,97 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post -->
-		<div class="post-blue container">
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Taking Shape
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						Generating Levels
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						September 22nd, 2023
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						November 5th, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-red">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Howdy,
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-				I have finally returned to the blog! Although I have not blogged as much as I had originally intended to, I <em>have</em> been
-				working a lot in the background. I've spent a lot of time the last month or two playing around with concepts and mechanics to
-				see what felt best, and I think I finally have the vision of what I want this project to be (and I feel like knowing me, as soon
-				as I say this I'm going to change directions again in the next blog post &#129335;).
+			Hello Again,
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				Using some of the mechanics I talked about in other posts, I now have created a simple stage that has two "rooms" of enemies.
-				I think that the combat is simple but fluid, and I want to build around this and actually complete this thing. My hope is that I can
-				get random rooms to generate at the end of the previous room, so it creates a long hallway of different subsets of enemies to fight.
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-				I added a lot of mechanics since the last blog post, but just to highlight a few:
-				<ul class="blog-text-blue">
-					<li>The player can now both "knife" enemies in a melee attack and throw knives at enemies from a distance.</li>
-					<li>Only a certain number of enemies can fire at the same time, so that way there's not a million overlapping gun noises.</li>
-					<li>I have added multiple different pitches for gun sounds, also for the purpose of presenting audio overlap.</li>
-					<li>I made "taking cover" less of a random experience; enemies used to just pick a random cover or cover within an
-						"optimal band", but it felt better to just have enemies move to set covers instead.</li>
-				</ul>
+				I am back again for another post! I have been making steady progress in my game, and I think I am nearly done with the overall
+				structure of the gameplay experience. The main thing I have been focusing on since my last post is turning the game into an
+				infinite, randomly-generated dungeon where stages called "segments" will continue to spawn until the player dies. The objective
+				of the game is to survive for as many segments as possible.
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-				I think in terms of mechanics, I'm satisfied for now. I want to put this thing together and actually have a full (but reasonably-sized)
-				game that you can download and play. If there are any tweaks to be made, I'll come back and do those later. Check out a little demo of
-				what I have so far in the video below!
+				I was able to successfully create a system whereby segments continuously generate. The game starts by spawning a starter segment,
+				which has a hole in the floor where the player "drops" into the next segment. At that hole is a node with a script on it that calls
+				for a random segment to be generated such that the entrance point of this new segment lines up with the exit point of the previous
+				segment. Likewise, once the player gets to the end of this "new" segment, there is another hole to drop into, and that hole spawns
+				another segment. So, as the player moves along and defeats all the enemies in each segment, a new one will keep spawning. This has
+				worked pretty effectively so far; I'm able to save on resources by not having tons of empty segments lingering, and at the same time,
+				the player doesn't see segments spawning in and out because the changeover happens when they are dropping through a tunnel.
 			
 			</p>
-			
-			<!-- Level Test Demo Clip -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<iframe class="demo_vid"
-					src="https://www.youtube.com/embed/lBKJIcRhq1k" allowfullscreen>
-				</iframe>
-			</div>
 
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+			<!-- Level Generation GIF -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="level-generation-gif" src="images/level_generation.gif"/>
+				<figcaption class="red-figcaption">
+					As the player drops into the next segment, another segment spawns.
+					A maximum of 3 segments can exist at a time, so older segments are despawned.
+				</figcaption>
+			</div>	
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				The most challenging part of generating each segment was re-baking the navmesh at runtime. The navmesh, which is the
+				designated area in which an agent can move (in my case, the enemies), typically gets baked once before runtime and does
+				not change. However, since in my game different segments are being created and destroyed as the player moves along, there
+				is a need for a navmesh that dynamically re-bakes in order to ensure enemies have full mobility over the changing terrain.
+				Base Unity itself does not have a mechanism for this, but luckily there is an experimental package for Unity called
+				
+				<a style="color: #ED553B;" href="https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/index.html" target="_blank" rel="noopener noreferrer"><u>AI Navigation</u></a>
+
+				that does allow you to call for a navmesh re-bake from a script. It was challenging to work through some bugs, but I now
+				have the game successfully re-baking the navmesh as soon as the player falls through a tunnel to transition from one segment
+				to the next.
+			
+			</p>
+			
+			<!-- Dynamic Navmesh IMG -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="dynamic-navmesh-img" src="images/dynamic_nav.png"/>
+				<figcaption class="red-figcaption">
+					As soon as a player transitions to a new segment, the navmesh is re-baked (navmesh seen here in light blue).
+				</figcaption>
+			</div>	
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+				Now that level-generation is under control, I want to make a bunch of more segments for the player to fight enemies on
+				(I've got the building blocks, now it's time to make some levels!). I am very excited for this part because I get to see
+				it all come together. My plan is to get those building blocks going and ensure that the right menus and mechanics are in
+				place for the game to actually "work", make a few more weapons perhaps, and then we're going to wrap it up there. Thanks
+				for reading as always!
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
 			</p>
-
+			
 		</div>
 		
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -439,7 +476,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_8-18-23.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_9-22-23.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
