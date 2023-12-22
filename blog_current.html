@@ -238,14 +238,26 @@
 		
 		code {
 			color: #5eb0f7;
-			font-size: 105%;
+			font-size: 95%;
+			background-color: rgba(59, 59, 59, 0.7);
+			border-radius: 10px;
+			padding: 2px 8px;
 		}
 		
-		.thumbnail-outerbox {
+		.thumbnail-outerbox-blue {
 			width: 400px;
 			height: 400px;
 			margin: 10px;
 			border: 3px solid #3CAEA3;
+			border-radius: 8px;
+			text-align: center;
+		}	
+
+		.thumbnail-outerbox-yellow {
+			width: 400px;
+			height: 400px;
+			margin: 10px;
+			border: 3px solid #F6D55C;
 			border-radius: 8px;
 			text-align: center;
 		}		
@@ -258,6 +270,14 @@
 			margin-top: 10px;
 		}
 		
+		.cell-title-yellow {
+			color: #F6D55C;
+			font-family: Lato;
+			text-align: center;
+			font-size: 25px;
+			margin-top: 10px;
+		}		
+		
 		.cell-subtitle {
 			color: #9c9c9c;
 			font-family: Lato;
@@ -267,6 +287,14 @@
 		
 		.cell-text-blue {
 			color: #3CAEA3;
+			font-family: Lato;
+			text-align: left;
+			font-size: 20px;
+			margin: 10px;
+		}
+
+		.cell-text-yellow {
+			color: #F6D55C;
 			font-family: Lato;
 			text-align: left;
 			font-size: 20px;
@@ -285,19 +313,26 @@
 		.blue-img:hover {
 			opacity: 0.7;
 		}
+		
+		.yellow-img {
+			border-radius: 8px;
+			border: 3px solid #F6D55C;
+			margin-top: 10px;
+			overflow: hidden;
+			height: 162px; 
+			width: 271px;
+		}
+				
+		.yellow-img:hover {
+			opacity: 0.7;
+		}
 						
 		/* Specific blog post images */
 				
-		.level-generation-gif {
-			height: 332px; 
-			width: 600px; 
-			border: 3px solid #ED553B;
-		}
-		
-		.dynamic-navmesh-img {
-			height: 385px; 
-			width: 656px; 
-			border: 3px solid #ED553B;			
+		.pickup-gifs {
+			height: 255px; 
+			width: 450px; 
+			border: 3px solid #F6D55C;
 		}
 			
 		/* Small screen adjustments */
@@ -316,33 +351,27 @@
 			}
 			
 		}
-		
-		@media (max-width: 1035px) {
-			
-			.level-generation-gif {
-				height: 221px; 
-				width: 400px; 
-				border: 3px solid #ED553B;
-			}
-			
-			.dynamic-navmesh-img {
-				height: 255px; 
-				width: 435px; 
-				border: 3px solid #ED553B;			
+				
+		@media (max-width: 760px) {
+						
+			.pickup-gifs {
+				visibility: hidden;
 			}
 		}
 		
-		@media (max-width: 725px) {
-						
-			.level-generation-gif {
-				visibility: hidden;
+		@media (max-width: 700px) {
+			
+			.thumbnail-outerbox-yellow {
+				width: 250px;
+				height: 250px;
 			}
 			
-			.dynamic-navmesh-img {
-				visibility: hidden;
+			.yellow-img {
+				height: 100px; 
+				width: 167px;
 			}
 			
-			.red-figcaption {
+			.cell-text-yellow {
 				visibility: hidden;
 			}
 		}
@@ -377,92 +406,112 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post -->
-		<div class="post-red container">
+		<div class="post-yellow container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
-						Generating Levels
+					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
+						Pickups and a Web App
 					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						November 5th, 2023
+					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						December 21st, 2023
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-red">
+			<hr class="line-yellow">
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-			Hello Again,
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				I am back again for another post! I have been making steady progress in my game, and I think I am nearly done with the overall
-				structure of the gameplay experience. The main thing I have been focusing on since my last post is turning the game into an
-				infinite, randomly-generated dungeon where stages called "segments" will continue to spawn until the player dies. The objective
-				of the game is to survive for as many segments as possible.
+			Happy Winter!
 			
 			</p>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				I was able to successfully create a system whereby segments continuously generate. The game starts by spawning a starter segment,
-				which has a hole in the floor where the player "drops" into the next segment. At that hole is a node with a script on it that calls
-				for a random segment to be generated such that the entrance point of this new segment lines up with the exit point of the previous
-				segment. Likewise, once the player gets to the end of this "new" segment, there is another hole to drop into, and that hole spawns
-				another segment. So, as the player moves along and defeats all the enemies in each segment, a new one will keep spawning. This has
-				worked pretty effectively so far; I'm able to save on resources by not having tons of empty segments lingering, and at the same time,
-				the player doesn't see segments spawning in and out because the changeover happens when they are dropping through a tunnel.
+				I have been busy plugging away at some things with my game, but a lot of the changes are not quite as glamorous as things I have shown in previous posts.
+				For one, I've spent a lot of time working on bug fixes and refactoring code. In particular, I previously had
+				two scripts called <code>PlayerMovement</code> and <code>PlayerController</code>, respectively, that I did not feel
+				were named appropriately relative to the functionality they provided. Since the latter script actually handled more
+				of the functionality related to the weapon itself, I renamed that script to <code>GunManager</code> and additionally
+				moved some code from the <code>Gun</code> script to this newly named script, i.e. those functions that made more sense
+				to be part of the "central management" of weapons. I then moved some code from the former <code>PlayerController</code>
+				to <code>PlayerMovement</code> and then renamed <em>that</em> script to <code>PlayerManager</code>, since this script
+				now handles more aspects of the player's control than just its movement. Written out here, it sounds like a bunch of
+				semantics, but for the organization of my scripts, it makes a lot more sense and it means I have to spend less time
+				wondering where the heck some function or another is in my code!
 			
 			</p>
-
-			<!-- Level Generation GIF -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="level-generation-gif" src="images/level_generation.gif"/>
-				<figcaption class="red-figcaption">
-					As the player drops into the next segment, another segment spawns.
-					A maximum of 3 segments can exist at a time, so older segments are despawned.
-				</figcaption>
-			</div>	
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				The most challenging part of generating each segment was re-baking the navmesh at runtime. The navmesh, which is the
-				designated area in which an agent can move (in my case, the enemies), typically gets baked once before runtime and does
-				not change. However, since in my game different segments are being created and destroyed as the player moves along, there
-				is a need for a navmesh that dynamically re-bakes in order to ensure enemies have full mobility over the changing terrain.
-				Base Unity itself does not have a mechanism for this, but luckily there is an experimental package for Unity called
+				To work towards making my game a complete and playable experience, I've added a few pickups, such as ammo
+				drops and health packs. I'm also getting prepped to let the player carry two weapons, so I revisted how weapon pickups
+				look and feel. To make weapon pickups feel better, I made a quick "pickup" animation where the player lifts up a weapon
+				after grabbing it from a gun rack. It looks pretty simple, but it gave me quite the headache to implement (I discovered I was
+				not consistent with what I was keyframing across different animations, which caused jerkiness and inconsistencies in
+				transitions between animations. Luckily, that's all been resolved!). Check out the gifs below to see quick little snippets
+				of these additions (in order: weapon pickup animation, ammo pickup, health pickup).
+			
+			</p>
+			
+			<!-- Dungeon Images - Flex -->
+			<div class="flex-container" style="text-align: center; margin-bottom: 43px;">
+				<img class="pickup-gifs" style="margin-left: 10px; margin-top: 10px;" src="images/weapon-pickup.gif"/>
+				<img class="pickup-gifs" style="margin-left: 10px; margin-top: 10px;" src="images/ammo-pickup.gif"/>
+				<img class="pickup-gifs" style="margin-left: 10px; margin-top: 10px;" src="images/health-pickup.gif"/>
+			</div>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				In addition to working on my game, I also just finished up my winter semester at Oregon State and I have deployed my
+				group's semester-long project to the web, which you can check out by clicking the link below (or the equivalent link
+				located on the Portfolio page). This was a databases class, so our project involved creating a SQL database and connecting
+				it to a web application that can perform CRUD operations on the database. I really enjoyed this class because instead of
+				just going through a long list of content and giving us videos to hold our hand, the professor instead made us put our learning into action
+				by working on one giant project all semester, which I find very effective for learning (the
+				phrase "use it or lose it" describes my learning style to a tee).
+			
+			</p>
+			
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			
+				Throughout the semester we were hosting our web app on one of Oregon State's student machines, which ended as soon as the
+				class ended. I took this as a good opportunity to learn about web hosting through
 				
-				<a style="color: #ED553B;" href="https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/index.html" target="_blank" rel="noopener noreferrer"><u>AI Navigation</u></a>
+				<a style="color: #F6D55C;" href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer"><u>Amazon Web Services</u></a>, 
+				
+				so that I could put our group's database and web application on the public web. Specifically, I used Amazon's 
+				
+				<a style="color: #F6D55C;" href="https://aws.amazon.com/rds/" target="_blank" rel="noopener noreferrer"><u>Relational Database Service (RDS)</u></a>
+				
+				to host the database and then used their
+				
+				<a style="color: #F6D55C;" href="https://aws.amazon.com/rds/" target="_blank" rel="noopener noreferrer"><u>Elastic Beanstalk</u></a>
+				
+				service to orchestrate several other services for web hosting (EC2, S3, autoscaling, etc). It took me a bit to get my
+				bearings, but I was able to deploy the site properly. Please feel free to check it out and test adding, deleting, and updating entries
+				to the various tables!
 
-				that does allow you to call for a navmesh re-bake from a script. It was challenging to work through some bugs, but I now
-				have the game successfully re-baking the navmesh as soon as the player falls through a tunnel to transition from one segment
-				to the next.
-			
 			</p>
 			
-			<!-- Dynamic Navmesh IMG -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="dynamic-navmesh-img" src="images/dynamic_nav.png"/>
-				<figcaption class="red-figcaption">
-					As soon as a player transitions to a new segment, the navmesh is re-baked (navmesh seen here in light blue).
-				</figcaption>
-			</div>	
+			<!-- Link to Reverse Rabbit demo -->
+			<div style="display: table; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
+				<div class="thumbnail-outerbox-yellow">
+					<div class="cell-title-yellow">Space Academy</div>
+					<div class="cell-subtitle">Website</div>
+					<a href="http://spaceacademy.us-east-2.elasticbeanstalk.com/"><img class="yellow-img" src="images/spaceacademy.png"/></a>
+					<div class="cell-text-yellow">REST API made with Express and Node.js, connected to a MySQL database. Deployed via Elastic Beanstalk on Amazon Web Services.</div>
+				</div>
+			</div>
 			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
 			
-				Now that level-generation is under control, I want to make a bunch of more segments for the player to fight enemies on
-				(I've got the building blocks, now it's time to make some levels!). I am very excited for this part because I get to see
-				it all come together. My plan is to get those building blocks going and ensure that the right menus and mechanics are in
-				place for the game to actually "work", make a few more weapons perhaps, and then we're going to wrap it up there. Thanks
-				for reading as always!
+			Have a Happy New Year! I can't wait to work on some more cool projects in the new year and blog about them. Thank you for reading!
 			
-			</p>
+			</p>			
 			
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
+			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -476,7 +525,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_9-22-23.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
+				<a href="blog_11-5-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
