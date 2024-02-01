@@ -406,112 +406,81 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post -->
-		<div class="post-yellow container">
+		<div class="post-blue container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						Pickups and a Web App
+					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
+						First Release of Corridors
 					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						December 21st, 2023
+					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						February 1st, 2024
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-yellow">
+			<hr class="line-blue">
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-			Happy Winter!
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				I have been busy plugging away at some things with my game, but a lot of the changes are not quite as glamorous as things I have shown in previous posts.
-				For one, I've spent a lot of time working on bug fixes and refactoring code. In particular, I previously had
-				two scripts called <code>PlayerMovement</code> and <code>PlayerController</code>, respectively, that I did not feel
-				were named appropriately relative to the functionality they provided. Since the latter script actually handled more
-				of the functionality related to the weapon itself, I renamed that script to <code>GunManager</code> and additionally
-				moved some code from the <code>Gun</code> script to this newly named script, i.e. those functions that made more sense
-				to be part of the "central management" of weapons. I then moved some code from the former <code>PlayerController</code>
-				to <code>PlayerMovement</code> and then renamed <em>that</em> script to <code>PlayerManager</code>, since this script
-				now handles more aspects of the player's control than just its movement. Written out here, it sounds like a bunch of
-				semantics, but for the organization of my scripts, it makes a lot more sense and it means I have to spend less time
-				wondering where the heck some function or another is in my code!
+			Hi again,
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-				To work towards making my game a complete and playable experience, I've added a few pickups, such as ammo
-				drops and health packs. I'm also getting prepped to let the player carry two weapons, so I revisted how weapon pickups
-				look and feel. To make weapon pickups feel better, I made a quick "pickup" animation where the player lifts up a weapon
-				after grabbing it from a gun rack. It looks pretty simple, but it gave me quite the headache to implement (I discovered I was
-				not consistent with what I was keyframing across different animations, which caused jerkiness and inconsistencies in
-				transitions between animations. Luckily, that's all been resolved!). Check out the gifs below to see quick little snippets
-				of these additions (in order: weapon pickup animation, ammo pickup, health pickup).
+			I'm still here! Sorry for the long delay between blog posts, but I have been really locked in trying to get a first
+			build of my game up on the site for people to play. I'm happy to say we're finally there! You can check out the game
+			either at the top of the 
 			
-			</p>
+			<a style="color: #3CAEA3;" href="portfolio.html"><u>Portfolio</u></a>
 			
-			<!-- Dungeon Images - Flex -->
-			<div class="flex-container" style="text-align: center; margin-bottom: 43px;">
-				<img class="pickup-gifs" style="margin-left: 10px; margin-top: 10px;" src="images/weapon-pickup.gif"/>
-				<img class="pickup-gifs" style="margin-left: 10px; margin-top: 10px;" src="images/ammo-pickup.gif"/>
-				<img class="pickup-gifs" style="margin-left: 10px; margin-top: 10px;" src="images/health-pickup.gif"/>
-			</div>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				In addition to working on my game, I also just finished up my winter semester at Oregon State and I have deployed my
-				group's semester-long project to the web, which you can check out by clicking the link below (or the equivalent link
-				located on the Portfolio page). This was a databases class, so our project involved creating a SQL database and connecting
-				it to a web application that can perform CRUD operations on the database. I really enjoyed this class because instead of
-				just going through a long list of content and giving us videos to hold our hand, the professor instead made us put our learning into action
-				by working on one giant project all semester, which I find very effective for learning (the
-				phrase "use it or lose it" describes my learning style to a tee).
+			page, or by clicking the link at the bottom of this post. I currently have a build working for Windows, and I hope to
+			have a build for Mac working soon. I decided to name the game Corridors. I had originally thought of naming the game "Climb",
+			with the thought that the player would keep climping up a spire as they battled enemies, but I ended up going the other
+			direction, and the player moves through different hallways before dropping down into the next one.
 			
 			</p>
 			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
 			
-				Throughout the semester we were hosting our web app on one of Oregon State's student machines, which ended as soon as the
-				class ended. I took this as a good opportunity to learn about web hosting through
-				
-				<a style="color: #F6D55C;" href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer"><u>Amazon Web Services</u></a>, 
-				
-				so that I could put our group's database and web application on the public web. Specifically, I used Amazon's 
-				
-				<a style="color: #F6D55C;" href="https://aws.amazon.com/rds/" target="_blank" rel="noopener noreferrer"><u>Relational Database Service (RDS)</u></a>
-				
-				to host the database and then used their
-				
-				<a style="color: #F6D55C;" href="https://aws.amazon.com/rds/" target="_blank" rel="noopener noreferrer"><u>Elastic Beanstalk</u></a>
-				
-				service to orchestrate several other services for web hosting (EC2, S3, autoscaling, etc). It took me a bit to get my
-				bearings, but I was able to deploy the site properly. Please feel free to check it out and test adding, deleting, and updating entries
-				to the various tables!
-
+			I spent a lot of time the last month debugging and working on the UI so that the game could feel like a full, playable
+			experience. There's definitely still a few bugs, but the build seems to be very stable. While I'm happy to have something
+			released, I definitely plan to keep working on this game. Now that the overall structure of the game appears to be in place,
+			I want to make the levels that generate (or the "corridors" &#128521;) be larger and more complex. I think that will help me "find
+			the fun" in the core gameplay.  
+			
 			</p>
 			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			I also plan on playing some FPS games in my free time to study how other games handle enemy AI. Right now, the enemies in
+			my game follow a fairly simple formula: when activated, they run towards a designated cover spot, and if the player is
+			"hiding" from the enemies and there's no shooting, then some enemies will get up and charge the player. I want to "feel out"
+			how other games do it, and specifically, I think I'm going to start with some oldies to see how they did it back in the day
+			(this is my excuse to revisit one of my favorite games from childhood,
+			
+			<a style="color: #3CAEA3;" href="https://en.wikipedia.org/wiki/James_Bond_007:_Nightfire" target="_blank" rel="noopener noreferrer"><u>007: Nightfire</u></a>).
+			
+			</p>
+			
+			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			
+			Anyways, please click the link below to download Corridors. Hope you like it, and thank you for reading!
+			
+			</p>
+												
 			<!-- Link to Reverse Rabbit demo -->
 			<div style="display: table; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
-				<div class="thumbnail-outerbox-yellow">
-					<div class="cell-title-yellow">Space Academy</div>
-					<div class="cell-subtitle">Website</div>
-					<a href="http://spaceacademy.us-east-2.elasticbeanstalk.com/"><img class="yellow-img" src="images/spaceacademy.png"/></a>
-					<div class="cell-text-yellow">REST API made with Express and Node.js, connected to a MySQL database. Deployed via Elastic Beanstalk on Amazon Web Services.</div>
+				<div class="thumbnail-outerbox-blue">
+					<div class="cell-title-blue">Corridors</div>
+					<div class="cell-subtitle">3D Game</div>
+					<a href="corridors.html"><img class="blue-img" src="images/corridors_icon.PNG"/></a>
+					<div class="cell-text-blue">The first build of my 3D first-person shooter. Battle your way through infinitely-generating levels!</div>
 				</div>
 			</div>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			Have a Happy New Year! I can't wait to work on some more cool projects in the new year and blog about them. Thank you for reading!
-			
-			</p>			
-			
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
+						
+			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -525,7 +494,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_11-5-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
+				<a href="blog_12-21-23.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
