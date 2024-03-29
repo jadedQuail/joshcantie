@@ -329,10 +329,35 @@
 						
 		/* Specific blog post images */
 				
-		.pickup-gifs {
-			height: 255px; 
-			width: 450px; 
-			border: 3px solid #F6D55C;
+		.purple-img-1 {
+			height: 422px; 
+			width: 650px; 
+			border: 3px solid #ED553B;			
+		}
+		
+		.purple-img-2 {
+			height: 410px; 
+			width: 800px; 
+			border: 3px solid #ED553B;			
+		}
+		
+		.purple-img-3 {
+			height: 395px; 
+			width: 650px; 
+			border: 3px solid #ED553B;			
+		}
+		
+		.behavior-img {
+			height: 555px;
+			width: 900px;
+			border: 3px solid #ED553B;
+		}
+		
+		.demo-vid {
+			margin-top: 30px;
+			height: 340px; 
+			width: 600px; 
+			border: 3px solid #ED553B;
 		}
 			
 		/* Small screen adjustments */
@@ -351,27 +376,79 @@
 			}
 			
 		}
-				
-		@media (max-width: 760px) {
+		
+		@media (max-width: 1360px) {
 						
-			.pickup-gifs {
-				visibility: hidden;
+			.behavior-img {
+				height: 400px;
+				width: 650px;
+				border: 3px solid #ED553B;
 			}
+			
+			.purple-img-2 {
+				height: 333px; 
+				width: 650px; 
+				border: 3px solid #ED553B;			
+			}
+		}		
+				
+		@media (max-width: 1000px) {
+						
+			.purple-img-1 {
+				height: 260px; 
+				width: 400px; 
+				border: 3px solid #ED553B;			
+			}
+			
+			.purple-img-2 {
+				height: 205px; 
+				width: 400px; 
+				border: 3px solid #ED553B;			
+			}
+			
+			.purple-img-3 {
+				height: 243px; 
+				width: 400px; 
+				border: 3px solid #ED553B;			
+			}
+			
+			.behavior-img {
+				height: 247px;
+				width: 400px;
+				border: 3px solid #ED553B;
+			}
+			
+			.demo-vid {
+				margin-top: 30px;
+				height: 227px; 
+				width: 400px; 
+				border: 3px solid #ED553B;
+			}									
 		}
 		
 		@media (max-width: 700px) {
-			
-			.thumbnail-outerbox-yellow {
-				width: 250px;
-				height: 250px;
+						
+			.red-figcaption {
+				visibility: hidden;
 			}
 			
-			.yellow-img {
-				height: 100px; 
-				width: 167px;
+			.purple-img-1 {
+				visibility: hidden;
 			}
 			
-			.cell-text-yellow {
+			.purple-img-2 {
+				visibility: hidden;		
+			}
+			
+			.purple-img-3 {
+				visibility: hidden;		
+			}
+			
+			.behavior-img {
+				visibility: hidden;
+			}
+			
+			.demo-vid {
 				visibility: hidden;
 			}
 		}
@@ -406,81 +483,152 @@
 		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 		
 		<!-- Post -->
-		<div class="post-blue container">
+		<div class="post-red container">
 		
 			<div>
 				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						First Release of Corridors
+					<div class="col-sm blog-text-red" style="padding-top: 11px;">
+						Progress Report
 					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						February 1st, 2024
+					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
+						March 28th, 2024
 					</div>
 				</div>
 			</div>
 			
-			<hr class="line-blue">
+			<hr class="line-red">
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			Hi again,
-			
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			I'm still here! Sorry for the long delay between blog posts, but I have been really locked in trying to get a first
-			build of my game up on the site for people to play. I'm happy to say we're finally there! You can check out the game
-			either at the top of the 
-			
-			<a style="color: #3CAEA3;" href="portfolio.html"><u>Portfolio</u></a>
-			
-			page, or by clicking the link at the bottom of this post. I currently have a build working for Windows, and I hope to
-			have a build for Mac working soon. I decided to name the game Corridors. I had originally thought of naming the game "Climb",
-			with the thought that the player would keep climping up a spire as they battled enemies, but I ended up going the other
-			direction, and the player moves through different hallways before dropping down into the next one.
+			Hello,
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			I spent a lot of time the last month debugging and working on the UI so that the game could feel like a full, playable
-			experience. There's definitely still a few bugs, but the build seems to be very stable. While I'm happy to have something
-			released, I definitely plan to keep working on this game. Now that the overall structure of the game appears to be in place,
-			I want to make the levels that generate (or the "corridors" &#128521;) be larger and more complex. I think that will help me "find
-			the fun" in the core gameplay.  
+			Back again. Sorry, going to apologize once again for the longer-than-planned delay on making a blog post. I can say that
+			I have been hard at work on a lot of things with my game, though, so I am going to use this blog post as a sort of "state
+			of the union" for Corridors (or rather, "state of the game"). &#128521;
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
 			
-			I also plan on playing some FPS games in my free time to study how other games handle enemy AI. Right now, the enemies in
-			my game follow a fairly simple formula: when activated, they run towards a designated cover spot, and if the player is
-			"hiding" from the enemies and there's no shooting, then some enemies will get up and charge the player. I want to "feel out"
-			how other games do it, and specifically, I think I'm going to start with some oldies to see how they did it back in the day
-			(this is my excuse to revisit one of my favorite games from childhood,
+			To put it simply, the main two things I've done in the last two months is 1.) created a much larger level and 2.) refined
+			how my enemies attack the player. On the first front, my plan after implementing most of the functionality for the core
+			gameplay loop was always to then create a much larger level to be the template for how the game's levels would work going forward.
+			While I've not really done large-scale level design for my game projects before, it is something that I really like to do
+			and I feel like it comes naturally to me (related but unrelated, I really like Minecraft and I have built some pretty
+			big maps before, check out my
 			
-			<a style="color: #3CAEA3;" href="https://en.wikipedia.org/wiki/James_Bond_007:_Nightfire" target="_blank" rel="noopener noreferrer"><u>007: Nightfire</u></a>).
+			<a style="color: #ED553B;" href="https://www.youtube.com/watch?v=-GtXke-Eym0" target="_blank" rel="noopener noreferrer"><u>castle</u></a> 
+			
+			in my portfolio!). I'm enjoying the freedom of crafting my own world, and I've made some pretty good progress on a large
+			map that I'm casually calling "the purple level" for now. Still a work in progress, but I have some images below that show
+			off some of the rooms of this larger level:
 			
 			</p>
 			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			Anyways, please click the link below to download Corridors from itch.io site. Hope you like it, and thank you for reading!
-			
-			</p>
-												
-			<!-- Link to Reverse Rabbit demo -->
-			<div style="display: table; margin-right: auto; margin-left: auto; margin-bottom: 15px;">
-				<div class="thumbnail-outerbox-blue">
-					<div class="cell-title-blue">Corridors</div>
-					<div class="cell-subtitle">3D Game</div>
-					<a href="https://jadedquail.itch.io/corridors" target="_blank" rel="noopener noreferrer"><img class="blue-img" src="images/corridors_icon.PNG"/></a>
-					<div class="cell-text-blue">The first build of my 3D first-person shooter. Battle your way through infinitely-generating levels!</div>
-				</div>
+			<!-- Purple Level Image 1 -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="purple-img-1" src="images/purple_level_1.png"/>
+				<figcaption class="red-figcaption">
+					This is the main room for combat in the level (so far).
+				</figcaption>
 			</div>
-						
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
+			
+			<!-- Purple Level Image 2 -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="purple-img-2" src="images/purple_level_2.png"/>
+				<figcaption class="red-figcaption">
+					This room is right below the room in the previous image. I plan to add some greenery everywhere!
+				</figcaption>
+			</div>
+
+			<!-- Purple Level Image 3 -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="purple-img-3" src="images/purple_level_3.png"/>
+				<figcaption class="red-figcaption">
+					A glance at the main hallway that will connect all the other rooms of the level.
+				</figcaption>
+			</div>
+																				
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			Creating these larger rooms was the impetus for the second thing I needed to address, which was the current logic of
+			enemy behavior. Once I put 10+ enemies in one giant room, it made the flaws of my overly-simplistic AI behavior more
+			apparent. I decided it was time to overhaul how this works, and basically the key change is that instead of enemies
+			picking one cover spot and only coming out to chase the player if an "inactivation timer" expired, enemies are now
+			picking certain moments to chase the player or move up to closer cover.
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			There is no more "inactivation timer"; instead, there is a timer running that activates every few seconds and prompts
+			a handful of enemies to move to a new state. That state is either a closer cover or directly charging the player. See
+			the graphic below for more details:
+			
+			</p>
+			
+			<!-- Purple Level Image 1 -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<img class="behavior-img" src="images/enemy_behavior_graphic.png"/>
+			</div>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			To further enhance the combat experience, I actually added another facet to healing, which is the use of a "stim pack"
+			that the player can administer to themselves to instantly heal. The player's health does tick up after a period of
+			time without being attacked, but I really liked adding this dimension to healing because it enables and encourages the
+			player to take the enemies head-on and have more control over how their health is managed (you can see how this stim
+			feature works in the YouTube video at the bottom of this post).
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			These couple of changes have made the combat feel a lot better. It feels a lot less "robotic", so to speak; since the
+			timer activates only certain enemies and they then each do something different, it just feels like the enemies each
+			have a mind of their own and there's more "going on" on the battlefield.
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			So now, I'm really at a spot where <em>enough is enough</em>. I have spent over a year creating the pieces, fine-tuning
+			things, working on combat dynamics, etc. I've eaten my vegetables, it's time for dessert: I want to take my purple level
+			and make it really huge, crazy, and chaotic and finally put these pieces to work. I will definitely think more on the little
+			things again in the near future, but now I feel good enough about the bones of this game that I want to have some fun. So,
+			hopefully my next blog post will have some fireworks to show off.
+			
+			</p>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			If you want to see a quick demo of how this new level and the refined mechanics look, please check out the YouTube video below:
+			
+			</p>
+			
+			<!-- Level Test Demo Clip -->
+			<div style="text-align: center; margin-bottom: 43px;">
+				<iframe class="demo-vid"
+					src="https://www.youtube.com/embed/zWHhRKgHDBM" allowfullscreen>
+				</iframe>
+			</div>
+			
+			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
+			
+			One other thing I might as well mention - one day I was frozen to my couch with my MacBook on my lap so I decided to see
+			if I could make tic-tac-toe by myself without looking up any tutorials or videos (I was 99% sure I could and would have
+			been really disappointed at this point if I couldn't lol). I was able to do it (hooray), and for the heck of it I put it
+			on my itch.io site. So if you want to see that, 
+			
+			<a style="color: #ED553B;" href="https://jadedquail.itch.io/tic-tac-toe" target="_blank" rel="noopener noreferrer"><u>click this link</u></a>.
+			
+			</p>
+		
+			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
 			
 				--Josh
 			
@@ -494,7 +642,7 @@
 		
 		<div class="container" style="margin-top: 50px;">
 			<div class="row">
-				<a href="blog_12-21-23.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
+				<a href="blog_2-1-24.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
 					Older Post -->
 				</a>
 			</div>
