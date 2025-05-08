@@ -1,317 +1,359 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		
-		<title>Josh Cantie</title>
-		
-		<!-- Bootstrap CSS, JS, Popper.js, jQuery -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-		
-		<!-- jQuery, Popper, Bootstrap -->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		
-	</head>
-	
-	<style>
-	
-		/* Font */
-		@font-face {
-			src: url(fonts/Lato-Regular.ttf);
-			font-family: Lato;
-		}
-	
-		.title {
-			position: absolute;
-			top: 25%;
-			left: 50%;
-			-moz-transform: translateX(-50%) translateY(-50%);
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
-		}
-	
-		.header {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: center;
-			font-size: 65px;
-		}
-		
-		.description {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: center;
-			font-size: 25px;
-		}
-			
-			
-		.top {
-			margin-top: 70px;
-		}
-			
-		img {
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			margin-top: 25px;
-			overflow: hidden;
-			image-orientation: from-image;
-		}
-		
-		.text-style {
-			color: #3CAEA3;
-			font-family: Lato;
-			font-size: 20px;
-			text-align: center;
-		}
-		
-		.nav-color {
-			background-color: #173F5F;
-		}
-		
-		.link-text {
-			color: #F6D55C;
-			font-family: Lato;
-			font-size: 30px;
-			margin: 7px;
-		}
-		
-		.link-text:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		body {
-			min-width: 566px;
-			min-height: 700px;
-		}
-		
-		.footer {
-			text-align: center;
-			position: relative;
-			margin-top: 50px;
-		}
-		
-		.icon-color {
-			color: #F6D55C; <!-- Gray -->
-		}
-		
-		.facebook:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}			
-		
-		.linkedin:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.email:hover{
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-		
-		.post-red {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			width: 70%;
-		}
-		
-		.post-blue {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #3CAEA3;
-			width: 70%;
-		}
-		
-		.post-yellow {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #F6D55C;
-			width: 70%;
-		}
-		
-		.blog-text-red {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-yellow {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.line-red {
-			border-radius: 8px;
-			border: 1.5px solid #ED553B;
-		}
-		
-		.line-blue {
-			border-radius: 8px;
-			border: 1.5px solid #3CAEA3;
-		}
-		
-		.line-yellow {
-			border-radius: 8px;
-			border: 1.5px solid #F6D55C;
-		}
-		
-		.botlink_left {
-			text-align: left;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.botlink_right {
-			text-align: right;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.red-text {
-			color: #ED553B;
-		}
-		
-		.red-text:hover {
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-				
-		/* Small screen adjustments */
-		@media (max-height: 700px) {
-			
-			.top {
-				margin-top: 5px;
-			}
-			
-			.header {
-				font-size: 50px;
-			}
-			
-			.link-text {
-				font-size: 25px;
-			}
-		}
-		
-	</style>
-	
-	<body style="background-color: #173F5F;">
-		
-		<!-- Navbar -->
-		<ul class="nav nav-width">
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="index.html">Home</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="files/resume_march_24_website.pdf">Resume</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="portfolio.html">Portfolio</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="blog_current.html">Blog</a>
-		  </li>
-		</ul>
-		
-		<!-- Title -->
-		<div class="top">
-			<div class="header d-none d-sm-block">Josh's Blog</div>
-			<div class="description d-none d-sm-block">Things I did on my computer and more.</div>
-			<a class="description d-none d-sm-block" style="color: #F6D55C;" href="archive.html">Blog Archive</a>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Post 1 -->
-		<div class="post-red container">
-		
-			<div>
-				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
-						My First Post
-					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						June 23rd, 2020
-					</div>
-				</div>
-			</div>
-			
-			<hr class="line-red">
-		
-			<p></p>
-		
-			<p class="blog-text-red"> Hello, my name is Josh and this is my new blog! </p>
-			
-			<p class="blog-text-red">
-			
-			Tonight is the first night that this site goes live. I've decided to create this blog and website to both keep track of the various tech projects I do and to give myself something to look back at in the future.
-			I just graduated from the University of Notre Dame this May - four years that felt like 30 seconds! - and now I have some time
-			on my hands to create, play, and hang out with friends.
-			
-			</p>
-			
-			<p class="blog-text-red">
-			
-			Unfortunately, I no longer have a cheap and easy way to use Autodesk Maya for modeling and animation now that my student license
-			is no longer effective; I love Maya but I don't think I can stomach the cost right now! So it's looking like for a start I will be
-			familiarizing myself with Blender for this summer. Hopefully I can create some assets to use in a new Unity project that I've been
-			brainstorming, but more on that in the future.
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
-			
-			--Josh
-			
-			</p>
-			
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img style="height: 348px; width: 261px;" src="images/deck_pic.jpg"/>
-			</div>
-			
-			<p class="blog-text-red">
-			<br>
-			
-			Apologies for the wild hair; can't get a cut during COVID!
-			
-			</p>
-			
-		</div>
-		
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Navigate to other posts -->
-		
-		<div class="container" style="margin-top: 50px;">
-			<div class="row">
-				<a href="blog_6-27-20.html" class="col-sm botlink_left red-text" style="text-decoration: none;">
-					<-- Newer Post
-				</a>
-			</div>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		
-		<!-- Footer -->
-		<div style="margin-bottom: 100px;"></div>
-				
-	</body>
-	
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Josh Cantie</title>
+
+        <!-- Bootstrap CSS, JS, Popper.js, jQuery -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+
+        <!-- jQuery, Popper, Bootstrap -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <style>
+
+        /* Font */
+        @font-face {
+        	src: url(fonts/Lato-Regular.ttf);
+        	font-family: Lato;
+        }
+
+        .title {
+        	position: absolute;
+        	top: 25%;
+        	left: 50%;
+        	-moz-transform: translateX(-50%) translateY(-50%);
+        	-webkit-transform: translateX(-50%) translateY(-50%);
+        	transform: translateX(-50%) translateY(-50%);
+        }
+
+        .header {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 65px;
+        }
+
+        .description {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 25px;
+        }
+
+
+        .top {
+        	margin-top: 70px;
+        }
+
+        img {
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	margin-top: 25px;
+        	overflow: hidden;
+        	image-orientation: from-image;
+        }
+
+        .text-style {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	font-size: 20px;
+        	text-align: center;
+        }
+
+        .nav-color {
+        	background-color: #173F5F;
+        }
+
+        .link-text {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	font-size: 30px;
+        	margin: 7px;
+        }
+
+        .link-text:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        body {
+        	min-width: 566px;
+        	min-height: 700px;
+        }
+
+        .footer {
+        	text-align: center;
+        	position: relative;
+        	margin-top: 50px;
+        }
+
+        .icon-color {
+        	color: #F6D55C; <!-- Gray -->
+        }
+
+        .facebook:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .linkedin:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .email:hover{
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        .post-red {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	width: 70%;
+        }
+
+        .post-blue {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #3CAEA3;
+        	width: 70%;
+        }
+
+        .post-yellow {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #F6D55C;
+        	width: 70%;
+        }
+
+        .blog-text-red {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-blue {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-yellow {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .line-red {
+        	border-radius: 8px;
+        	border: 1.5px solid #ED553B;
+        }
+
+        .line-blue {
+        	border-radius: 8px;
+        	border: 1.5px solid #3CAEA3;
+        }
+
+        .line-yellow {
+        	border-radius: 8px;
+        	border: 1.5px solid #F6D55C;
+        }
+
+        .botlink_left {
+        	text-align: left;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .botlink_right {
+        	text-align: right;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .red-text {
+        	color: #ED553B;
+        }
+
+        .red-text:hover {
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        /* Small screen adjustments */
+        @media (max-height: 700px) {
+
+        	.top {
+        		margin-top: 5px;
+        	}
+
+        	.header {
+        		font-size: 50px;
+        	}
+
+        	.link-text {
+        		font-size: 25px;
+        	}
+        }
+    </style>
+
+    <body style="background-color: #173f5f">
+        <!-- Navbar -->
+        <ul class="nav nav-width">
+            <li class="nav-item">
+                <a class="nav-link link-text" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a
+                    class="nav-link link-text"
+                    href="files/resume_may_25_website.pdf"
+                    >Resume</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="portfolio.html"
+                    >Portfolio</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="blog_current.html">Blog</a>
+            </li>
+        </ul>
+
+        <!-- Title -->
+        <div class="top">
+            <div class="header d-none d-sm-block">Josh's Blog</div>
+            <div class="description d-none d-sm-block">
+                Things I did on my computer and more.
+            </div>
+            <a
+                class="description d-none d-sm-block"
+                style="color: #f6d55c"
+                href="archive.html"
+                >Blog Archive</a
+            >
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Post 1 -->
+        <div class="post-red container">
+            <div>
+                <div class="row">
+                    <div class="col-sm blog-text-red" style="padding-top: 11px">
+                        My First Post
+                    </div>
+                    <div
+                        class="col-sm blog-text-red d-none d-sm-block"
+                        style="text-align: right; padding-top: 11px"
+                    >
+                        June 23rd, 2020
+                    </div>
+                </div>
+            </div>
+
+            <hr class="line-red" />
+
+            <p></p>
+
+            <p class="blog-text-red">
+                Hello, my name is Josh and this is my new blog!
+            </p>
+
+            <p class="blog-text-red">
+                Tonight is the first night that this site goes live. I've
+                decided to create this blog and website to both keep track of
+                the various tech projects I do and to give myself something to
+                look back at in the future. I just graduated from the University
+                of Notre Dame this May - four years that felt like 30 seconds! -
+                and now I have some time on my hands to create, play, and hang
+                out with friends.
+            </p>
+
+            <p class="blog-text-red">
+                Unfortunately, I no longer have a cheap and easy way to use
+                Autodesk Maya for modeling and animation now that my student
+                license is no longer effective; I love Maya but I don't think I
+                can stomach the cost right now! So it's looking like for a start
+                I will be familiarizing myself with Blender for this summer.
+                Hopefully I can create some assets to use in a new Unity project
+                that I've been brainstorming, but more on that in the future.
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: right; padding-right: 30px"
+            >
+                --Josh
+            </p>
+
+            <div style="text-align: center; margin-bottom: 43px">
+                <img
+                    style="height: 348px; width: 261px"
+                    src="images/deck_pic.jpg"
+                />
+            </div>
+
+            <p class="blog-text-red">
+                <br />
+
+                Apologies for the wild hair; can't get a cut during COVID!
+            </p>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Navigate to other posts -->
+
+        <div class="container" style="margin-top: 50px">
+            <div class="row">
+                <a
+                    href="blog_6-27-20.html"
+                    class="col-sm botlink_left red-text"
+                    style="text-decoration: none"
+                >
+                    <-- Newer Post
+                </a>
+            </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Footer -->
+        <div style="margin-bottom: 100px"></div>
+    </body>
 </html>

@@ -1,389 +1,460 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		
-		<title>Josh Cantie</title>
-		
-		<!-- Bootstrap CSS, JS, Popper.js, jQuery -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-		
-		<!-- jQuery, Popper, Bootstrap -->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		
-	</head>
-	
-	<style>
-	
-		/* Font */
-		@font-face {
-			src: url(fonts/Lato-Regular.ttf);
-			font-family: Lato;
-		}
-	
-		.title {
-			position: absolute;
-			top: 25%;
-			left: 50%;
-			-moz-transform: translateX(-50%) translateY(-50%);
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
-		}
-	
-		.header {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: center;
-			font-size: 65px;
-		}
-		
-		.description {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: center;
-			font-size: 25px;
-		}
-			
-			
-		.top {
-			margin-top: 70px;
-		}
-			
-		img {
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			margin-top: 25px;
-			overflow: hidden;
-			image-orientation: from-image;
-		}
-		
-		.text-style {
-			color: #3CAEA3;
-			font-family: Lato;
-			font-size: 20px;
-			text-align: center;
-		}
-		
-		.nav-color {
-			background-color: #173F5F;
-		}
-		
-		.link-text {
-			color: #F6D55C;
-			font-family: Lato;
-			font-size: 30px;
-			margin: 7px;
-		}
-		
-		.link-text:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		body {
-			min-width: 566px;
-			min-height: 700px;
-		}
-		
-		.footer {
-			text-align: center;
-			position: relative;
-			margin-top: 50px;
-		}
-		
-		.icon-color {
-			color: #F6D55C; <!-- Gray -->
-		}
-		
-		.facebook:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}			
-		
-		.linkedin:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.email:hover{
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-		
-		.post-red {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			width: 70%;
-		}
-		
-		.post-blue {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #3CAEA3;
-			width: 70%;
-		}
-		
-		.post-yellow {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #F6D55C;
-			width: 70%;
-		}
-		
-		.blog-text-red {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-yellow {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.line-red {
-			border-radius: 8px;
-			border: 1.5px solid #ED553B;
-		}
-		
-		.line-blue {
-			border-radius: 8px;
-			border: 1.5px solid #3CAEA3;
-		}
-		
-		.line-yellow {
-			border-radius: 8px;
-			border: 1.5px solid #F6D55C;
-		}
-		
-		.botlink_left {
-			text-align: left;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.botlink_right {
-			text-align: right;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.red-text {
-			color: #ED553B;
-		}
-		
-		.yellow-text {
-			color: #F6D55C;
-		}
-		
-		
-		.blue-text {
-			color: #3CAEA3;
-		}
-		
-		.red-text:hover {
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-		
-		.yellow-text:hover {
-			color: #bda346;
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.blue-text:hover {
-			color: #2a7d75;
-			transition: color 0.2s;
-		}
-		
-		.flex-container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-				
-		/* Specific blog post images */
-		
-		.handling_gif {
-			height: 340px; 
-			width: 600px; 
-			border: 3px solid #ED553B;
-		}
-			
-		/* Small screen adjustments */
-		@media (max-height: 700px) {
-			
-			.top {
-				margin-top: 5px;
-			}
-			
-			.header {
-				font-size: 50px;
-			}
-			
-			.link-text {
-				font-size: 25px;
-			}
-			
-		}
-		
-		@media (max-width: 1116px) {
-		
-			.handling_gif {
-				height: 251px; 
-				width: 400px; 
-				border: 3px solid #ED553B;
-			}
-		}
-		
-		@media (max-width: 650px) {
-			
-			.handling_gif {
-				visibility: hidden;
-			}
+    <head>
+        <meta charset="utf-8" />
 
-		}
-		
-	</style>
-	
-	<body style="background-color: #173F5F;">
-		
-		<!-- Navbar -->
-		<ul class="nav nav-width">
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="index.html">Home</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="files/resume_march_24_website.pdf">Resume</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="portfolio.html">Portfolio</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="blog_current.html">Blog</a>
-		  </li>
-		</ul>
-		
-		<!-- Title -->
-		<div class="top">
-			<div class="header d-none d-sm-block">Josh's Blog</div>
-			<div class="description d-none d-sm-block">Things I did on my computer and more.</div>
-			<a class="description d-none d-sm-block" style="color: #F6D55C;" href="archive.html">Blog Archive</a>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Post 1 -->
-		<div class="post-red container">
-		
-			<div>
-				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
-						Weapon Handling 101
-					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						Janaury 14th, 2023
-					</div>
-				</div>
-			</div>
-			
-			<hr class="line-red">
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			Happy New Year,
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			Spent most of my time over the last few weeks improving how the gun handles for the player. I created animations for what the gun
-			does when the player is reloading or running. At first I was worried that I wasn't going to be able to make compelling animations,
-			but I found that it's pretty easy to get a simple reload or "weapon bob" animation created, and I'm pretty pleased with the results.
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			The running and reloading are done with animations, but I decided that for the player "lowering his gun" when approaching a wall,
-			I would instead lerp the rotation of the weapon. I used a 
-			
-			<a style="color: #ED553B;" href="https://www.youtube.com/watch?v=bax-xjlfMPs" target="_blank" rel="noopener noreferrer"><u>great tutorial by BuffaLou</u></a>
-			
-			as a starting point, and I was able to make the adjustments needed to fit my vision for this game. Between these different animations
-			and mechanisms, it took me a good bit of thinking to figure out how to properly trigger each one - i.e. handling things like "you
-			shouldn't be able to shoot while near a wall" and "you should cancel your reload if you start running during the animation". I'm pretty
-			happy with where it's at now, and I think I've laid solid groundwork to move on to other parts of the game.
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			Speaking of other parts, I have a shootable NPC in my game, which I got from the
-			
-			<a style="color: #ED553B;" href="https://assetstore.unity.com/packages/3d/characters/humanoids/low-poly-animated-people-156748" target="_blank" rel="noopener noreferrer"><u>Low Poly Animated People pack by polyperfect</u></a>
-			
-			. As you can see below, you can now shoot and kill Santa in my video game. I plan on building on this affront to Christmas by
-			playing around with the other characters in this pack, and hopefully will get some basic enemies and levels designed soon.
-			
-			</p>			
-										
-			<!-- Recoil Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="handling_gif" src="images/handling.gif"/>
-			</div>			
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			Stay tuned!
-			
-			</p>
-																		
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
-			
-			--Josh
-			
-			</p>
+        <title>Josh Cantie</title>
 
-		</div>
-		
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Navigate to other posts -->
-		
-		<div class="container" style="margin-top: 50px;">
-			<div class="row">
-				<a href="blog_1-29-23.html" class="col-sm botlink_left red-text" style="text-decoration: none;">
-					<-- Newer Post
-				</a>			
-				<a href="blog_12-29-22.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
-					Older Post -->
-				</a>
-			</div>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-				
-		<!-- Footer -->
-		<div style="margin-bottom: 100px;"></div>		
-				
-	</body>
-	
+        <!-- Bootstrap CSS, JS, Popper.js, jQuery -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+
+        <!-- jQuery, Popper, Bootstrap -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <style>
+
+        /* Font */
+        @font-face {
+        	src: url(fonts/Lato-Regular.ttf);
+        	font-family: Lato;
+        }
+
+        .title {
+        	position: absolute;
+        	top: 25%;
+        	left: 50%;
+        	-moz-transform: translateX(-50%) translateY(-50%);
+        	-webkit-transform: translateX(-50%) translateY(-50%);
+        	transform: translateX(-50%) translateY(-50%);
+        }
+
+        .header {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 65px;
+        }
+
+        .description {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 25px;
+        }
+
+
+        .top {
+        	margin-top: 70px;
+        }
+
+        img {
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	margin-top: 25px;
+        	overflow: hidden;
+        	image-orientation: from-image;
+        }
+
+        .text-style {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	font-size: 20px;
+        	text-align: center;
+        }
+
+        .nav-color {
+        	background-color: #173F5F;
+        }
+
+        .link-text {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	font-size: 30px;
+        	margin: 7px;
+        }
+
+        .link-text:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        body {
+        	min-width: 566px;
+        	min-height: 700px;
+        }
+
+        .footer {
+        	text-align: center;
+        	position: relative;
+        	margin-top: 50px;
+        }
+
+        .icon-color {
+        	color: #F6D55C; <!-- Gray -->
+        }
+
+        .facebook:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .linkedin:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .email:hover{
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        .post-red {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	width: 70%;
+        }
+
+        .post-blue {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #3CAEA3;
+        	width: 70%;
+        }
+
+        .post-yellow {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #F6D55C;
+        	width: 70%;
+        }
+
+        .blog-text-red {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-blue {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-yellow {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .line-red {
+        	border-radius: 8px;
+        	border: 1.5px solid #ED553B;
+        }
+
+        .line-blue {
+        	border-radius: 8px;
+        	border: 1.5px solid #3CAEA3;
+        }
+
+        .line-yellow {
+        	border-radius: 8px;
+        	border: 1.5px solid #F6D55C;
+        }
+
+        .botlink_left {
+        	text-align: left;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .botlink_right {
+        	text-align: right;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .red-text {
+        	color: #ED553B;
+        }
+
+        .yellow-text {
+        	color: #F6D55C;
+        }
+
+
+        .blue-text {
+        	color: #3CAEA3;
+        }
+
+        .red-text:hover {
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        .yellow-text:hover {
+        	color: #bda346;
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .blue-text:hover {
+        	color: #2a7d75;
+        	transition: color 0.2s;
+        }
+
+        .flex-container {
+        	display: flex;
+        	flex-wrap: wrap;
+        	justify-content: center;
+        }
+
+        /* Specific blog post images */
+
+        .handling_gif {
+        	height: 340px;
+        	width: 600px;
+        	border: 3px solid #ED553B;
+        }
+
+        /* Small screen adjustments */
+        @media (max-height: 700px) {
+
+        	.top {
+        		margin-top: 5px;
+        	}
+
+        	.header {
+        		font-size: 50px;
+        	}
+
+        	.link-text {
+        		font-size: 25px;
+        	}
+
+        }
+
+        @media (max-width: 1116px) {
+
+        	.handling_gif {
+        		height: 251px;
+        		width: 400px;
+        		border: 3px solid #ED553B;
+        	}
+        }
+
+        @media (max-width: 650px) {
+
+        	.handling_gif {
+        		visibility: hidden;
+        	}
+
+        }
+    </style>
+
+    <body style="background-color: #173f5f">
+        <!-- Navbar -->
+        <ul class="nav nav-width">
+            <li class="nav-item">
+                <a class="nav-link link-text" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a
+                    class="nav-link link-text"
+                    href="files/resume_may_25_website.pdf"
+                    >Resume</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="portfolio.html"
+                    >Portfolio</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="blog_current.html">Blog</a>
+            </li>
+        </ul>
+
+        <!-- Title -->
+        <div class="top">
+            <div class="header d-none d-sm-block">Josh's Blog</div>
+            <div class="description d-none d-sm-block">
+                Things I did on my computer and more.
+            </div>
+            <a
+                class="description d-none d-sm-block"
+                style="color: #f6d55c"
+                href="archive.html"
+                >Blog Archive</a
+            >
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Post 1 -->
+        <div class="post-red container">
+            <div>
+                <div class="row">
+                    <div class="col-sm blog-text-red" style="padding-top: 11px">
+                        Weapon Handling 101
+                    </div>
+                    <div
+                        class="col-sm blog-text-red d-none d-sm-block"
+                        style="text-align: right; padding-top: 11px"
+                    >
+                        Janaury 14th, 2023
+                    </div>
+                </div>
+            </div>
+
+            <hr class="line-red" />
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                Happy New Year,
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                Spent most of my time over the last few weeks improving how the
+                gun handles for the player. I created animations for what the
+                gun does when the player is reloading or running. At first I was
+                worried that I wasn't going to be able to make compelling
+                animations, but I found that it's pretty easy to get a simple
+                reload or "weapon bob" animation created, and I'm pretty pleased
+                with the results.
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                The running and reloading are done with animations, but I
+                decided that for the player "lowering his gun" when approaching
+                a wall, I would instead lerp the rotation of the weapon. I used
+                a
+
+                <a
+                    style="color: #ed553b"
+                    href="https://www.youtube.com/watch?v=bax-xjlfMPs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><u>great tutorial by BuffaLou</u></a
+                >
+
+                as a starting point, and I was able to make the adjustments
+                needed to fit my vision for this game. Between these different
+                animations and mechanisms, it took me a good bit of thinking to
+                figure out how to properly trigger each one - i.e. handling
+                things like "you shouldn't be able to shoot while near a wall"
+                and "you should cancel your reload if you start running during
+                the animation". I'm pretty happy with where it's at now, and I
+                think I've laid solid groundwork to move on to other parts of
+                the game.
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                Speaking of other parts, I have a shootable NPC in my game,
+                which I got from the
+
+                <a
+                    style="color: #ed553b"
+                    href="https://assetstore.unity.com/packages/3d/characters/humanoids/low-poly-animated-people-156748"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><u>Low Poly Animated People pack by polyperfect</u></a
+                >
+
+                . As you can see below, you can now shoot and kill Santa in my
+                video game. I plan on building on this affront to Christmas by
+                playing around with the other characters in this pack, and
+                hopefully will get some basic enemies and levels designed soon.
+            </p>
+
+            <!-- Recoil Gif -->
+            <div style="text-align: center; margin-bottom: 43px">
+                <img class="handling_gif" src="images/handling.gif" />
+            </div>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                Stay tuned!
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: right; padding-right: 30px"
+            >
+                --Josh
+            </p>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Navigate to other posts -->
+
+        <div class="container" style="margin-top: 50px">
+            <div class="row">
+                <a
+                    href="blog_1-29-23.html"
+                    class="col-sm botlink_left red-text"
+                    style="text-decoration: none"
+                >
+                    <-- Newer Post
+                </a>
+                <a
+                    href="blog_12-29-22.html"
+                    class="col-sm botlink_right red-text"
+                    style="text-decoration: none"
+                >
+                    Older Post -->
+                </a>
+            </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Footer -->
+        <div style="margin-bottom: 100px"></div>
+    </body>
 </html>

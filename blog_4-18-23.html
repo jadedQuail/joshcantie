@@ -1,408 +1,488 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		
-		<title>Josh Cantie</title>
-		
-		<!-- Bootstrap CSS, JS, Popper.js, jQuery -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-		
-		<!-- jQuery, Popper, Bootstrap -->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		
-	</head>
-	
-	<style>
-	
-		/* Font */
-		@font-face {
-			src: url(fonts/Lato-Regular.ttf);
-			font-family: Lato;
-		}
-	
-		.title {
-			position: absolute;
-			top: 25%;
-			left: 50%;
-			-moz-transform: translateX(-50%) translateY(-50%);
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
-		}
-	
-		.header {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: center;
-			font-size: 65px;
-		}
-		
-		.description {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: center;
-			font-size: 25px;
-		}
-			
-			
-		.top {
-			margin-top: 70px;
-		}
-			
-		img {
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			margin-top: 25px;
-			overflow: hidden;
-			image-orientation: from-image;
-		}
-		
-		.text-style {
-			color: #3CAEA3;
-			font-family: Lato;
-			font-size: 20px;
-			text-align: center;
-		}
-		
-		.nav-color {
-			background-color: #173F5F;
-		}
-		
-		.link-text {
-			color: #F6D55C;
-			font-family: Lato;
-			font-size: 30px;
-			margin: 7px;
-		}
-		
-		.link-text:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		body {
-			min-width: 566px;
-			min-height: 700px;
-		}
-		
-		.footer {
-			text-align: center;
-			position: relative;
-			margin-top: 50px;
-		}
-		
-		.icon-color {
-			color: #F6D55C; <!-- Gray -->
-		}
-		
-		.facebook:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}			
-		
-		.linkedin:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.email:hover{
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-		
-		.post-red {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			width: 70%;
-		}
-		
-		.post-blue {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #3CAEA3;
-			width: 70%;
-		}
-		
-		.post-yellow {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #F6D55C;
-			width: 70%;
-		}
-		
-		.blog-text-red {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-yellow {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.line-red {
-			border-radius: 8px;
-			border: 1.5px solid #ED553B;
-		}
-		
-		.line-blue {
-			border-radius: 8px;
-			border: 1.5px solid #3CAEA3;
-		}
-		
-		.line-yellow {
-			border-radius: 8px;
-			border: 1.5px solid #F6D55C;
-		}
-		
-		.botlink_left {
-			text-align: left;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.botlink_right {
-			text-align: right;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.red-text {
-			color: #ED553B;
-		}
-		
-		.yellow-text {
-			color: #F6D55C;
-		}
-		
-		
-		.blue-text {
-			color: #3CAEA3;
-		}
-		
-		.red-text:hover {
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-		
-		.yellow-text:hover {
-			color: #bda346;
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.blue-text:hover {
-			color: #2a7d75;
-			transition: color 0.2s;
-		}
-		
-		.flex-container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-				
-		/* Specific blog post images */
-		
-		.arms-gif {
-			height: 340px; 
-			width: 600px; 
-			border: 3px solid #F6D55C;
-		}
-			
-		/* Small screen adjustments */
-		@media (max-height: 700px) {
-			
-			.top {
-				margin-top: 5px;
-			}
-			
-			.header {
-				font-size: 50px;
-			}
-			
-			.link-text {
-				font-size: 25px;
-			}
-			
-		}
-		
-		@media (max-width: 1116px) {
-		
-			.arms-gif {
-				height: 251px; 
-				width: 400px; 
-				border: 3px solid #F6D55C;
-			}
-		}
-		
-		@media (max-width: 650px) {
-			
-			.arms-gif {
-				visibility: hidden;
-			}
+    <head>
+        <meta charset="utf-8" />
 
-		}
-		
-	</style>
-	
-	<body style="background-color: #173F5F;">
-		
-		<!-- Navbar -->
-		<ul class="nav nav-width">
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="index.html">Home</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="files/resume_march_24_website.pdf">Resume</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="portfolio.html">Portfolio</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="blog_current.html">Blog</a>
-		  </li>
-		</ul>
-		
-		<!-- Title -->
-		<div class="top">
-			<div class="header d-none d-sm-block">Josh's Blog</div>
-			<div class="description d-none d-sm-block">Things I did on my computer and more.</div>
-			<a class="description d-none d-sm-block" style="color: #F6D55C;" href="archive.html">Blog Archive</a>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Post 1 -->
-		<div class="post-yellow container">
-		
-			<div>
-				<div class="row">
-					<div class="col-sm blog-text-yellow" style="padding-top: 11px;">
-						Arms!
-					</div>
-					<div class="col-sm blog-text-yellow d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						April 18th, 2023
-					</div>
-				</div>
-			</div>
-			
-			<hr class="line-yellow">
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-			Happy Tuesday,
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				The day has finally arrived: The player in my FPS game is no longer possessing his gun with non-existent hands,
-				and instead I now have two arms that hold the weapons and animate along with them! It’s definitely added some life
-				to the game, and I feel like I’m getting closer to being ready to set up some levels for the player to conquer.
-			
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				At first, I wanted to try creating a fully animating character model for the player instead of just a pair of arms.
-				I experimented with a platform called 
-				
-				<a style="color: #F6D55C;" href="https://www.mixamo.com/#/" target="_blank" rel="noopener noreferrer"><u>Mixamo</u></a>,
-				
-				which has tons of character models and animations that are all very
-				plug-and-play, so you can integrate them all with each other pretty easily (and you can implement the animations
-				with other 3D character models outside of Mixamo, too). While I do think I will be making use of Mixamo in future
-				projects, I decided against a full character model for my player, mainly because I thought it would be difficult
-				to integrate these animations with the weapons which I have already animated separately. The only way you could “see”
-				this character model anyway would be by seeing the player’s shadow, so the benefit to me seemed pretty minimal given
-				the amount of time and energy it would have taken at this juncture to implement the full model.
-				
-			</p>
-			
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				So instead, I used the same character model I had been using for the enemy, and I opened up its .fbx file in 
-				
-				<a style="color: #F6D55C;" href="https://www.blender.org/" target="_blank" rel="noopener noreferrer"><u>Blender</u></a>
-				
-				and ripped off its arms! (Or rather, I ripped the body off the arms). I created two models, one for the left and right
-				arms respectively, so I could more easily manipulate the two as separate objects. In Unity, I actually didn’t have
-				just one pair of arms, but instead a pair of arms for each separate weapon. By making the arms a child object of the
-				weapon, it would cause them to inherit a lot of the other things occurring on the weapon, i.e. when the weapon
-				experiences recoil, the arms would “kick up” as the weapon kicks up. In short, it makes more sense to pair the arms
-				with the weapon instead of the player’s body, since the arms really follow what the weapon does.				
-			
-			</p>
-												
-			<!-- Arms Gif -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="arms-gif" src="images/arms.gif"/>
-			</div>	
+        <title>Josh Cantie</title>
 
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				From there, it was pretty simple to animate the arms to follow along with a weapon’s animations. When the weapon would
-				be lowered, raised, reloaded, etc., I moved the arms to new positions on the same keyframes where the weapon moved; this
-				created simple animations that look great for this low-poly world. One weapon that I still have to work on is the pistol,
-				since it’s smaller than a rifle and the current arm models have hands that are too clunky to make holding a pistol look
-				good. I’m going to experiment in Blender with curling the fingers on the arms models, so that way the pair of arms
-				attached to the pistol will be easier to work with and will look more realistic.
-			
-			</p>	
+        <!-- Bootstrap CSS, JS, Popper.js, jQuery -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
 
-			<p class="blog-text-yellow" style="text-align: left; padding-right: 30px;">
-			
-				From there, I think it’s time to put some levels together and see how it feels, and adjust as I go to make the game feel
-				more fun! As always, thanks for stopping by.				
-			
-			</p>			
-																								
-			<p class="blog-text-yellow" style="text-align: right; padding-right: 30px;">
-			
-				--Josh
-			
-			</p>
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
 
-		</div>
-		
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Navigate to other posts -->
-		
-		<div class="container" style="margin-top: 50px;">
-			<div class="row">
-				<a href="blog_5-6-23.html" class="col-sm botlink_left yellow-text" style="text-decoration: none;">
-					<-- Newer Post
-				</a>
-				<a href="blog_3-27-23.html" class="col-sm botlink_right yellow-text" style="text-decoration: none;">
-					Older Post -->
-				</a>
-			</div>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-				
-		<!-- Footer -->
-		<div style="margin-bottom: 100px;"></div>		
-				
-	</body>
-	
+        <!-- jQuery, Popper, Bootstrap -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <style>
+
+        /* Font */
+        @font-face {
+        	src: url(fonts/Lato-Regular.ttf);
+        	font-family: Lato;
+        }
+
+        .title {
+        	position: absolute;
+        	top: 25%;
+        	left: 50%;
+        	-moz-transform: translateX(-50%) translateY(-50%);
+        	-webkit-transform: translateX(-50%) translateY(-50%);
+        	transform: translateX(-50%) translateY(-50%);
+        }
+
+        .header {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 65px;
+        }
+
+        .description {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 25px;
+        }
+
+
+        .top {
+        	margin-top: 70px;
+        }
+
+        img {
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	margin-top: 25px;
+        	overflow: hidden;
+        	image-orientation: from-image;
+        }
+
+        .text-style {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	font-size: 20px;
+        	text-align: center;
+        }
+
+        .nav-color {
+        	background-color: #173F5F;
+        }
+
+        .link-text {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	font-size: 30px;
+        	margin: 7px;
+        }
+
+        .link-text:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        body {
+        	min-width: 566px;
+        	min-height: 700px;
+        }
+
+        .footer {
+        	text-align: center;
+        	position: relative;
+        	margin-top: 50px;
+        }
+
+        .icon-color {
+        	color: #F6D55C; <!-- Gray -->
+        }
+
+        .facebook:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .linkedin:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .email:hover{
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        .post-red {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	width: 70%;
+        }
+
+        .post-blue {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #3CAEA3;
+        	width: 70%;
+        }
+
+        .post-yellow {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #F6D55C;
+        	width: 70%;
+        }
+
+        .blog-text-red {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-blue {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-yellow {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .line-red {
+        	border-radius: 8px;
+        	border: 1.5px solid #ED553B;
+        }
+
+        .line-blue {
+        	border-radius: 8px;
+        	border: 1.5px solid #3CAEA3;
+        }
+
+        .line-yellow {
+        	border-radius: 8px;
+        	border: 1.5px solid #F6D55C;
+        }
+
+        .botlink_left {
+        	text-align: left;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .botlink_right {
+        	text-align: right;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .red-text {
+        	color: #ED553B;
+        }
+
+        .yellow-text {
+        	color: #F6D55C;
+        }
+
+
+        .blue-text {
+        	color: #3CAEA3;
+        }
+
+        .red-text:hover {
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        .yellow-text:hover {
+        	color: #bda346;
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .blue-text:hover {
+        	color: #2a7d75;
+        	transition: color 0.2s;
+        }
+
+        .flex-container {
+        	display: flex;
+        	flex-wrap: wrap;
+        	justify-content: center;
+        }
+
+        /* Specific blog post images */
+
+        .arms-gif {
+        	height: 340px;
+        	width: 600px;
+        	border: 3px solid #F6D55C;
+        }
+
+        /* Small screen adjustments */
+        @media (max-height: 700px) {
+
+        	.top {
+        		margin-top: 5px;
+        	}
+
+        	.header {
+        		font-size: 50px;
+        	}
+
+        	.link-text {
+        		font-size: 25px;
+        	}
+
+        }
+
+        @media (max-width: 1116px) {
+
+        	.arms-gif {
+        		height: 251px;
+        		width: 400px;
+        		border: 3px solid #F6D55C;
+        	}
+        }
+
+        @media (max-width: 650px) {
+
+        	.arms-gif {
+        		visibility: hidden;
+        	}
+
+        }
+    </style>
+
+    <body style="background-color: #173f5f">
+        <!-- Navbar -->
+        <ul class="nav nav-width">
+            <li class="nav-item">
+                <a class="nav-link link-text" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a
+                    class="nav-link link-text"
+                    href="files/resume_may_25_website.pdf"
+                    >Resume</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="portfolio.html"
+                    >Portfolio</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="blog_current.html">Blog</a>
+            </li>
+        </ul>
+
+        <!-- Title -->
+        <div class="top">
+            <div class="header d-none d-sm-block">Josh's Blog</div>
+            <div class="description d-none d-sm-block">
+                Things I did on my computer and more.
+            </div>
+            <a
+                class="description d-none d-sm-block"
+                style="color: #f6d55c"
+                href="archive.html"
+                >Blog Archive</a
+            >
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Post 1 -->
+        <div class="post-yellow container">
+            <div>
+                <div class="row">
+                    <div
+                        class="col-sm blog-text-yellow"
+                        style="padding-top: 11px"
+                    >
+                        Arms!
+                    </div>
+                    <div
+                        class="col-sm blog-text-yellow d-none d-sm-block"
+                        style="text-align: right; padding-top: 11px"
+                    >
+                        April 18th, 2023
+                    </div>
+                </div>
+            </div>
+
+            <hr class="line-yellow" />
+
+            <p
+                class="blog-text-yellow"
+                style="text-align: left; padding-right: 30px"
+            >
+                Happy Tuesday,
+            </p>
+
+            <p
+                class="blog-text-yellow"
+                style="text-align: left; padding-right: 30px"
+            >
+                The day has finally arrived: The player in my FPS game is no
+                longer possessing his gun with non-existent hands, and instead I
+                now have two arms that hold the weapons and animate along with
+                them! It’s definitely added some life to the game, and I feel
+                like I’m getting closer to being ready to set up some levels for
+                the player to conquer.
+            </p>
+
+            <p
+                class="blog-text-yellow"
+                style="text-align: left; padding-right: 30px"
+            >
+                At first, I wanted to try creating a fully animating character
+                model for the player instead of just a pair of arms. I
+                experimented with a platform called
+
+                <a
+                    style="color: #f6d55c"
+                    href="https://www.mixamo.com/#/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><u>Mixamo</u></a
+                >, which has tons of character models and animations that are
+                all very plug-and-play, so you can integrate them all with each
+                other pretty easily (and you can implement the animations with
+                other 3D character models outside of Mixamo, too). While I do
+                think I will be making use of Mixamo in future projects, I
+                decided against a full character model for my player, mainly
+                because I thought it would be difficult to integrate these
+                animations with the weapons which I have already animated
+                separately. The only way you could “see” this character model
+                anyway would be by seeing the player’s shadow, so the benefit to
+                me seemed pretty minimal given the amount of time and energy it
+                would have taken at this juncture to implement the full model.
+            </p>
+
+            <p
+                class="blog-text-yellow"
+                style="text-align: left; padding-right: 30px"
+            >
+                So instead, I used the same character model I had been using for
+                the enemy, and I opened up its .fbx file in
+
+                <a
+                    style="color: #f6d55c"
+                    href="https://www.blender.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><u>Blender</u></a
+                >
+
+                and ripped off its arms! (Or rather, I ripped the body off the
+                arms). I created two models, one for the left and right arms
+                respectively, so I could more easily manipulate the two as
+                separate objects. In Unity, I actually didn’t have just one pair
+                of arms, but instead a pair of arms for each separate weapon. By
+                making the arms a child object of the weapon, it would cause
+                them to inherit a lot of the other things occurring on the
+                weapon, i.e. when the weapon experiences recoil, the arms would
+                “kick up” as the weapon kicks up. In short, it makes more sense
+                to pair the arms with the weapon instead of the player’s body,
+                since the arms really follow what the weapon does.
+            </p>
+
+            <!-- Arms Gif -->
+            <div style="text-align: center; margin-bottom: 43px">
+                <img class="arms-gif" src="images/arms.gif" />
+            </div>
+
+            <p
+                class="blog-text-yellow"
+                style="text-align: left; padding-right: 30px"
+            >
+                From there, it was pretty simple to animate the arms to follow
+                along with a weapon’s animations. When the weapon would be
+                lowered, raised, reloaded, etc., I moved the arms to new
+                positions on the same keyframes where the weapon moved; this
+                created simple animations that look great for this low-poly
+                world. One weapon that I still have to work on is the pistol,
+                since it’s smaller than a rifle and the current arm models have
+                hands that are too clunky to make holding a pistol look good.
+                I’m going to experiment in Blender with curling the fingers on
+                the arms models, so that way the pair of arms attached to the
+                pistol will be easier to work with and will look more realistic.
+            </p>
+
+            <p
+                class="blog-text-yellow"
+                style="text-align: left; padding-right: 30px"
+            >
+                From there, I think it’s time to put some levels together and
+                see how it feels, and adjust as I go to make the game feel more
+                fun! As always, thanks for stopping by.
+            </p>
+
+            <p
+                class="blog-text-yellow"
+                style="text-align: right; padding-right: 30px"
+            >
+                --Josh
+            </p>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Navigate to other posts -->
+
+        <div class="container" style="margin-top: 50px">
+            <div class="row">
+                <a
+                    href="blog_5-6-23.html"
+                    class="col-sm botlink_left yellow-text"
+                    style="text-decoration: none"
+                >
+                    <-- Newer Post
+                </a>
+                <a
+                    href="blog_3-27-23.html"
+                    class="col-sm botlink_right yellow-text"
+                    style="text-decoration: none"
+                >
+                    Older Post -->
+                </a>
+            </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Footer -->
+        <div style="margin-bottom: 100px"></div>
+    </body>
 </html>

@@ -1,529 +1,623 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		
-		<title>Josh Cantie</title>
-		
-		<!-- Bootstrap CSS, JS, Popper.js, jQuery -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-		
-		<!-- jQuery, Popper, Bootstrap -->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		
-	</head>
-	
-	<style>
-	
-		/* Font */
-		@font-face {
-			src: url(fonts/Lato-Regular.ttf);
-			font-family: Lato;
-		}
-	
-		.title {
-			position: absolute;
-			top: 25%;
-			left: 50%;
-			-moz-transform: translateX(-50%) translateY(-50%);
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
-		}
-	
-		.header {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: center;
-			font-size: 65px;
-		}
-		
-		.description {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: center;
-			font-size: 25px;
-		}
-			
-			
-		.top {
-			margin-top: 70px;
-		}
-			
-		img {
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			margin-top: 25px;
-			overflow: hidden;
-			image-orientation: from-image;
-		}
-		
-		.text-style {
-			color: #3CAEA3;
-			font-family: Lato;
-			font-size: 20px;
-			text-align: center;
-		}
-		
-		.nav-color {
-			background-color: #173F5F;
-		}
-		
-		.link-text {
-			color: #F6D55C;
-			font-family: Lato;
-			font-size: 30px;
-			margin: 7px;
-		}
-		
-		.link-text:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		body {
-			min-width: 566px;
-			min-height: 700px;
-		}
-		
-		.footer {
-			text-align: center;
-			position: relative;
-			margin-top: 50px;
-		}
-		
-		.icon-color {
-			color: #F6D55C; <!-- Gray -->
-		}
-		
-		.facebook:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}			
-		
-		.linkedin:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.email:hover{
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-		
-		.post-red {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			width: 70%;
-		}
-		
-		.post-blue {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #3CAEA3;
-			width: 70%;
-		}
-		
-		.post-yellow {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #F6D55C;
-			width: 70%;
-		}
-		
-		.blog-text-red {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-yellow {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.line-red {
-			border-radius: 8px;
-			border: 1.5px solid #ED553B;
-		}
-		
-		.line-blue {
-			border-radius: 8px;
-			border: 1.5px solid #3CAEA3;
-		}
-		
-		.line-yellow {
-			border-radius: 8px;
-			border: 1.5px solid #F6D55C;
-		}
-		
-		.botlink_left {
-			text-align: left;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.botlink_right {
-			text-align: right;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.red-text {
-			color: #ED553B;
-		}
-		
-		.red-figcaption {
-			color: #ED553B;
-			margin-top: 2px;
-		}
-		
-		.yellow-figcaption {
-			color: #F6D55C;
-			margin-top: 2px;		
-		}
-		
-		.yellow-text {
-			color: #F6D55C;
-		}
-		
-		
-		.blue-text {
-			color: #3CAEA3;
-		}
-		
-		.red-text:hover {
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-		
-		.yellow-text:hover {
-			color: #bda346;
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.blue-text:hover {
-			color: #2a7d75;
-			transition: color 0.2s;
-		}
-		
-		.flex-container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-		
-		.code-block {
-			padding: 12px 20px;
-			background-color: rgba(59, 59, 59, 0.7);
-			border-radius: 10px;
-			margin-bottom: 12px;
-		}
-		
-		code {
-			color: #5eb0f7;
-			font-size: 105%;
-		}
-		
-		.thumbnail-outerbox {
-			width: 400px;
-			height: 400px;
-			margin: 10px;
-			border: 3px solid #3CAEA3;
-			border-radius: 8px;
-			text-align: center;
-		}		
-		
-		.cell-title-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: center;
-			font-size: 25px;
-			margin-top: 10px;
-		}
-		
-		.cell-subtitle {
-			color: #9c9c9c;
-			font-family: Lato;
-			text-align: center;
-			font-size: 17px;
-		}
-		
-		.cell-text-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-			margin: 10px;
-		}
-		
-		.blue-img {
-			border-radius: 8px;
-			border: 3px solid #3CAEA3;
-			margin-top: 10px;
-			overflow: hidden;
-			height: 162px; 
-			width: 271px;
-		}
-				
-		.blue-img:hover {
-			opacity: 0.7;
-		}
-						
-		/* Specific blog post images */
-				
-		.level-img {
-			height: 362px; 
-			width: 647px; 
-			border: 3px solid #ED553B;
-		}
-		
-		.level_vid {
-			margin-top: 30px;
-			height: 340px; 
-			width: 600px; 
-			border: 3px solid #ED553B;
-		}
-			
-		/* Small screen adjustments */
-		@media (max-height: 700px) {
-			
-			.top {
-				margin-top: 5px;
-			}
-			
-			.header {
-				font-size: 50px;
-			}
-			
-			.link-text {
-				font-size: 25px;
-			}
-			
-		}
-		
-		@media (max-width: 1016px) {
-			
-			.level-img {
-				height: 224px; 
-				width: 400px; 
-				border: 3px solid #ED553B;
-			}
-			
-			.level_vid {
-				height: 251px; 
-				width: 400px; 
-				border: 3px solid #ED553B;
-			}
-		}
-		
-		@media (max-width: 700px) {
-						
-			.level-img {
-				visibility: hidden;
-			}
-			
-			.level_vid {
-				visibility: hidden;
-			}
-			
-			.red-figcaption {
-				visibility: hidden;
-			}
-		}
-		
-	</style>
-	
-	<body style="background-color: #173F5F;">
-		
-		<!-- Navbar -->
-		<ul class="nav nav-width">
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="index.html">Home</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="files/resume_march_24_website.pdf">Resume</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="portfolio.html">Portfolio</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="blog_current.html">Blog</a>
-		  </li>
-		</ul>
-		
-		<!-- Title -->
-		<div class="top">
-			<div class="header d-none d-sm-block">Josh's Blog</div>
-			<div class="description d-none d-sm-block">Things I did on my computer and more.</div>
-			<a class="description d-none d-sm-block" style="color: #F6D55C;" href="archive.html">Blog Archive</a>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Post -->
-		<div class="post-red container">
-		
-			<div>
-				<div class="row">
-					<div class="col-sm blog-text-red" style="padding-top: 11px;">
-						Flying Off the Staircase
-					</div>
-					<div class="col-sm blog-text-red d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						July 28th, 2023
-					</div>
-				</div>
-			</div>
-			
-			<hr class="line-red">
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-			Hello again!
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				As promised, I’m now going to revisit the FPS game and go over some of the progress I’ve made there. As I said in a
-				previous post, I’ve decided to abandon the pre-made “desert” map that I had been playing with, as it doesn’t really
-				fit with what I want to focus on with this game. Instead, I’ve turned my attention to Unity’s
-				
-				<a style="color: #ED553B;" href="https://unity.com/features/probuilder" target="_blank" rel="noopener noreferrer"><u>ProBuilder</u></a>
-			
-				design editor to build out a map.
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				I’ve been pretty busy doing that; you can see in the screenshot below the map I’ve been making. It’s pretty basic,
-				but I want to spend more of my time focusing on creating a core gameplay loop and polishing the mechanics of the game,
-				and I think a simple map such as this one will enable me to do so.
-			
-			</p>
-			
-			<!-- Level Image -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="level-img" src="images/level.png"/>
-				<figcaption class="red-figcaption">I plan on giving this walls and a glass ceiling, sort of like a stadium.</figcaption>
-			</div>	
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				After building some stairs and ramps, I had an issue that I needed to figure out. My current movement system is
-				based on user input adding <em>forces</em> to the player to get him to move; as a result of that, when the player was 
-				going up ramps, he would end up flying off the top once the end of the ramp/staircase was reached. This was not ideal for
-				ramps, and very unrealistic for stairs! (
+    <head>
+        <meta charset="utf-8" />
 
-				<a style="color: #ED553B;" href="https://www.reddit.com/r/Unity3D/comments/p7nq93/how_do_i_keep_player_on_ground_when_running_up/" target="_blank" rel="noopener noreferrer"><u>This post</u></a>
+        <title>Josh Cantie</title>
 
-				from reddit shows the exact same issue I’m talking about).
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				The solution to this involved a couple of things. For one, while on a slope, the player’s “forward” force was going in
-				the same direction as the ramp’s slope, via the 
-				
-				<a style="color: #ED553B;" href="https://docs.unity3d.com/ScriptReference/Vector3.ProjectOnPlane.html" target="_blank" rel="noopener noreferrer"><u>ProjectOnPlane()</u></a>
-				
-				method of Unity’s Vector3 struct. This was still not preventing the player from flying off the top of the ramp, 
-				because we’re adding forces, and they don’t magically go away when the slope of the surface the player is on changes.				
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				What did fix the issue, though, was forcing the player to have no upward velocity (i.e. a “y” value) unless the player
-				is on a slope or jumping. Obviously if a player is deliberately moving up a slope or is choosing to jump, there needs
-				to be some upward velocity allowed; but aside from that, there’s no other scenario where we’d want the player to have
-				upward momentum. So, by adding the following at the end of our Update() method:		
-			
-			</p>
-			
-			<div class="code-block">
-				<code>
-					if (!OnSlope() && !initiatingJump && rb.velocity.y > 0f)
-					<br>
-					{
-					<br>
-					&nbsp &nbsp &nbsp rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-					<br>
-					}
-				</code>
-			</div>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				We were able to correct the player’s velocity to eliminate upward movement in cases where we didn’t want it, such
-				as the moment where the player has moved off a ramp and back onto a flat surface. So, no more flying off of stairs.
-				Perhaps if I run fast enough up my own staircase I can fly off the top and then I’ll change this back to reflect this
-				new perspective on physics, but for now, I think this fix works nicely.
-			
-			</p>
-			
-			<p class="blog-text-red" style="text-align: left; padding-right: 30px;">
-			
-				Aside from that, I’ve laid out some of my enemies and I’m seeing how the game feels when the player is shooting his
-				way through the map. See the video below for what that looks like! A crucial next step is coming up with a way to make
-				my enemy AI more fun to fight. I don’t want them bunching up too much with each other, and I want my AI to have a little
-				more complexity than just charging straight at the player. So, I have some research to do!
-			
-			</p>
-			
-			<!-- Level Test Demo Clip -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<iframe class="level_vid"
-					src="https://www.youtube.com/embed/UtbU5sK2jl0" allowfullscreen>
-				</iframe>
-			</div>
+        <!-- Bootstrap CSS, JS, Popper.js, jQuery -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
 
-			<p class="blog-text-red" style="text-align: right; padding-right: 30px;">
-			
-				--Josh
-			
-			</p>
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
 
-		</div>
-		
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Navigate to other posts -->
-		
-		<div class="container" style="margin-top: 50px;">
-			<div class="row">
-				<a href="blog_8-18-23.html" class="col-sm botlink_left red-text" style="text-decoration: none;">
-					<-- Newer Post
-				</a>
-				<a href="blog_7-9-23.html" class="col-sm botlink_right red-text" style="text-decoration: none;">
-					Older Post -->
-				</a>
-			</div>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-				
-		<!-- Footer -->
-		<div style="margin-bottom: 100px;"></div>		
-				
-	</body>
-	
+        <!-- jQuery, Popper, Bootstrap -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <style>
+
+        /* Font */
+        @font-face {
+        	src: url(fonts/Lato-Regular.ttf);
+        	font-family: Lato;
+        }
+
+        .title {
+        	position: absolute;
+        	top: 25%;
+        	left: 50%;
+        	-moz-transform: translateX(-50%) translateY(-50%);
+        	-webkit-transform: translateX(-50%) translateY(-50%);
+        	transform: translateX(-50%) translateY(-50%);
+        }
+
+        .header {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 65px;
+        }
+
+        .description {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 25px;
+        }
+
+
+        .top {
+        	margin-top: 70px;
+        }
+
+        img {
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	margin-top: 25px;
+        	overflow: hidden;
+        	image-orientation: from-image;
+        }
+
+        .text-style {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	font-size: 20px;
+        	text-align: center;
+        }
+
+        .nav-color {
+        	background-color: #173F5F;
+        }
+
+        .link-text {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	font-size: 30px;
+        	margin: 7px;
+        }
+
+        .link-text:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        body {
+        	min-width: 566px;
+        	min-height: 700px;
+        }
+
+        .footer {
+        	text-align: center;
+        	position: relative;
+        	margin-top: 50px;
+        }
+
+        .icon-color {
+        	color: #F6D55C; <!-- Gray -->
+        }
+
+        .facebook:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .linkedin:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .email:hover{
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        .post-red {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	width: 70%;
+        }
+
+        .post-blue {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #3CAEA3;
+        	width: 70%;
+        }
+
+        .post-yellow {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #F6D55C;
+        	width: 70%;
+        }
+
+        .blog-text-red {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-blue {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-yellow {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .line-red {
+        	border-radius: 8px;
+        	border: 1.5px solid #ED553B;
+        }
+
+        .line-blue {
+        	border-radius: 8px;
+        	border: 1.5px solid #3CAEA3;
+        }
+
+        .line-yellow {
+        	border-radius: 8px;
+        	border: 1.5px solid #F6D55C;
+        }
+
+        .botlink_left {
+        	text-align: left;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .botlink_right {
+        	text-align: right;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .red-text {
+        	color: #ED553B;
+        }
+
+        .red-figcaption {
+        	color: #ED553B;
+        	margin-top: 2px;
+        }
+
+        .yellow-figcaption {
+        	color: #F6D55C;
+        	margin-top: 2px;
+        }
+
+        .yellow-text {
+        	color: #F6D55C;
+        }
+
+
+        .blue-text {
+        	color: #3CAEA3;
+        }
+
+        .red-text:hover {
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        .yellow-text:hover {
+        	color: #bda346;
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .blue-text:hover {
+        	color: #2a7d75;
+        	transition: color 0.2s;
+        }
+
+        .flex-container {
+        	display: flex;
+        	flex-wrap: wrap;
+        	justify-content: center;
+        }
+
+        .code-block {
+        	padding: 12px 20px;
+        	background-color: rgba(59, 59, 59, 0.7);
+        	border-radius: 10px;
+        	margin-bottom: 12px;
+        }
+
+        code {
+        	color: #5eb0f7;
+        	font-size: 105%;
+        }
+
+        .thumbnail-outerbox {
+        	width: 400px;
+        	height: 400px;
+        	margin: 10px;
+        	border: 3px solid #3CAEA3;
+        	border-radius: 8px;
+        	text-align: center;
+        }
+
+        .cell-title-blue {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 25px;
+        	margin-top: 10px;
+        }
+
+        .cell-subtitle {
+        	color: #9c9c9c;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 17px;
+        }
+
+        .cell-text-blue {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        	margin: 10px;
+        }
+
+        .blue-img {
+        	border-radius: 8px;
+        	border: 3px solid #3CAEA3;
+        	margin-top: 10px;
+        	overflow: hidden;
+        	height: 162px;
+        	width: 271px;
+        }
+
+        .blue-img:hover {
+        	opacity: 0.7;
+        }
+
+        /* Specific blog post images */
+
+        .level-img {
+        	height: 362px;
+        	width: 647px;
+        	border: 3px solid #ED553B;
+        }
+
+        .level_vid {
+        	margin-top: 30px;
+        	height: 340px;
+        	width: 600px;
+        	border: 3px solid #ED553B;
+        }
+
+        /* Small screen adjustments */
+        @media (max-height: 700px) {
+
+        	.top {
+        		margin-top: 5px;
+        	}
+
+        	.header {
+        		font-size: 50px;
+        	}
+
+        	.link-text {
+        		font-size: 25px;
+        	}
+
+        }
+
+        @media (max-width: 1016px) {
+
+        	.level-img {
+        		height: 224px;
+        		width: 400px;
+        		border: 3px solid #ED553B;
+        	}
+
+        	.level_vid {
+        		height: 251px;
+        		width: 400px;
+        		border: 3px solid #ED553B;
+        	}
+        }
+
+        @media (max-width: 700px) {
+
+        	.level-img {
+        		visibility: hidden;
+        	}
+
+        	.level_vid {
+        		visibility: hidden;
+        	}
+
+        	.red-figcaption {
+        		visibility: hidden;
+        	}
+        }
+    </style>
+
+    <body style="background-color: #173f5f">
+        <!-- Navbar -->
+        <ul class="nav nav-width">
+            <li class="nav-item">
+                <a class="nav-link link-text" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a
+                    class="nav-link link-text"
+                    href="files/resume_may_25_website.pdf"
+                    >Resume</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="portfolio.html"
+                    >Portfolio</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="blog_current.html">Blog</a>
+            </li>
+        </ul>
+
+        <!-- Title -->
+        <div class="top">
+            <div class="header d-none d-sm-block">Josh's Blog</div>
+            <div class="description d-none d-sm-block">
+                Things I did on my computer and more.
+            </div>
+            <a
+                class="description d-none d-sm-block"
+                style="color: #f6d55c"
+                href="archive.html"
+                >Blog Archive</a
+            >
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Post -->
+        <div class="post-red container">
+            <div>
+                <div class="row">
+                    <div class="col-sm blog-text-red" style="padding-top: 11px">
+                        Flying Off the Staircase
+                    </div>
+                    <div
+                        class="col-sm blog-text-red d-none d-sm-block"
+                        style="text-align: right; padding-top: 11px"
+                    >
+                        July 28th, 2023
+                    </div>
+                </div>
+            </div>
+
+            <hr class="line-red" />
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                Hello again!
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                As promised, I’m now going to revisit the FPS game and go over
+                some of the progress I’ve made there. As I said in a previous
+                post, I’ve decided to abandon the pre-made “desert” map that I
+                had been playing with, as it doesn’t really fit with what I want
+                to focus on with this game. Instead, I’ve turned my attention to
+                Unity’s
+
+                <a
+                    style="color: #ed553b"
+                    href="https://unity.com/features/probuilder"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><u>ProBuilder</u></a
+                >
+
+                design editor to build out a map.
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                I’ve been pretty busy doing that; you can see in the screenshot
+                below the map I’ve been making. It’s pretty basic, but I want to
+                spend more of my time focusing on creating a core gameplay loop
+                and polishing the mechanics of the game, and I think a simple
+                map such as this one will enable me to do so.
+            </p>
+
+            <!-- Level Image -->
+            <div style="text-align: center; margin-bottom: 43px">
+                <img class="level-img" src="images/level.png" />
+                <figcaption class="red-figcaption">
+                    I plan on giving this walls and a glass ceiling, sort of
+                    like a stadium.
+                </figcaption>
+            </div>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                After building some stairs and ramps, I had an issue that I
+                needed to figure out. My current movement system is based on
+                user input adding <em>forces</em> to the player to get him to
+                move; as a result of that, when the player was going up ramps,
+                he would end up flying off the top once the end of the
+                ramp/staircase was reached. This was not ideal for ramps, and
+                very unrealistic for stairs! (
+
+                <a
+                    style="color: #ed553b"
+                    href="https://www.reddit.com/r/Unity3D/comments/p7nq93/how_do_i_keep_player_on_ground_when_running_up/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><u>This post</u></a
+                >
+
+                from reddit shows the exact same issue I’m talking about).
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                The solution to this involved a couple of things. For one, while
+                on a slope, the player’s “forward” force was going in the same
+                direction as the ramp’s slope, via the
+
+                <a
+                    style="color: #ed553b"
+                    href="https://docs.unity3d.com/ScriptReference/Vector3.ProjectOnPlane.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><u>ProjectOnPlane()</u></a
+                >
+
+                method of Unity’s Vector3 struct. This was still not preventing
+                the player from flying off the top of the ramp, because we’re
+                adding forces, and they don’t magically go away when the slope
+                of the surface the player is on changes.
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                What did fix the issue, though, was forcing the player to have
+                no upward velocity (i.e. a “y” value) unless the player is on a
+                slope or jumping. Obviously if a player is deliberately moving
+                up a slope or is choosing to jump, there needs to be some upward
+                velocity allowed; but aside from that, there’s no other scenario
+                where we’d want the player to have upward momentum. So, by
+                adding the following at the end of our Update() method:
+            </p>
+
+            <div class="code-block">
+                <code>
+                    if (!OnSlope() && !initiatingJump && rb.velocity.y > 0f)
+                    <br />
+                    {
+                    <br />
+                    &nbsp &nbsp &nbsp rb.velocity = new Vector3(rb.velocity.x,
+                    0f, rb.velocity.z);
+                    <br />
+                    }
+                </code>
+            </div>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                We were able to correct the player’s velocity to eliminate
+                upward movement in cases where we didn’t want it, such as the
+                moment where the player has moved off a ramp and back onto a
+                flat surface. So, no more flying off of stairs. Perhaps if I run
+                fast enough up my own staircase I can fly off the top and then
+                I’ll change this back to reflect this new perspective on
+                physics, but for now, I think this fix works nicely.
+            </p>
+
+            <p
+                class="blog-text-red"
+                style="text-align: left; padding-right: 30px"
+            >
+                Aside from that, I’ve laid out some of my enemies and I’m seeing
+                how the game feels when the player is shooting his way through
+                the map. See the video below for what that looks like! A crucial
+                next step is coming up with a way to make my enemy AI more fun
+                to fight. I don’t want them bunching up too much with each
+                other, and I want my AI to have a little more complexity than
+                just charging straight at the player. So, I have some research
+                to do!
+            </p>
+
+            <!-- Level Test Demo Clip -->
+            <div style="text-align: center; margin-bottom: 43px">
+                <iframe
+                    class="level_vid"
+                    src="https://www.youtube.com/embed/UtbU5sK2jl0"
+                    allowfullscreen
+                >
+                </iframe>
+            </div>
+
+            <p
+                class="blog-text-red"
+                style="text-align: right; padding-right: 30px"
+            >
+                --Josh
+            </p>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Navigate to other posts -->
+
+        <div class="container" style="margin-top: 50px">
+            <div class="row">
+                <a
+                    href="blog_8-18-23.html"
+                    class="col-sm botlink_left red-text"
+                    style="text-decoration: none"
+                >
+                    <-- Newer Post
+                </a>
+                <a
+                    href="blog_7-9-23.html"
+                    class="col-sm botlink_right red-text"
+                    style="text-decoration: none"
+                >
+                    Older Post -->
+                </a>
+            </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Footer -->
+        <div style="margin-bottom: 100px"></div>
+    </body>
 </html>

@@ -1,401 +1,474 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-		
-		<title>Josh Cantie</title>
-		
-		<!-- Bootstrap CSS, JS, Popper.js, jQuery -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-		
-		<!-- jQuery, Popper, Bootstrap -->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		
-	</head>
-	
-	<style>
-	
-		/* Font */
-		@font-face {
-			src: url(fonts/Lato-Regular.ttf);
-			font-family: Lato;
-		}
-	
-		.title {
-			position: absolute;
-			top: 25%;
-			left: 50%;
-			-moz-transform: translateX(-50%) translateY(-50%);
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
-		}
-	
-		.header {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: center;
-			font-size: 65px;
-		}
-		
-		.description {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: center;
-			font-size: 25px;
-		}
-			
-			
-		.top {
-			margin-top: 70px;
-		}
-			
-		img {
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			margin-top: 25px;
-			overflow: hidden;
-			image-orientation: from-image;
-		}
-		
-		.text-style {
-			color: #3CAEA3;
-			font-family: Lato;
-			font-size: 20px;
-			text-align: center;
-		}
-		
-		.nav-color {
-			background-color: #173F5F;
-		}
-		
-		.link-text {
-			color: #F6D55C;
-			font-family: Lato;
-			font-size: 30px;
-			margin: 7px;
-		}
-		
-		.link-text:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		body {
-			min-width: 566px;
-			min-height: 700px;
-		}
-		
-		.footer {
-			text-align: center;
-			position: relative;
-			margin-top: 50px;
-		}
-		
-		.icon-color {
-			color: #F6D55C; <!-- Gray -->
-		}
-		
-		.facebook:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}			
-		
-		.linkedin:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.email:hover{
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-		
-		.post-red {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #ED553B;
-			width: 70%;
-		}
-		
-		.post-blue {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #3CAEA3;
-			width: 70%;
-		}
-		
-		.post-yellow {
-			margin-top: 60px;
-			border-radius: 8px;
-			border: 3px solid #F6D55C;
-			width: 70%;
-		}
-		
-		.blog-text-red {
-			color: #ED553B;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-blue {
-			color: #3CAEA3;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.blog-text-yellow {
-			color: #F6D55C;
-			font-family: Lato;
-			text-align: left;
-			font-size: 20px;
-		}
-		
-		.line-red {
-			border-radius: 8px;
-			border: 1.5px solid #ED553B;
-		}
-		
-		.line-blue {
-			border-radius: 8px;
-			border: 1.5px solid #3CAEA3;
-		}
-		
-		.line-yellow {
-			border-radius: 8px;
-			border: 1.5px solid #F6D55C;
-		}
-		
-		.botlink_left {
-			text-align: left;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.botlink_right {
-			text-align: right;
-			margin-bottom: 50px;
-			font-size: 30px;
-		}
-		
-		.red-text {
-			color: #ED553B;
-		}
-		
-		.yellow-text {
-			color: #F6D55C;
-		}
-		
-		
-		.blue-text {
-			color: #3CAEA3;
-		}
-		
-		.red-text:hover {
-			color: #9e3a29;
-			transition: color 0.2s;
-		}
-		
-		.yellow-text:hover {
-			color: #bda346;
-			transition: color 0.2s;
-		}
-		
-		.blue-text:hover {
-			color: #2a7d75;
-			transition: color 0.2s;
-		}
-		
-		/* Specific blog post images */
-		
-		.combat-gif {
-			height: 374px; 
-			width: 600px; 
-			border: 3px solid #3CAEA3;
-		}
-		
-		.rl-gif {
-			height: 338px;
-			width: 600px;
-			border: 3px solid #3CAEA3;
-		}
-		
-		/* Small screen adjustments */
-		@media (max-height: 700px) {
-			
-			.top {
-				margin-top: 5px;
-			}
-			
-			.header {
-				font-size: 50px;
-			}
-			
-			.link-text {
-				font-size: 25px;
-			}
-			
-		}
-		
-		@media (max-width: 1116px) {
-					
-			.combat-gif {
-				height: 249px; 
-				width: 400px; 
-				border: 3px solid #3CAEA3;
-			}
-			
-			.rl-gif {
-				height: 225px;
-				width: 400px;
-				border: 3px solid #3CAEA3;
-			}
+    <head>
+        <meta charset="utf-8" />
 
-		}
-		
-		@media (max-width: 650px) {
-			
-			.combat-gif {
-				visibility: hidden;
-			}
-			
-			.rl-gif {
-				visibility: hidden;
-			}
-		}
-		
-	</style>
-	
-	<body style="background-color: #173F5F;">
-		
-		<!-- Navbar -->
-		<ul class="nav nav-width">
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="index.html">Home</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="files/resume_march_24_website.pdf">Resume</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="portfolio.html">Portfolio</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link link-text" href="blog_current.html">Blog</a>
-		  </li>
-		</ul>
-		
-		<!-- Title -->
-		<div class="top">
-			<div class="header d-none d-sm-block">Josh's Blog</div>
-			<div class="description d-none d-sm-block">Things I did on my computer and more.</div>
-			<a class="description d-none d-sm-block" style="color: #F6D55C;" href="archive.html">Blog Archive</a>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Post 1 -->
-		<div class="post-blue container">
-		
-			<div>
-				<div class="row">
-					<div class="col-sm blog-text-blue" style="padding-top: 11px;">
-						Putting Pieces Together in Unity
-					</div>
-					<div class="col-sm blog-text-blue d-none d-sm-block" style="text-align: right; padding-top: 11px;">
-						July 7th, 2020
-					</div>
-				</div>
-			</div>
-			
-			<hr class="line-blue">
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			The time between posts was longer for this one because I went on a trip to a friend's lakehouse. It was a great time, but my extremely fair skin makes it so I burst into flames the
-			second I am exposed to sunlight, so now I have to apply Aloe every 30 minutes. Probably why I've always spent most of my time indoors on a computer!
-						
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			So at this point, I've become fairly familiar with the process of making an animation in Blender for my model and exporting it to Unity. I went ahead an made a simple "arm swinging"
-			animation and a death animation, which is all the pieces I need to make some very basic gameplay.
-						
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			I managed to get my game at a point where the player can go up to an enemy, swing at it a few times, and then it falls over and dies. In the past I've used other people's models and animations
-			from the asset store, and I've come to appreciate how clean those assets were; it's really hard to make your animations flow smoothly when you make them yourself! But, I think I managed to get
-			them to a point that I'm satisfied with.
-						
-			</p>
-			
-			<!-- Picture of Model -->
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="combat-gif" src="images/combat.gif"/>
-			</div>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			Just to make sure I'm giving credit where it's due, I am drawing heavily from a great Udemy course on intermediate Unity development called 
-			
-			<a style="color: #3CAEA3;" href="https://www.udemy.com/course/unityrpg/">"RPG Core Combat Creator: Learn Intermediate Unity C# Coding"</a>
-			
-			by 
-			
-			<a style="color: #3CAEA3;" href="https://www.gamedev.tv/">GameDev.tv</a>
-			
-			. The instructors, Ben Tristem, Rick Davidson, and Sam Pattuzzi, do a wonderful job of breaking down the basics of RPG creation. Basically I watch them as a
-			reference point and change the code as I see fit to better match what I'm going for (and I use different assets as well). I encourage you to check them out!
-						
-			</p>
-			
-			<p class="blog-text-blue" style="text-align: left; padding-right: 30px;">
-			
-			Now to totally change topics: I am really into the video game Rocket League! It's my favorite game of all time, and I've been playing for about 4 years and have logged about 2,000 hours.
-			I'm going to occasionally posts gifs of plays that I'm proud of.
-						
-			</p>
-			
-			<div style="text-align: center; margin-bottom: 43px;">
-				<img class="rl-gif" src="images/backwards_goal.gif"/>
-			</div>
-			
-			<p class="blog-text-blue" style="text-align: right; padding-right: 30px;">
-			
-			--Josh
-			
-			</p>
-			
-		</div>
-		
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-		
-		<!-- Navigate to other posts -->
-		
-		<div class="container" style="margin-top: 50px;">
-			<div class="row">
-				<a href="blog_7-13-20.html" class="col-sm botlink_left blue-text" style="text-decoration: none;">
-					<-- Newer Post
-				</a>
-				<a href="blog_6-27-20.html" class="col-sm botlink_right blue-text" style="text-decoration: none;">
-					Older Post -->
-				</a>
-			</div>
-		</div>
-				
-		<!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-				
-		<!-- Footer -->
-		<div style="margin-bottom: 100px;"></div>		
-				
-	</body>
-	
+        <title>Josh Cantie</title>
+
+        <!-- Bootstrap CSS, JS, Popper.js, jQuery -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous"
+        />
+
+        <!-- jQuery, Popper, Bootstrap -->
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <style>
+
+        /* Font */
+        @font-face {
+        	src: url(fonts/Lato-Regular.ttf);
+        	font-family: Lato;
+        }
+
+        .title {
+        	position: absolute;
+        	top: 25%;
+        	left: 50%;
+        	-moz-transform: translateX(-50%) translateY(-50%);
+        	-webkit-transform: translateX(-50%) translateY(-50%);
+        	transform: translateX(-50%) translateY(-50%);
+        }
+
+        .header {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 65px;
+        }
+
+        .description {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: center;
+        	font-size: 25px;
+        }
+
+
+        .top {
+        	margin-top: 70px;
+        }
+
+        img {
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	margin-top: 25px;
+        	overflow: hidden;
+        	image-orientation: from-image;
+        }
+
+        .text-style {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	font-size: 20px;
+        	text-align: center;
+        }
+
+        .nav-color {
+        	background-color: #173F5F;
+        }
+
+        .link-text {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	font-size: 30px;
+        	margin: 7px;
+        }
+
+        .link-text:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        body {
+        	min-width: 566px;
+        	min-height: 700px;
+        }
+
+        .footer {
+        	text-align: center;
+        	position: relative;
+        	margin-top: 50px;
+        }
+
+        .icon-color {
+        	color: #F6D55C; <!-- Gray -->
+        }
+
+        .facebook:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .linkedin:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .email:hover{
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        .post-red {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #ED553B;
+        	width: 70%;
+        }
+
+        .post-blue {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #3CAEA3;
+        	width: 70%;
+        }
+
+        .post-yellow {
+        	margin-top: 60px;
+        	border-radius: 8px;
+        	border: 3px solid #F6D55C;
+        	width: 70%;
+        }
+
+        .blog-text-red {
+        	color: #ED553B;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-blue {
+        	color: #3CAEA3;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .blog-text-yellow {
+        	color: #F6D55C;
+        	font-family: Lato;
+        	text-align: left;
+        	font-size: 20px;
+        }
+
+        .line-red {
+        	border-radius: 8px;
+        	border: 1.5px solid #ED553B;
+        }
+
+        .line-blue {
+        	border-radius: 8px;
+        	border: 1.5px solid #3CAEA3;
+        }
+
+        .line-yellow {
+        	border-radius: 8px;
+        	border: 1.5px solid #F6D55C;
+        }
+
+        .botlink_left {
+        	text-align: left;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .botlink_right {
+        	text-align: right;
+        	margin-bottom: 50px;
+        	font-size: 30px;
+        }
+
+        .red-text {
+        	color: #ED553B;
+        }
+
+        .yellow-text {
+        	color: #F6D55C;
+        }
+
+
+        .blue-text {
+        	color: #3CAEA3;
+        }
+
+        .red-text:hover {
+        	color: #9e3a29;
+        	transition: color 0.2s;
+        }
+
+        .yellow-text:hover {
+        	color: #bda346;
+        	transition: color 0.2s;
+        }
+
+        .blue-text:hover {
+        	color: #2a7d75;
+        	transition: color 0.2s;
+        }
+
+        /* Specific blog post images */
+
+        .combat-gif {
+        	height: 374px;
+        	width: 600px;
+        	border: 3px solid #3CAEA3;
+        }
+
+        .rl-gif {
+        	height: 338px;
+        	width: 600px;
+        	border: 3px solid #3CAEA3;
+        }
+
+        /* Small screen adjustments */
+        @media (max-height: 700px) {
+
+        	.top {
+        		margin-top: 5px;
+        	}
+
+        	.header {
+        		font-size: 50px;
+        	}
+
+        	.link-text {
+        		font-size: 25px;
+        	}
+
+        }
+
+        @media (max-width: 1116px) {
+
+        	.combat-gif {
+        		height: 249px;
+        		width: 400px;
+        		border: 3px solid #3CAEA3;
+        	}
+
+        	.rl-gif {
+        		height: 225px;
+        		width: 400px;
+        		border: 3px solid #3CAEA3;
+        	}
+
+        }
+
+        @media (max-width: 650px) {
+
+        	.combat-gif {
+        		visibility: hidden;
+        	}
+
+        	.rl-gif {
+        		visibility: hidden;
+        	}
+        }
+    </style>
+
+    <body style="background-color: #173f5f">
+        <!-- Navbar -->
+        <ul class="nav nav-width">
+            <li class="nav-item">
+                <a class="nav-link link-text" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a
+                    class="nav-link link-text"
+                    href="files/resume_may_25_website.pdf"
+                    >Resume</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="portfolio.html"
+                    >Portfolio</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-text" href="blog_current.html">Blog</a>
+            </li>
+        </ul>
+
+        <!-- Title -->
+        <div class="top">
+            <div class="header d-none d-sm-block">Josh's Blog</div>
+            <div class="description d-none d-sm-block">
+                Things I did on my computer and more.
+            </div>
+            <a
+                class="description d-none d-sm-block"
+                style="color: #f6d55c"
+                href="archive.html"
+                >Blog Archive</a
+            >
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Post 1 -->
+        <div class="post-blue container">
+            <div>
+                <div class="row">
+                    <div
+                        class="col-sm blog-text-blue"
+                        style="padding-top: 11px"
+                    >
+                        Putting Pieces Together in Unity
+                    </div>
+                    <div
+                        class="col-sm blog-text-blue d-none d-sm-block"
+                        style="text-align: right; padding-top: 11px"
+                    >
+                        July 7th, 2020
+                    </div>
+                </div>
+            </div>
+
+            <hr class="line-blue" />
+
+            <p
+                class="blog-text-blue"
+                style="text-align: left; padding-right: 30px"
+            >
+                The time between posts was longer for this one because I went on
+                a trip to a friend's lakehouse. It was a great time, but my
+                extremely fair skin makes it so I burst into flames the second I
+                am exposed to sunlight, so now I have to apply Aloe every 30
+                minutes. Probably why I've always spent most of my time indoors
+                on a computer!
+            </p>
+
+            <p
+                class="blog-text-blue"
+                style="text-align: left; padding-right: 30px"
+            >
+                So at this point, I've become fairly familiar with the process
+                of making an animation in Blender for my model and exporting it
+                to Unity. I went ahead an made a simple "arm swinging" animation
+                and a death animation, which is all the pieces I need to make
+                some very basic gameplay.
+            </p>
+
+            <p
+                class="blog-text-blue"
+                style="text-align: left; padding-right: 30px"
+            >
+                I managed to get my game at a point where the player can go up
+                to an enemy, swing at it a few times, and then it falls over and
+                dies. In the past I've used other people's models and animations
+                from the asset store, and I've come to appreciate how clean
+                those assets were; it's really hard to make your animations flow
+                smoothly when you make them yourself! But, I think I managed to
+                get them to a point that I'm satisfied with.
+            </p>
+
+            <!-- Picture of Model -->
+            <div style="text-align: center; margin-bottom: 43px">
+                <img class="combat-gif" src="images/combat.gif" />
+            </div>
+
+            <p
+                class="blog-text-blue"
+                style="text-align: left; padding-right: 30px"
+            >
+                Just to make sure I'm giving credit where it's due, I am drawing
+                heavily from a great Udemy course on intermediate Unity
+                development called
+
+                <a
+                    style="color: #3caea3"
+                    href="https://www.udemy.com/course/unityrpg/"
+                    >"RPG Core Combat Creator: Learn Intermediate Unity C#
+                    Coding"</a
+                >
+
+                by
+
+                <a style="color: #3caea3" href="https://www.gamedev.tv/"
+                    >GameDev.tv</a
+                >
+
+                . The instructors, Ben Tristem, Rick Davidson, and Sam Pattuzzi,
+                do a wonderful job of breaking down the basics of RPG creation.
+                Basically I watch them as a reference point and change the code
+                as I see fit to better match what I'm going for (and I use
+                different assets as well). I encourage you to check them out!
+            </p>
+
+            <p
+                class="blog-text-blue"
+                style="text-align: left; padding-right: 30px"
+            >
+                Now to totally change topics: I am really into the video game
+                Rocket League! It's my favorite game of all time, and I've been
+                playing for about 4 years and have logged about 2,000 hours. I'm
+                going to occasionally posts gifs of plays that I'm proud of.
+            </p>
+
+            <div style="text-align: center; margin-bottom: 43px">
+                <img class="rl-gif" src="images/backwards_goal.gif" />
+            </div>
+
+            <p
+                class="blog-text-blue"
+                style="text-align: right; padding-right: 30px"
+            >
+                --Josh
+            </p>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Navigate to other posts -->
+
+        <div class="container" style="margin-top: 50px">
+            <div class="row">
+                <a
+                    href="blog_7-13-20.html"
+                    class="col-sm botlink_left blue-text"
+                    style="text-decoration: none"
+                >
+                    <-- Newer Post
+                </a>
+                <a
+                    href="blog_6-27-20.html"
+                    class="col-sm botlink_right blue-text"
+                    style="text-decoration: none"
+                >
+                    Older Post -->
+                </a>
+            </div>
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Footer -->
+        <div style="margin-bottom: 100px"></div>
+    </body>
 </html>
