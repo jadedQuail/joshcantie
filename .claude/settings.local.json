@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir builds\\\\fantasy_rpg)",
+      "Bash(xcopy /E /I /Y \"C:\\\\Builds\\\\FantasyRPG\\\\Build\" \"builds\\\\fantasy_rpg\\\\Build\")",
+      "Bash(xcopy /E /I /Y \"C:\\\\Builds\\\\FantasyRPG\\\\TemplateData\" \"builds\\\\fantasy_rpg\\\\TemplateData\")",
+      "Bash(copy \"C:\\\\Builds\\\\FantasyRPG\\\\index.html\" \"builds\\\\fantasy_rpg\\\\game.html\")",
+      "PowerShell(Get-ChildItem -Recurse \"builds\\\\fantasy_rpg\" -File | ForEach-Object { \"{0,12:N0}  {1}\" -f $_.Length, $_.FullName.Substring\\(\\(Get-Location\\).Path.Length + 1\\) })",
+      "PowerShell(Get-ChildItem -Recurse \"builds\" -File | Group-Object { $_.FullName.Split\\('\\\\'\\)[\\($_.FullName.Split\\('\\\\'\\).IndexOf\\('builds'\\)+1\\)] } | ForEach-Object { \"{0,8:N1} MB  {1}\" -f \\(\\($_.Group | Measure-Object Length -Sum\\).Sum/1MB\\), $_.Name })"
+    ]
+  }
+}

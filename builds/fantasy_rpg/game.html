@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>FantasyRPG</title>
+  <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+<body>
+  <div id="unity-page">
+    <div id="unity-container">
+      <canvas id="unity-canvas" tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+    </div>
+    <div id="unity-footer">
+      <div id="unity-build-title">FantasyRPG</div>
+      <button id="unity-fullscreen-button" type="button" title="Fullscreen">&#9974;</button>
+    </div>
+  </div>
+
+  <script>
+    var canvas = document.querySelector("#unity-canvas");
+    var loadingBar = document.querySelector("#unity-loading-bar");
+    var progressBarFull = document.querySelector("#unity-progress-bar-full");
+    var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/FantasyRPG.loader.js";
+    var config = {
+      dataUrl: buildUrl + "/FantasyRPG.data",
+      frameworkUrl: buildUrl + "/FantasyRPG.framework.js",
+      codeUrl: buildUrl + "/FantasyRPG.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "DefaultCompany",
+      productName: "FantasyRPG",
+      productVersion: "1.0",
+    };
+
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = function () {
+      createUnityInstance(canvas, config, function (progress) {
+        progressBarFull.style.width = (100 * progress) + "%";
+      }).then(function (unityInstance) {
+        loadingBar.style.display = "none";
+        fullscreenButton.onclick = function () {
+          unityInstance.SetFullscreen(1);
+        };
+      }).catch(function (message) {
+        alert(message);
+      });
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>
